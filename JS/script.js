@@ -123,6 +123,9 @@ $(document).ready(function() {
             $(".cookiePerClick").val(cookiecountAdd);
             cookiecountAdd = parseInt(cookiecountAdd);
             $(".cookiePerSec").val(cookiePerSecJs);
+        if (autoClicker >= 10) {
+            $(".farmUpg").show();
+        }
             update();
         }
         else {
