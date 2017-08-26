@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-        $(".farmUpg").hide()
+    $(".farmUpg").hide()
 
     function update () {
         $(".cookieNumber").val(cookiecount);
@@ -45,71 +45,71 @@ $(document).ready(function() {
         cookiecount = parseInt(cookiecount);
         document.title = cookiecount +" Cookies - Cookie Farm";
     });
-
     $(".saveBtn").click(function() {
-        localStorage.setItem("cookiecount", cookiecount);
-        localStorage.setItem("autoClicker", autoClicker);
-        localStorage.setItem("autoClickerPrice", autoClickerPrice);
-        localStorage.setItem("farmClicker", farmClicker);
-        localStorage.setItem("farmClickerPrice", farmClickerPrice);
-        localStorage.setItem("cookiePerSecJs", cookiePerSecJs);
-        localStorage.setItem("farmClickerMultiplier", farmClickerMultiplier);
-        localStorage.setItem("cookiecountAdd", cookiecountAdd);
-    });
+    localStorage.setItem("cookiecount", cookiecount);
+    localStorage.setItem("autoClicker", autoClicker);
+    localStorage.setItem("autoClickerPrice", autoClickerPrice);
+    localStorage.setItem("farmClicker", farmClicker);
+    localStorage.setItem("farmClickerPrice", farmClickerPrice);
+    localStorage.setItem("cookiePerSecJs", cookiePerSecJs);
+    localStorage.setItem("farmClickerMultiplier", farmClickerMultiplier);
+    localStorage.setItem("cookiecountAdd", cookiecountAdd);
+});
 
     $(".loadBtn").click(function() {
-        cookiecount = localStorage.getItem("cookiecount");
-        cookiecount = parseInt(cookiecount);
-        $(".cookieNumber").val(cookiecount);
-        autoClicker = localStorage.getItem("autoClicker");
-        autoClicker = parseInt(autoClicker);
-        $(".autoClickBtn .clickerUpgInpt1").val(autoClicker);
-        autoClickerPrice = localStorage.getItem("autoClickerPrice");
-        autoClickerPrice = parseInt(autoClickerPrice);
-        $(".autoClickBtn .clickerUpgInpt2").val(autoClickerPrice);
-        farmClicker = localStorage.getItem("farmClicker");
-        farmClicker = parseInt(farmClicker);
-        $(".farmUpg .clickerUpgInpt1").val(farmClicker);
-        farmClickerPrice = localStorage.getItem("farmClickerPrice");
-        farmClickerPrice = parseInt(farmClickerPrice);
-        $(".farmUpg .clickerUpgInpt2").val(farmClickerPrice);
-        farmClickerMultiplier = localStorage.getItem("farmClickerMultiplier");
-        farmClickerMultiplier = parseInt(farmClickerMultiplier);
-        cookiePerSecJs = localStorage.getItem("cookiePerSecJs");
-        cookiePerSecJs = parseInt(cookiePerSecJs);
-        $(".cookiePerSec").val(cookiePerSecJs);
-        cookiecountAdd = localStorage.getItem("cookiecountAdd");
-        cookiecountAdd = parseInt(cookiecountAdd);
-        $("#cookieSpot .cookiePerClickSpot .cookiePerClick").val(cookiecountAdd);
-        document.title = cookiecount +" Cookies - Cookie Farm";
-        update();
-    });
+    cookiecount = localStorage.getItem("cookiecount");
+    cookiecount = parseInt(cookiecount);
+    $(".cookieNumber").val(cookiecount);
+    autoClicker = localStorage.getItem("autoClicker");
+    autoClicker = parseInt(autoClicker);
+    $(".autoClickBtn .clickerUpgInpt1").val(autoClicker);
+    autoClickerPrice = localStorage.getItem("autoClickerPrice");
+    autoClickerPrice = parseInt(autoClickerPrice);
+    $(".autoClickBtn .clickerUpgInpt2").val(autoClickerPrice);
+    farmClicker = localStorage.getItem("farmClicker");
+    farmClicker = parseInt(farmClicker);
+    $(".farmUpg .clickerUpgInpt1").val(farmClicker);
+    farmClickerPrice = localStorage.getItem("farmClickerPrice");
+    farmClickerPrice = parseInt(farmClickerPrice);
+    $(".farmUpg .clickerUpgInpt2").val(farmClickerPrice);
+    farmClickerMultiplier = localStorage.getItem("farmClickerMultiplier");
+    farmClickerMultiplier = parseInt(farmClickerMultiplier);
+    cookiePerSecJs = localStorage.getItem("cookiePerSecJs");
+    cookiePerSecJs = parseInt(cookiePerSecJs);
+    $(".cookiePerSec").val(cookiePerSecJs);
+    cookiecountAdd = localStorage.getItem("cookiecountAdd");
+    cookiecountAdd = parseInt(cookiecountAdd);
+    $("#cookieSpot .cookiePerClickSpot .cookiePerClick").val(cookiecountAdd);
+    document.title = cookiecount +" Cookies - Cookie Farm";
+    update();
+});
 
-    $(".resetBtn").click(function() {
-        cookiecount = 0;
-        autoClicker = 0;
-        autoClickerPrice = 20;
-        $(".autoClickBtn .clickerUpgInpt2").val(autoClickerPrice);
-        farmClicker = 0;
-        farmClickerMultiplier = 0;
-        farmClickerPrice = 50;
-        $(".farmUpg .clickerUpgInpt2").val(farmClickerPrice);
-        cookiePerSecJs = 0;
-        $(".cookiePerSec").val(cookiePerSecJs);
-        cookiecountAdd = 1;
-        $(".cookiePerClick").val(cookiecountAdd);
-    });
+$(".resetBtn").click(function() {
+    cookiecount = 0;
+    autoClicker = 0;
+    autoClickerPrice = 20;
+    $(".autoClickBtn .clickerUpgInpt2").val(autoClickerPrice);
+    farmClicker = 0;
+    farmClickerMultiplier = 0;
+    farmClickerPrice = 50;
+    $(".farmUpg .clickerUpgInpt2").val(farmClickerPrice);
+    cookiePerSecJs = 0;
+    $(".cookiePerSec").val(cookiePerSecJs);
+    cookiecountAdd = 1;
+    $(".cookiePerClick").val(cookiecountAdd);
+});
 
-    $(".deleteBtn").click(function() {
-        localStorage.removeItem("cookiecount", cookiecount);
-        localStorage.removeItem("autoClicker", autoClicker);
-        localStorage.removeItem("autoClickerPrice", autoClickerPrice);
-        localStorage.removeItem("farmClicker", farmClicker);
-        localStorage.removeItem("farmClickerPrice", farmClickerPrice);
-        localStorage.removeItem("cookiePerSecJs", cookiePerSecJs);
-        localStorage.removeItem("farmClickerMultiplier", farmClickerMultiplier);
-        localStorage.removeItem("cookiecountAdd", cookiecountAdd);
-    });
+$(".deleteBtn").click(function() {
+    localStorage.removeItem("cookiecount", cookiecount);
+    localStorage.removeItem("autoClicker", autoClicker);
+    localStorage.removeItem("autoClickerPrice", autoClickerPrice);
+    localStorage.removeItem("farmClicker", farmClicker);
+    localStorage.removeItem("farmClickerPrice", farmClickerPrice);
+    localStorage.removeItem("cookiePerSecJs", cookiePerSecJs);
+    localStorage.removeItem("farmClickerMultiplier", farmClickerMultiplier);
+    localStorage.removeItem("cookiecountAdd", cookiecountAdd);
+});
+
 
     $(".autoClickBtn").click(function() {
         if (cookiecount >= autoClickerPrice) {
