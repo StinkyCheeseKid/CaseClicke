@@ -96,6 +96,8 @@ $(document).ready(function() {
         $(".farmUpg .clickerUpgInpt2").val(farmClickerPrice);
         cookiePerSecJs = 0;
         $(".cookiePerSec").val(cookiePerSecJs);
+        cookiecountAdd = 1;
+        $(".cookiePerClick").val(cookiecountAdd);
     });
 
     $(".deleteBtn").click(function() {
@@ -130,7 +132,7 @@ $(document).ready(function() {
             },400);
         }
     });
-    
+
     $(".farmUpg").click(function() {
         if (cookiecount >= farmClickerPrice) {
             cookiecount = cookiecount - farmClickerPrice;
