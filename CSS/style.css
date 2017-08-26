@@ -39,20 +39,15 @@ h1
 }
 #cookieSpot .cookieNumberSpot
 {
-    text-align: center;
-    margin: 7px 0px;
-    border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.0);
     border: 1px solid rgba(0, 0, 0, 0.0);
-    width: 260px;
 }
 #cookieSpot .cookieNumber
 {
-    text-align: center;
-    margin: 7px 0px;
     background-color: rgba(0, 0, 0, 0.0);
     border: 1px solid rgba(0, 0, 0, 0.0);
-    width: 50px;
+    width: 80px;
+    text-align: right;
 }
 #cookieSpot .cookiePerSecSpot
 {
@@ -60,6 +55,18 @@ h1
     border: 1px solid rgba(0, 0, 0, 0.0);
 }
 #cookieSpot .cookiePerSec
+{
+    background-color: rgba(0, 0, 0, 0.0);
+    border: 1px solid rgba(0, 0, 0, 0.0);
+    width: 80px;
+    text-align: right;
+}
+#cookieSpot .cookiePerClickSpot
+{
+    background-color: rgba(0, 0, 0, 0.0);
+    border: 1px solid rgba(0, 0, 0, 0.0);
+}
+#cookieSpot .cookiePerClick
 {
     background-color: rgba(0, 0, 0, 0.0);
     border: 1px solid rgba(0, 0, 0, 0.0);

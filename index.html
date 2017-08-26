@@ -16,24 +16,30 @@
                 <div id="cookieSpot" class="col-sm-4">
                     <h1>Cookie Farm</h1>
                         <div class="cookieNumberSpot">
-                            Your cookies:
                             <input class="cookieNumber" type="text" disabled value="0">
+                            <span style="font-weight: bold;"> Cookies</span>
                         </div>
                         <div class="cookiePerSecSpot">
                             <input class="cookiePerSec" type="text" disabled value="0">
-                            Cookies/s
+                            <span style="font-weight: bold;">Cookies/s</span>
+                        </div>
+                        <div class="cookiePerClickSpot">
+                            <input class="cookiePerClick" type="text" disabled value="1">
+                            <span style="font-weight: bold;">Cookies/click</span>
                         </div>
                     <img class="perfectCookie" src="CSS/IMGS/perfectCookie.png">
                 </div>
                 <div id="upgradeSpot" class="col-sm-4">
                     <h1><span class="glyphicon glyphicon-tasks"></span> Upgrades</h1>
-                    <button class="btn btn-default autoClickBtn"><span class="glyphicon glyphicon-hand-up" style="color: black;"> Clicker</span><input class="clickerUpgInpt1" type="text" disabled value="0" max="100"><input class="clickerUpgInpt2" type="text" disabled value="20"><span style="font-weight: bold;"> c</span></button>
-                    <button class="btn btn-default farmUpg"><span class="glyphicon glyphicon-home" style="color: black;"> Farm</span><input class="clickerUpgInpt1" type="text" disabled value="0" max="100"><input class="clickerUpgInpt2" type="text" disabled value="45"><span style="font-weight: bold;"> c</span></button>
+                    <button class="btn btn-default autoClickBtn"><span class="glyphicon glyphicon-hand-up" style="color: black;"> Clicker</span><input class="clickerUpgInpt1" type="text" disabled value="0" max="50"><input class="clickerUpgInpt2" type="text" disabled value="20"><span style="font-weight: bold;"> c</span></button>
+                    <button class="btn btn-default farmUpg"><span class="glyphicon glyphicon-home" style="color: black;"> Farm</span><input class="clickerUpgInpt1" type="text" disabled value="0" max="25"><input class="clickerUpgInpt2" type="text" disabled value="45"><span style="font-weight: bold;"> c</span></button>
                 </div>
                 <div id="optionSpot" class="col-sm-4">
                     <h1><span class="glyphicon glyphicon-cog"></span> Options</h1>
                     <button class="saveBtn btn btn-success">Save</button>
                     <button class="loadBtn btn btn-primary">Load</button>
+                    <button class="resetBtn btn btn-warning">Reset</button>
+                    <button class="deleteBtn btn btn-danger">Delete</button>
                 </div>
             </div>
         </div>
