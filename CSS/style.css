@@ -17,17 +17,17 @@ h1
 }
 /* COOKIE SPOT */
 
-#cookieSpot
+#caseSpot
 {
 
 }
-#cookieSpot .perfectCookie
+#caseSpot .caseCsgoImg
 {
     margin: 14px 0px;
     border: 0px solid black;
-    border-radius: 50%;
+    border-radius: 25%;
 }
-#cookieSpot h1
+#caseSpot h1
 {
     border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 20px;
@@ -37,40 +37,40 @@ h1
     padding: 2px 0px 2px 0px;
     background-color: rgba(0, 0, 0, 0.3);
 }
-#cookieSpot .cookieNumberSpot
+#caseSpot .caseNumberSpot
 {
     background-color: rgba(0, 0, 0, 0.0);
     border: 1px solid rgba(0, 0, 0, 0.0);
 }
-#cookieSpot .cookieNumber
+#caseSpot .caseNumber
 {
     background-color: rgba(0, 0, 0, 0.0);
     border: 1px solid rgba(0, 0, 0, 0.0);
-    width: 80px;
+    width: 180px;
     text-align: right;
 }
-#cookieSpot .cookiePerSecSpot
+#caseSpot .casePerSecSpot
 {
     background-color: rgba(0, 0, 0, 0.0);
     border: 1px solid rgba(0, 0, 0, 0.0);
 }
-#cookieSpot .cookiePerSec
+#caseSpot .casePerSec
 {
     background-color: rgba(0, 0, 0, 0.0);
     border: 1px solid rgba(0, 0, 0, 0.0);
-    width: 80px;
+    width: 180px;
     text-align: right;
 }
-#cookieSpot .cookiePerClickSpot
+#caseSpot .casePerClickSpot
 {
     background-color: rgba(0, 0, 0, 0.0);
     border: 1px solid rgba(0, 0, 0, 0.0);
 }
-#cookieSpot .cookiePerClick
+#caseSpot .casePerClick
 {
     background-color: rgba(0, 0, 0, 0.0);
     border: 1px solid rgba(0, 0, 0, 0.0);
-    width: 80px;
+    width: 180px;
     text-align: right;
 }
 /* OPTION SPOT */
@@ -109,7 +109,7 @@ h1
 }
 #upgradeSpot button
 {
-    margin-right: 135px;
+    margin-right: 350px;
     width: 250px;
     text-align: left;
 }
@@ -129,20 +129,16 @@ h1
     border: 1px solid rgba(0, 0, 0, 0.0);
     margin-left: 75px;
 }
-#upgradeSpot .cookie-icon
-{
-    float: right;
-}
-#upgradeSpot .farmUpg
+#upgradeSpot .uspBtn
 {
     margin-top: 5px;
 }
-#upgradeSpot .farmUpg .clickerUpgInpt1
+#upgradeSpot .uspBtn .clickerUpgInpt1
 {
     margin-left: 11px;
     position: absolute;
 }
-#upgradeSpot .farmUpg .clickerUpgInpt2
+#upgradeSpot .uspBtn .clickerUpgInpt2
 {
     margin-left: 86px;
 }
