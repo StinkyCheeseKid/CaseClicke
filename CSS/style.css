@@ -1,0 +1,82 @@
+/* GENERAL */
+body
+{
+    background: url("IMGS/background.jpg");
+    /*font-style:*/
+    font-size: 20px;
+    color: white;
+}
+div .row
+{
+    margin-top: 14px;
+}
+h1
+{
+    font-size: 30px;
+    font-style: bold;
+}
+/* COOKIE SPOT */
+
+#cookieSpot
+{
+
+}
+#cookieSpot .perfectCookie
+{
+    margin: 14px 0px;
+}
+#cookieSpot h1
+{
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 260px;
+    padding: 2px 0px 2px 0px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+#cookieSpot .cookieNumberSpot
+{
+    text-align: center;
+    margin: 7px 0px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    width: 260px;
+}
+#cookieSpot .cookieNumber
+{
+    text-align: center;
+    margin: 7px 0px;
+    background-color: rgba(0, 0, 0, 0.0);
+    border: 1px solid rgba(0, 0, 0, 0.0);
+    width: 50px;
+}
+/* OPTION SPOT */
+
+#optionSpot h1
+{
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 260px;
+    padding: 2px 0px 2px 0px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+#optionSpot button
+{
+    
+}
+/* UPGRADE SPOT */
+
+#upgradeSpot h1
+{
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 260px;
+    padding: 2px 0px 2px 0px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
