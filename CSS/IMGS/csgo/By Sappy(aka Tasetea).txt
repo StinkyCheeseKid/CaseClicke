@@ -1,0 +1,22 @@
+To install custom icons to your folder:
+
+1: Create new folder or select an existing folder
+2: Right click on the folder and select properties	
+3: Select the customize tab in the upper right
+4: Click change icon and browse these folders for desired icon
+
+
+Most weapons,skins,teams are avalible
+Cool skins that dont have their own weapon folder are in the "the rest" folder in weapons
+Most skins have been edited to make them pop better on screen
+
+
+With MLG right around the bend I made holo team stickers icons to celebrate!
+put your cans in the air and enjoy the family show!
+
+thanks to csgo stash for having all the png. files making this process a lot easier.
+Hope you guys enjoy this set, took me a fair bit of time to get all of editing and 
+converting done but it was worth it. Really makes folders look cool.
+
+
+-Sappy

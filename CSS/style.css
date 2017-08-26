@@ -1,14 +1,27 @@
 /* GENERAL */
 body
 {
-    background: url("IMGS/background.jpg");
+    background: url("IMGS/background1.png");
     /*font-style:*/
     font-size: 20px;
     color: white;
 }
+.iCenter
+{
+    margin: auto;
+}
 div .row
 {
     margin-top: 14px;
+}
+.noSelect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 h1
 {
@@ -19,7 +32,6 @@ h1
 
 #caseSpot
 {
-
 }
 #caseSpot .caseCsgoImg
 {
@@ -113,6 +125,11 @@ h1
     width: 250px;
     text-align: left;
 }
+#upgradeSpot .upgIcon
+{
+    height: 20px !important;
+    width: 20px !important;
+}
 #upgradeSpot .clickerUpgInpt1
 {
     width: 30px;
@@ -135,10 +152,21 @@ h1
 }
 #upgradeSpot .uspBtn .clickerUpgInpt1
 {
-    margin-left: 11px;
     position: absolute;
 }
 #upgradeSpot .uspBtn .clickerUpgInpt2
+{
+    margin-left: 86px;
+}
+#upgradeSpot .p250Btn
+{
+    margin-top: 5px;
+}
+#upgradeSpot .p250Btn .clickerUpgInpt1
+{
+    position: absolute;
+}
+#upgradeSpot .p250Btn .clickerUpgInpt2
 {
     margin-left: 86px;
 }
