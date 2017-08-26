@@ -24,6 +24,8 @@ h1
 #cookieSpot .perfectCookie
 {
     margin: 14px 0px;
+    border: 0px solid black;
+    border-radius: 50%;
 }
 #cookieSpot h1
 {
@@ -40,8 +42,8 @@ h1
     text-align: center;
     margin: 7px 0px;
     border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.0);
+    border: 1px solid rgba(0, 0, 0, 0.0);
     width: 260px;
 }
 #cookieSpot .cookieNumber
@@ -52,8 +54,23 @@ h1
     border: 1px solid rgba(0, 0, 0, 0.0);
     width: 50px;
 }
+#cookieSpot .cookiePerSecSpot
+{
+    background-color: rgba(0, 0, 0, 0.0);
+    border: 1px solid rgba(0, 0, 0, 0.0);
+}
+#cookieSpot .cookiePerSec
+{
+    background-color: rgba(0, 0, 0, 0.0);
+    border: 1px solid rgba(0, 0, 0, 0.0);
+    width: 80px;
+    text-align: right;
+}
 /* OPTION SPOT */
 
+#optionSpot
+{
+}
 #optionSpot h1
 {
     border: 1px solid rgba(0, 0, 0, 0.3);
@@ -66,10 +83,13 @@ h1
 }
 #optionSpot button
 {
-    
+
 }
 /* UPGRADE SPOT */
-
+#upgradeSpot
+{
+    text-align: center;
+}
 #upgradeSpot h1
 {
     border: 1px solid rgba(0, 0, 0, 0.3);
@@ -79,4 +99,43 @@ h1
     width: 260px;
     padding: 2px 0px 2px 0px;
     background-color: rgba(0, 0, 0, 0.3);
+}
+#upgradeSpot button
+{
+    margin-right: 135px;
+    width: 250px;
+    text-align: left;
+}
+#upgradeSpot .clickerUpgInpt1
+{
+    width: 30px;
+    text-align: right;
+    background-color: rgba(0, 0, 0, 0.0);
+    border: 1px solid rgba(0, 0, 0, 0.0);
+    position: absolute;
+}
+#upgradeSpot .clickerUpgInpt2
+{
+    width: 60px;
+    text-align: right;
+    background-color: rgba(0, 0, 0, 0.0);
+    border: 1px solid rgba(0, 0, 0, 0.0);
+    margin-left: 75px;
+}
+#upgradeSpot .cookie-icon
+{
+    float: right;
+}
+#upgradeSpot .farmUpg
+{
+    margin-top: 5px;
+}
+#upgradeSpot .farmUpg .clickerUpgInpt1
+{
+    margin-left: 11px;
+    position: absolute;
+}
+#upgradeSpot .farmUpg .clickerUpgInpt2
+{
+    margin-left: 86px;
 }
