@@ -163,7 +163,7 @@ $(".deleteBtn").click(function() {
             glockClickerPrice = parseInt(glockClickerPrice);
             euroCountAdd -= 1;
             casePerSecJs -= 1;
-            euroCount += glockClickerPrice;
+            euroCount += glockClickerPrice * 0.50;
             $(".glockBtn .clickerUpgInpt2").val(glockClickerPrice);
             $(".casePerClick").val(euroCountAdd);
             euroCountAdd = parseInt(euroCountAdd);
@@ -214,7 +214,7 @@ $(".deleteBtn").click(function() {
             euroCountAdd -= 2;
             clickerMultiplier -= 3;
             casePerSecJs -= 2;
-            euroCount += uspClickerPrice;
+            euroCount += uspClickerPrice / 0.50;
             $(".uspBtn .clickerUpgInpt2").val(uspClickerPrice);
             $(".casePerClick").val(euroCountAdd);
             euroCountAdd = parseInt(euroCountAdd);
@@ -265,7 +265,7 @@ $(".deleteBtn").click(function() {
             euroCountAdd -= 3;
             clickerMultiplier -= 6;
             casePerSecJs -= 3;
-            euroCount += p250ClickerPrice;
+            euroCount += p250ClickerPrice / 0.50;
             $(".p250Btn .clickerUpgInpt2").val(p250ClickerPrice);
             $(".casePerClick").val(euroCountAdd);
             euroCountAdd = parseInt(euroCountAdd);
@@ -288,12 +288,12 @@ $(".deleteBtn").click(function() {
             euroCountAdd += 4;
             $(".casePerClick").val(euroCountAdd);
             casePerSecJs += 4;
-            $(".deagBtn, .clickerUpgInpt2").val(deagClickerPrice);
+            $(".deagBtn .clickerUpgInpt2").val(deagClickerPrice);
             $(".casePerSec").val(casePerSecJs);
             update();
         switch (deagClicker) {
             case 13:
-                $(".tec9Btn .selltec9").fadeIn();
+                $(".tec9Btn, .sellTec9").fadeIn();
                 break;
             case 15:
                 $(".deagBtn").prop("disabled", true);
@@ -316,7 +316,7 @@ $(".deleteBtn").click(function() {
             euroCountAdd -= 4;
             clickerMultiplier -= 9;
             casePerSecJs -= 4;
-            euroCount += deagClickerPrice;
+            euroCount += deagClickerPrice / 0.50;
             $(".deagBtn .clickerUpgInpt2").val(deagClickerPrice);
             $(".casePerClick").val(euroCountAdd);
             euroCountAdd = parseInt(euroCountAdd);
@@ -367,7 +367,7 @@ $(".deleteBtn").click(function() {
             euroCountAdd -= 5;
             clickerMultiplier -= 12;
             casePerSecJs -= 5;
-            euroCount += tec9ClickerPrice;
+            euroCount += tec9ClickerPrice / 0.50;
             $(".tec9Btn .clickerUpgInpt2").val(tec9ClickerPrice);
             $(".casePerClick").val(euroCountAdd);
             euroCountAdd = parseInt(euroCountAdd);
@@ -418,7 +418,7 @@ $(".deleteBtn").click(function() {
             euroCountAdd -= 6;
             clickerMultiplier -= 15;
             casePerSecJs -= 6;
-            euroCount += fiveClickerPrice;
+            euroCount += fiveClickerPrice / 0.50;
             $(".fiveBtn .clickerUpgInpt2").val(fiveClickerPrice);
             $(".casePerClick").val(euroCountAdd);
             euroCountAdd = parseInt(euroCountAdd);
