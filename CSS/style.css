@@ -1,7 +1,7 @@
 /* GENERAL */
 body
 {
-    background: url("IMGS/background1.png");
+    background: url("IMGS/csgo2.jpg");
     /*font-style:*/
     font-size: 20px;
     color: white;
@@ -23,10 +23,22 @@ div .row
     -ms-user-select: none;
     user-select: none;
 }
+.floatRight
+{
+    float: right;
+}
+.floatLeft
+{
+    float: left;
+}
 h1
 {
     font-size: 30px;
     font-style: bold;
+}
+button
+{
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 /* COOKIE SPOT */
 
@@ -38,16 +50,17 @@ h1
     margin: 14px 0px;
     border: 0px solid black;
     border-radius: 25%;
+    margin-left: 55px;
 }
 #caseSpot h1
 {
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.6);
     text-align: center;
-    width: 260px;
+    width: 390px;
+    height: 42px;
     padding: 2px 0px 2px 0px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 #caseSpot .caseNumberSpot
 {
@@ -92,18 +105,19 @@ h1
 }
 #optionSpot h1
 {
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.6);
     text-align: center;
-    width: 260px;
+    width: 390px;
+    height: 42px;
     padding: 2px 0px 2px 0px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
 }
-#optionSpot button
+#optionSpot .groupBtn
 {
-
+    margin-left: 70px;
 }
+
 /* UPGRADE SPOT */
 #upgradeSpot
 {
@@ -111,19 +125,35 @@ h1
 }
 #upgradeSpot h1
 {
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.6);
     text-align: center;
-    width: 260px;
+    width: 390px;
+    height: 42px;
     padding: 2px 0px 2px 0px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
 }
-#upgradeSpot button
+#upgradeSpot .btnGroup
 {
-    margin-right: 350px;
+    width: 390px;
+}
+#upgradeSpot .sell
+{
+    margin-top: 5px;
+    height: 40px;
+}
+#upgradeSpot .groupBtn
+{
+    margin-left: 40px;
+}
+#upgradeSpot .btnUpg
+{
+    /*margin-right: 350px;*/
     width: 250px;
     text-align: left;
+    height: 40px;
+    margin-top: 5px;
+    position: relative;
 }
 #upgradeSpot .upgIcon
 {
@@ -145,28 +175,4 @@ h1
     background-color: rgba(0, 0, 0, 0.0);
     border: 1px solid rgba(0, 0, 0, 0.0);
     margin-left: 75px;
-}
-#upgradeSpot .uspBtn
-{
-    margin-top: 5px;
-}
-#upgradeSpot .uspBtn .clickerUpgInpt1
-{
-    position: absolute;
-}
-#upgradeSpot .uspBtn .clickerUpgInpt2
-{
-    margin-left: 86px;
-}
-#upgradeSpot .p250Btn
-{
-    margin-top: 5px;
-}
-#upgradeSpot .p250Btn .clickerUpgInpt1
-{
-    position: absolute;
-}
-#upgradeSpot .p250Btn .clickerUpgInpt2
-{
-    margin-left: 86px;
 }
