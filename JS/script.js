@@ -30,7 +30,7 @@ $(document).ready(function() {
         update();
     }
 
-    setInterval(timer, 10);
+    setInterval(timer, 1000);
 
     $(".caseCsgoImg").mouseenter(function() {
         $(this).css("transform", "scale(1.05, 1.05)");
@@ -242,7 +242,7 @@ $(".deleteBtn").click(function() {
             update();
         switch (p250Clicker) {
             case 12:
-                $(".deagBtn .sellDeag").fadeIn();
+                $(".deagBtn, .sellDeag").fadeIn();
                 break;
             case 15:
                 $(".p250Btn").prop("disabled", true);
@@ -288,7 +288,7 @@ $(".deleteBtn").click(function() {
             euroCountAdd += 4;
             $(".casePerClick").val(euroCountAdd);
             casePerSecJs += 4;
-            $(".deagBtn .clickerUpgInpt2").val(deagClickerPrice);
+            $(".deagBtn, .clickerUpgInpt2").val(deagClickerPrice);
             $(".casePerSec").val(casePerSecJs);
             update();
         switch (deagClicker) {
@@ -344,7 +344,7 @@ $(".deleteBtn").click(function() {
             update();
         switch (tec9Clicker) {
             case 14:
-                $(".fiveBtn .sellFive").fadeIn();
+                $(".fiveBtn, .sellFive").fadeIn();
                 break;
             case 15:
                 $(".tec9Btn").prop("disabled", true);
@@ -395,7 +395,7 @@ $(".deleteBtn").click(function() {
             update();
         switch (fiveClicker) {
             case 15:
-                $(".famasBtn .sellFamas").fadeIn();
+                $(".famasBtn, .sellFamas").fadeIn();
                 break;
             case 15:
                 $(".fiveBtn").prop("disabled", true);
