@@ -199,3 +199,8 @@ button
     border: 1px solid rgba(0, 0, 0, 0.0);
     margin-left: 75px;
 }
+#upgradeSpot .moreUpgBtn
+{
+    color: #aaa !important;
+    margin-left: 10px;
+}

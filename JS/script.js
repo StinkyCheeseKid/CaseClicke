@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
     $(".uspBtn,.sellUsp, .p250Btn,.sellP250, .deagBtn,.sellDeag, .tec9Btn,.sellTec9, .fiveBtn,.sellFive").hide()
+    $(".damageBtn, .recoilBtn, .accuracyBtn, .statstrakBtn").hide();
 
     function update () {
         $(".caseNumber").val(euroCount);
@@ -126,7 +127,7 @@ $(".deleteBtn").click(function() {
     var tec9ClickerPrice = 102;
     var fiveClickerPrice = 153;
 
-    $(".glockBtn").click(function() {
+    $(".glockBtn").click(function glock() {
         if (euroCount >= glockClickerPrice) {
             euroCount = euroCount - glockClickerPrice;
             glockClicker += 1;
@@ -139,21 +140,24 @@ $(".deleteBtn").click(function() {
             euroCountAdd = parseInt(euroCountAdd);
             $(".casePerSec").val(casePerSecJs);
             update();
-        switch (glockClicker) {
-            case 10:
-                $(".uspBtn, .sellUsp").fadeIn();
-                break;
-            case 15:
-                $(".glockBtn").prop("disabled", true);
-                break;
-        }
-    }
-        else {
-            $(".clickerUpgInpt2").css("color", "red")
-            setTimeout(function() {
-                $(".clickerUpgInpt2").css("color", "black");
-            },400);
-        }
+            if (casePerSecJs == 315) {
+                $(".damageBtn").fadeIn();
+            }
+            switch (glockClicker) {
+                case 10:
+                    $(".uspBtn, .sellUsp").fadeIn();
+                    break;
+                case 15:
+                    $(".glockBtn").prop("disabled", true);
+                        break;
+                    }
+                }
+                else {
+                    $(".clickerUpgInpt2").css("color", "red")
+                    setTimeout(function() {
+                        $(".clickerUpgInpt2").css("color", "black");
+                    },400);
+                }
     });
 
     $(".sellGlock").click(function() {
@@ -168,6 +172,7 @@ $(".deleteBtn").click(function() {
             $(".casePerClick").val(euroCountAdd);
             euroCountAdd = parseInt(euroCountAdd);
             $(".casePerSec").val(casePerSecJs);
+            $(".glockBtn").prop("disabled", false);
             update();
         }
         else {
@@ -176,19 +181,22 @@ $(".deleteBtn").click(function() {
         }
     });
 
-    $(".uspBtn").click(function() {
+    $(".uspBtn").click(function usp() {
         if (euroCount >= uspClickerPrice) {
             euroCount = euroCount - uspClickerPrice;
             uspClicker += 1;
             uspClickerPrice *= 1.55;
             uspClickerPrice = parseInt(uspClickerPrice);
-            clickerMultiplier += 3;
+            clickerMultiplier += 2;
             euroCountAdd += 2;
             $(".casePerClick").val(euroCountAdd);
             casePerSecJs += 2;
             $(".uspBtn .clickerUpgInpt2").val(uspClickerPrice);
             $(".casePerSec").val(casePerSecJs);
             update();
+            if (casePerSecJs == 315) {
+                $(".damageBtn").fadeIn();
+            }
         switch (uspClicker) {
             case 11:
                 $(".p250Btn, .sellP250").fadeIn();
@@ -196,8 +204,8 @@ $(".deleteBtn").click(function() {
             case 15:
                 $(".uspBtn").prop("disabled", true);
                 break;
+            }
         }
-    }
         else {
             $(".uspBtn .clickerUpgInpt2").css("color", "red")
             setTimeout(function() {
@@ -212,13 +220,14 @@ $(".deleteBtn").click(function() {
             uspClickerPrice /= 1.55;
             uspClickerPrice = parseInt(uspClickerPrice);
             euroCountAdd -= 2;
-            clickerMultiplier -= 3;
+            clickerMultiplier -= 2;
             casePerSecJs -= 2;
             euroCount += uspClickerPrice / 0.50;
             $(".uspBtn .clickerUpgInpt2").val(uspClickerPrice);
             $(".casePerClick").val(euroCountAdd);
             euroCountAdd = parseInt(euroCountAdd);
             $(".casePerSec").val(casePerSecJs);
+            $(".uspBtn").prop("disabled", false);
             update();
         }
         else {
@@ -227,19 +236,22 @@ $(".deleteBtn").click(function() {
         }
     });
 
-    $(".p250Btn").click(function() {
+    $(".p250Btn").click(function p250() {
         if (euroCount >= p250ClickerPrice) {
             euroCount = euroCount - p250ClickerPrice;
             p250Clicker += 1;
             p250ClickerPrice *= 1.60;
             p250ClickerPrice = parseInt(p250ClickerPrice);
-            clickerMultiplier += 6;
+            clickerMultiplier += 3;
             euroCountAdd += 3;
             $(".casePerClick").val(euroCountAdd);
             casePerSecJs += 3;
             $(".p250Btn .clickerUpgInpt2").val(p250ClickerPrice);
             $(".casePerSec").val(casePerSecJs);
             update();
+            if (casePerSecJs == 315) {
+                $(".damageBtn").fadeIn();
+            }
         switch (p250Clicker) {
             case 12:
                 $(".deagBtn, .sellDeag").fadeIn();
@@ -247,8 +259,8 @@ $(".deleteBtn").click(function() {
             case 15:
                 $(".p250Btn").prop("disabled", true);
                 break;
+            }
         }
-    }
         else {
             $(".p250Btn .clickerUpgInpt2").css("color", "red")
             setTimeout(function() {
@@ -263,13 +275,14 @@ $(".deleteBtn").click(function() {
             p250ClickerPrice /= 1.60;
             p250ClickerPrice = parseInt(p250ClickerPrice);
             euroCountAdd -= 3;
-            clickerMultiplier -= 6;
+            clickerMultiplier -= 3;
             casePerSecJs -= 3;
             euroCount += p250ClickerPrice / 0.50;
             $(".p250Btn .clickerUpgInpt2").val(p250ClickerPrice);
             $(".casePerClick").val(euroCountAdd);
             euroCountAdd = parseInt(euroCountAdd);
             $(".casePerSec").val(casePerSecJs);
+            $(".p250Btn").prop("disabled", false);
             update();
         }
         else {
@@ -278,26 +291,29 @@ $(".deleteBtn").click(function() {
         }
     });
 
-    $(".deagBtn").click(function() {
+    $(".deagBtn").click(function deagle() {
         if (euroCount >= deagClickerPrice) {
             euroCount = euroCount - deagClickerPrice;
             deagClicker += 1;
             deagClickerPrice *= 1.65;
             deagClickerPrice = parseInt(deagClickerPrice);
-            clickerMultiplier += 9;
+            clickerMultiplier += 4;
             euroCountAdd += 4;
             $(".casePerClick").val(euroCountAdd);
             casePerSecJs += 4;
             $(".deagBtn .clickerUpgInpt2").val(deagClickerPrice);
             $(".casePerSec").val(casePerSecJs);
             update();
+            if (casePerSecJs == 315) {
+                $(".damageBtn").fadeIn();
+            }
         switch (deagClicker) {
             case 13:
                 $(".tec9Btn, .sellTec9").fadeIn();
                 break;
             case 15:
                 $(".deagBtn").prop("disabled", true);
-                break;
+            break;
             }
         }
         else {
@@ -314,13 +330,14 @@ $(".deleteBtn").click(function() {
             deagClickerPrice /= 1.65;
             deagClickerPrice = parseInt(deagClickerPrice);
             euroCountAdd -= 4;
-            clickerMultiplier -= 9;
+            clickerMultiplier -= 4;
             casePerSecJs -= 4;
             euroCount += deagClickerPrice / 0.50;
             $(".deagBtn .clickerUpgInpt2").val(deagClickerPrice);
             $(".casePerClick").val(euroCountAdd);
             euroCountAdd = parseInt(euroCountAdd);
             $(".casePerSec").val(casePerSecJs);
+            $(".deagBtn").prop("disabled", false);
             update();
         }
         else {
@@ -329,19 +346,22 @@ $(".deleteBtn").click(function() {
         }
     });
 
-    $(".tec9Btn").click(function() {
+    $(".tec9Btn").click(function tec9() {
         if (euroCount >= tec9ClickerPrice) {
             euroCount = euroCount - tec9ClickerPrice;
             tec9Clicker += 1;
             tec9ClickerPrice *= 1.70;
             tec9ClickerPrice = parseInt(tec9ClickerPrice);
-            clickerMultiplier += 12;
+            clickerMultiplier += 5;
             euroCountAdd += 5;
             $(".casePerClick").val(euroCountAdd);
             casePerSecJs += 5;
             $(".tec9Btn .clickerUpgInpt2").val(tec9ClickerPrice);
             $(".casePerSec").val(casePerSecJs);
             update();
+            if (casePerSecJs == 315) {
+                $(".damageBtn").fadeIn();
+            }
         switch (tec9Clicker) {
             case 14:
                 $(".fiveBtn, .sellFive").fadeIn();
@@ -365,13 +385,14 @@ $(".deleteBtn").click(function() {
             tec9ClickerPrice /= 1.70;
             tec9ClickerPrice = parseInt(tec9ClickerPrice);
             euroCountAdd -= 5;
-            clickerMultiplier -= 12;
+            clickerMultiplier -= 5;
             casePerSecJs -= 5;
             euroCount += tec9ClickerPrice / 0.50;
             $(".tec9Btn .clickerUpgInpt2").val(tec9ClickerPrice);
             $(".casePerClick").val(euroCountAdd);
             euroCountAdd = parseInt(euroCountAdd);
             $(".casePerSec").val(casePerSecJs);
+            $(".tec9Btn").prop("disabled", false);
             update();
         }
         else {
@@ -386,48 +407,77 @@ $(".deleteBtn").click(function() {
             fiveClicker += 1;
             fiveClickerPrice *= 1.75;
             fiveClickerPrice = parseInt(fiveClickerPrice);
-            clickerMultiplier += 15;
+            clickerMultiplier += 6;
             euroCountAdd += 6;
             $(".casePerClick").val(euroCountAdd);
             casePerSecJs += 6;
             $(".fiveBtn .clickerUpgInpt2").val(fiveClickerPrice);
             $(".casePerSec").val(casePerSecJs);
             update();
+            if (casePerSecJs == 315) {
+                $(".damageBtn").fadeIn();
+            }
         switch (fiveClicker) {
-            case 15:
+            case 14:
                 $(".famasBtn, .sellFamas").fadeIn();
                 break;
             case 15:
                 $(".fiveBtn").prop("disabled", true);
-                break;
+                    break;
             }
         }
         else {
-            $(".tec9Btn .clickerUpgInpt2").css("color", "red")
+            $(".fiveBtn .clickerUpgInpt2").css("color", "red")
             setTimeout(function() {
-                $(".tec9Btn .clickerUpgInpt2").css("color", "black");
+                $(".fiveBtn .clickerUpgInpt2").css("color", "black");
             },500);
         }
     });
 
-    $(".sellFive").click(function() {
+    $(".sellFive").click(function five() {
         if (fiveClicker > 0) {
             fiveClicker -= 1;
             fiveClickerPrice /= 1.75;
             fiveClickerPrice = parseInt(fiveClickerPrice);
             euroCountAdd -= 6;
-            clickerMultiplier -= 15;
+            clickerMultiplier -= 6;
             casePerSecJs -= 6;
             euroCount += fiveClickerPrice / 0.50;
             $(".fiveBtn .clickerUpgInpt2").val(fiveClickerPrice);
             $(".casePerClick").val(euroCountAdd);
             euroCountAdd = parseInt(euroCountAdd);
             $(".casePerSec").val(casePerSecJs);
+            $(".fiveBtn").prop("disabled", false);
             update();
         }
         else {
             fiveClickerPrice = 153;
             $(".fiveBtn .clickerUpgInpt2").val(fiveClickerPrice);
+        }
+    });
+
+    $(".damageBtn").click(function damagePlus() {
+        if (euroCount >= 500000) {
+            $(".damageBtn").remove();
+            glockClicker *= 2;
+            uspClicker *= 2;
+            p250Clicker *= 2;
+            deagClicker *= 2;
+            tec9Clicker *= 2;
+            fiveClicker *= 2;
+            $(".glockBtn .clickerUpgInpt1").val(glockClicker);
+            $(".uspBtn .clickerUpgInpt1").val(uspClicker);
+            $(".p250Btn .clickerUpgInpt1").val(p250Clicker);
+            $(".deagBtn .clickerUpgInpt1").val(deagClicker);
+            $(".tec9Btn .clickerUpgInpt1").val(tec9Clicker);
+            $(".fiveBtn .clickerUpgInpt1").val(fiveClicker);
+            clickerMultiplier += 30;
+            clickerMultiplier += 45;
+            clickerMultiplier += 60;
+            clickerMultiplier += 75;
+            clickerMultiplier += 90;
+            $(".glockBtn .clickerUpgInpt1").val(clickerMultiplier);
+            $(".casePerSec").val(clickerMultiplier);
         }
     });
 });
