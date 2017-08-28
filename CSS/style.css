@@ -193,11 +193,11 @@ button
 }
 #upgradeSpot .clickerUpgInpt2
 {
-    width: 60px;
+    width: 100px;
     text-align: right;
     background-color: rgba(0, 0, 0, 0.0);
     border: 1px solid rgba(0, 0, 0, 0.0);
-    margin-left: 75px;
+    margin-left: 0px;
 }
 #upgradeSpot .moreUpgBtn
 {
