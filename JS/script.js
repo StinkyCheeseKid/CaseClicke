@@ -1,12 +1,20 @@
 $(document).ready(function() {
+"use strict";
+/*
+=================================================================================================================================
+GAME
+=================================================================================================================================
+*/
 
     $(".uspBtn,.sellUsp, .p250Btn,.sellP250, .deagBtn,.sellDeag, .tec9Btn,.sellTec9, .fiveBtn,.sellFive").hide();
     $(".famasBtn,.sellFamas, .galilBtn,.sellGalil, .m4Btn,.sellM4, .akBtn,.sellAk, .scoutBtn,.sellScout, .awpBtn,.sellAwp").hide();
+    $(".bash").hide();
     //$(".damageBtn, .recoilBtn, .accuracyBtn, .statstrakBtn").hide();
 
     function update () {
         $(".caseNumber").val(euroCount);
         document.title = euroCount +" € - CS:GO Farm";
+        $(".euroTotal").val(achievementExp);
         $(".glockBtn .clickerUpgInpt1").val(glockClicker);
         $(".uspBtn .clickerUpgInpt1").val(uspClicker);
         $(".p250Btn .clickerUpgInpt1").val(p250Clicker);
@@ -24,6 +32,8 @@ $(document).ready(function() {
 
     var euroCount = 0;
     var euroCountAdd = 1;
+    var achievementExp = 0;
+    var achievementCount = 0;
     var glockClicker = 0;
     var clickerMultiplier = 0;
     var uspClicker = 0;
@@ -42,29 +52,25 @@ $(document).ready(function() {
     function timer() {
         euroCount = euroCount + glockClicker;
         euroCount = euroCount + clickerMultiplier;
+        achievementExp = achievementExp + glockClicker;
+        achievementExp = achievementExp + clickerMultiplier;
+        achievements();
+        prestige();
         update();
     }
 
     setInterval(timer, 1000);
 
-    $(".caseCsgoImg").mouseenter(function() {
-        $(this).css("transform", "scale(1.05, 1.05)");
-    });
-
-    $(".caseCsgoImg").mouseleave(function() {
-        $(this).css("transform", "none");
-    });
-
-    $(".caseCsgoImg").hover(function() {
-        $(this).css("cursor", "pointer");
-    });
-
     $(".caseCsgoImg").click(function() {
-        $(this).css("transform", "scale(0.95, 0.95)");
         euroCount = euroCount + euroCountAdd;
+        achievementExp = achievementExp + euroCountAdd;
         $(".caseNumber").val(euroCount);
         euroCount = parseInt(euroCount);
         document.title = euroCount +" € - CS:GO Farm";
+        $(this).css("transform", "scale(0.95, 0.95)");
+        setTimeout(function() {
+            $(this).css("transform", "scale(1.5, 1.5)");
+        },1000);
     });
 
     /* Pour plus tard !
@@ -208,7 +214,7 @@ $(".deleteBtn").click(function() {
             uspClickerPrice *= 1.55;
             uspClickerPrice = parseInt(uspClickerPrice);
             clickerMultiplier += 2;
-            euroCountAdd += 2;
+            euroCountAdd += 1;
             $(".casePerClick").val(euroCountAdd);
             casePerSecJs += 2;
             $(".uspBtn .clickerUpgInpt2").val(uspClickerPrice);
@@ -239,7 +245,7 @@ $(".deleteBtn").click(function() {
             uspClicker -= 1;
             uspClickerPrice /= 1.55;
             uspClickerPrice = parseInt(uspClickerPrice);
-            euroCountAdd -= 2;
+            euroCountAdd -= 1;
             clickerMultiplier -= 2;
             casePerSecJs -= 2;
             euroCount += uspClickerPrice * 0.50;
@@ -263,7 +269,7 @@ $(".deleteBtn").click(function() {
             p250ClickerPrice *= 1.60;
             p250ClickerPrice = parseInt(p250ClickerPrice);
             clickerMultiplier += 3;
-            euroCountAdd += 3;
+            euroCountAdd += 1;
             $(".casePerClick").val(euroCountAdd);
             casePerSecJs += 3;
             $(".p250Btn .clickerUpgInpt2").val(p250ClickerPrice);
@@ -294,7 +300,7 @@ $(".deleteBtn").click(function() {
             p250Clicker -= 1;
             p250ClickerPrice /= 1.60;
             p250ClickerPrice = parseInt(p250ClickerPrice);
-            euroCountAdd -= 3;
+            euroCountAdd -= 1;
             clickerMultiplier -= 3;
             casePerSecJs -= 3;
             euroCount += p250ClickerPrice * 0.50;
@@ -318,7 +324,7 @@ $(".deleteBtn").click(function() {
             deagClickerPrice *= 1.65;
             deagClickerPrice = parseInt(deagClickerPrice);
             clickerMultiplier += 4;
-            euroCountAdd += 4;
+            euroCountAdd += 1;
             $(".casePerClick").val(euroCountAdd);
             casePerSecJs += 4;
             $(".deagBtn .clickerUpgInpt2").val(deagClickerPrice);
@@ -349,7 +355,7 @@ $(".deleteBtn").click(function() {
             deagClicker -= 1;
             deagClickerPrice /= 1.65;
             deagClickerPrice = parseInt(deagClickerPrice);
-            euroCountAdd -= 4;
+            euroCountAdd -= 1;
             clickerMultiplier -= 4;
             casePerSecJs -= 4;
             euroCount += deagClickerPrice * 0.50;
@@ -373,7 +379,7 @@ $(".deleteBtn").click(function() {
             tec9ClickerPrice *= 1.70;
             tec9ClickerPrice = parseInt(tec9ClickerPrice);
             clickerMultiplier += 5;
-            euroCountAdd += 5;
+            euroCountAdd += 1;
             $(".casePerClick").val(euroCountAdd);
             casePerSecJs += 5;
             $(".tec9Btn .clickerUpgInpt2").val(tec9ClickerPrice);
@@ -404,7 +410,7 @@ $(".deleteBtn").click(function() {
             tec9Clicker -= 1;
             tec9ClickerPrice /= 1.70;
             tec9ClickerPrice = parseInt(tec9ClickerPrice);
-            euroCountAdd -= 5;
+            euroCountAdd -= 1;
             clickerMultiplier -= 5;
             casePerSecJs -= 5;
             euroCount += tec9ClickerPrice * 0.50;
@@ -428,7 +434,7 @@ $(".deleteBtn").click(function() {
             fiveClickerPrice *= 1.75;
             fiveClickerPrice = parseInt(fiveClickerPrice);
             clickerMultiplier += 6;
-            euroCountAdd += 6;
+            euroCountAdd += 1;
             $(".casePerClick").val(euroCountAdd);
             casePerSecJs += 6;
             $(".fiveBtn .clickerUpgInpt2").val(fiveClickerPrice);
@@ -459,7 +465,7 @@ $(".deleteBtn").click(function() {
             fiveClicker -= 1;
             fiveClickerPrice /= 1.75;
             fiveClickerPrice = parseInt(fiveClickerPrice);
-            euroCountAdd -= 6;
+            euroCountAdd -= 1;
             clickerMultiplier -= 6;
             casePerSecJs -= 6;
             euroCount += fiveClickerPrice * 0.50;
@@ -483,7 +489,7 @@ $(".deleteBtn").click(function() {
             famasClickerPrice *= 2;
             famasClickerPrice = parseInt(famasClickerPrice);
             clickerMultiplier += 12;
-            euroCountAdd += 12;
+            euroCountAdd += 3;
             $(".casePerClick").val(euroCountAdd);
             casePerSecJs += 12;
             $(".famasBtn .clickerUpgInpt2").val(famasClickerPrice);
@@ -514,7 +520,7 @@ $(".deleteBtn").click(function() {
             famasClicker -= 1;
             famasClickerPrice /= 2;
             famasClickerPrice = parseInt(famasClickerPrice);
-            euroCountAdd -= 12;
+            euroCountAdd -= 3;
             clickerMultiplier -= 12;
             casePerSecJs -= 12;
             euroCount += famasClickerPrice * 0.50;
@@ -538,7 +544,7 @@ $(".deleteBtn").click(function() {
             galilClickerPrice *= 2.05;
             galilClickerPrice = parseInt(galilClickerPrice);
             clickerMultiplier += 14;
-            euroCountAdd += 14;
+            euroCountAdd += 3;
             $(".casePerClick").val(euroCountAdd);
             casePerSecJs += 14;
             $(".galilBtn .clickerUpgInpt2").val(galilClickerPrice);
@@ -569,7 +575,7 @@ $(".deleteBtn").click(function() {
             galilClicker -= 1;
             galilClickerPrice /= 2.05;
             galilClickerPrice = parseInt(galilClickerPrice);
-            euroCountAdd -= 14;
+            euroCountAdd -= 3;
             clickerMultiplier -= 14;
             casePerSecJs -= 14;
             euroCount += galilClickerPrice * 0.50;
@@ -593,7 +599,7 @@ $(".deleteBtn").click(function() {
             m4ClickerPrice *= 2.10;
             m4ClickerPrice = parseInt(m4ClickerPrice);
             clickerMultiplier += 16;
-            euroCountAdd += 16;
+            euroCountAdd += 3;
             $(".casePerClick").val(euroCountAdd);
             casePerSecJs += 16;
             $(".m4Btn .clickerUpgInpt2").val(m4ClickerPrice);
@@ -624,7 +630,7 @@ $(".deleteBtn").click(function() {
             m4Clicker -= 1;
             m4ClickerPrice /= 2.10;
             m4ClickerPrice = parseInt(m4ClickerPrice);
-            euroCountAdd -= 16;
+            euroCountAdd -= 3;
             clickerMultiplier -= 16;
             casePerSecJs -= 16;
             euroCount += m4ClickerPrice * 0.50;
@@ -648,7 +654,7 @@ $(".deleteBtn").click(function() {
             scoutClickerPrice *= 2.15;
             scoutClickerPrice = parseInt(scoutClickerPrice);
             clickerMultiplier += 18;
-            euroCountAdd += 18;
+            euroCountAdd += 3;
             $(".casePerClick").val(euroCountAdd);
             casePerSecJs += 18;
             $(".scoutBtn .clickerUpgInpt2").val(scoutClickerPrice);
@@ -679,7 +685,7 @@ $(".deleteBtn").click(function() {
             scoutClicker -= 1;
             scoutClickerPrice /= 2.15;
             scoutClickerPrice = parseInt(scoutClickerPrice);
-            euroCountAdd -= 18;
+            euroCountAdd -= 3;
             clickerMultiplier -= 18;
             casePerSecJs -= 18;
             euroCount += scoutClickerPrice * 0.50;
@@ -703,7 +709,7 @@ $(".deleteBtn").click(function() {
             akClickerPrice *= 2.20;
             akClickerPrice = parseInt(akClickerPrice);
             clickerMultiplier += 20;
-            euroCountAdd += 20;
+            euroCountAdd += 3;
             $(".casePerClick").val(euroCountAdd);
             casePerSecJs += 20;
             $(".akBtn .clickerUpgInpt2").val(akClickerPrice);
@@ -734,7 +740,7 @@ $(".deleteBtn").click(function() {
             akClicker -= 1;
             akClickerPrice /= 2.20;
             akClickerPrice = parseInt(akClickerPrice);
-            euroCountAdd -= 20;
+            euroCountAdd -= 3;
             clickerMultiplier -= 20;
             casePerSecJs -= 20;
             euroCount += akClickerPrice * 0.50;
@@ -758,7 +764,7 @@ $(".deleteBtn").click(function() {
             awpClickerPrice *= 2.25;
             awpClickerPrice = parseInt(awpClickerPrice);
             clickerMultiplier += 22;
-            euroCountAdd += 22;
+            euroCountAdd += 3;
             $(".casePerClick").val(euroCountAdd);
             casePerSecJs += 22;
             $(".awpBtn .clickerUpgInpt2").val(awpClickerPrice);
@@ -789,7 +795,7 @@ $(".deleteBtn").click(function() {
             awpClicker -= 1;
             awpClickerPrice /= 2.25;
             awpClickerPrice = parseInt(awpClickerPrice);
-            euroCountAdd -= 22;
+            euroCountAdd -= 3;
             clickerMultiplier -= 22;
             casePerSecJs -= 22;
             euroCount += awpClickerPrice * 0.50;
@@ -831,4 +837,29 @@ $(".deleteBtn").click(function() {
             $(".damageBtn").remove();
         }
     });*/
+/*
+=================================================================================================================================
+ACHIEVEMENTS
+=================================================================================================================================
+*/
+
+            function achievements() {
+                if (achievementExp >= 1000 && achievementCount == 0) {
+                    $(".noBash").fadeOut(1500);
+                    setInterval(function () {
+                        $(".bash").fadeIn(3000);
+                    },1500);
+                    $("#progress-bar").css("width", "5%");
+                    $("#progress-bar").attr("aria-valuenow", "5%");
+                    $("#progress-bar .progressBarText").text("25/500 Exp");
+                    achievementCount += 1;
+                }
+        }
+
+        function prestige() {
+            if(achievementExp >= 1000000) {
+
+            }
+        }
+
 });

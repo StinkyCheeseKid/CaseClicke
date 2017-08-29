@@ -48,7 +48,19 @@ button
 {
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
-.modal-content
+.clickerUpgInpt1:hover, .clickerUpgInpt2:hover
+{
+    cursor: pointer;
+}
+.modalLeft
+{
+    text-align: left;
+}
+.modalRight
+{
+    text-align: right;
+}
+.titleModals .modal-content
 {
     background: url("IMGS/popUpBackground3.jpg");
     /*z-index: 1;
@@ -62,6 +74,10 @@ button
     height: 750px;
     margin-left: 315px;
     margin-top: 85px;*/
+}
+#myModalAchivementsPop1 .modal-content
+{
+    background: url("IMGS/achievementBackground.jpg")
 }
 /* FOOTER */
 
@@ -180,12 +196,12 @@ footer h5
     width: 180px;
     text-align: right;
 }
-/* OPTION SPOT */
+/* achievement SPOT */
 
-#optionSpot
+#achievementSpot
 {
 }
-#optionSpot h1
+#achievementSpot h1
 {
     border: 1px solid rgba(0, 0, 0, 0.4);
     box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.6);
@@ -195,11 +211,85 @@ footer h5
     padding: 2px 0px 2px 0px;
     background-color: rgba(0, 0, 0, 0.5);
 }
-#optionSpot .groupBtn
-{
-    margin-left: 70px;
+.iconAchiev {
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  background: url("IMGS/achievementBackground.jpg");
+  border-radius: 5px;
 }
-
+.iconAchievNo {
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  background: url("IMGS/achievementBackground.jpg");
+  filter: grayscale(75%);
+  border-radius: 5px;
+}
+.iconAchiev:hover, .iconAchievNo:hover
+{
+    cursor: pointer;
+}
+#achievementSpot .achievIcon
+{
+    height: 40px !important;
+    width: 40px !important;
+}
+#achievementSpot .progressBar
+{
+    background: url("IMGS/progressBarImg2.jpg")no-repeat;
+}
+.progress {
+    position: relative;
+    margin-top: 5px;
+    border-radius: 10px !important;
+}
+.progress .progressBarText {
+    position: absolute;
+    display: block;
+    width: 100%;
+    color: black;
+}
+.bash-tooltip + .tooltip > .tooltip-inner
+{
+    /* à modifier si envie */
+    /*background: url(""); */
+}
+.bash-tooltip + .tooltip > .tooltip-arrow
+{
+    border-bottom-color:#f00;
+}
+.euroTotal
+{
+    display: block;
+    width: 100%;
+    border: 0px solid black;
+    text-align: center;
+    color: #1E90FF;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.0);
+}
+.yourLevel, .yourTotal
+{
+    padding: 3px 0px 3px 0px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background: url("IMGS/achievementBackground.jpg");
+}
+.divider
+{
+    width: 100%;
+    height: 2px;
+    background: #808080;
+    margin: 0 auto;
+}
 /* UPGRADE SPOT */
 #upgradeSpot
 {
