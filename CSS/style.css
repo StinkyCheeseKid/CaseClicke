@@ -256,12 +256,12 @@ footer h5
     width: 100%;
     color: black;
 }
-.bash-tooltip + .tooltip > .tooltip-inner
+.mod-tooltip + .tooltip > .tooltip-inner
 {
     /* à modifier si envie */
     /*background: url(""); */
 }
-.bash-tooltip + .tooltip > .tooltip-arrow
+.mod-tooltip + .tooltip > .tooltip-arrow
 {
     border-bottom-color:#f00;
 }
@@ -275,7 +275,7 @@ footer h5
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.0);
 }
-.yourLevel, .yourTotal
+.yourLevel, .yourTotal, .yourAchievements
 {
     padding: 3px 0px 3px 0px;
     text-align: center;

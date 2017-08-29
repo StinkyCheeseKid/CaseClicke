@@ -8,13 +8,13 @@ GAME
 
     $(".uspBtn,.sellUsp, .p250Btn,.sellP250, .deagBtn,.sellDeag, .tec9Btn,.sellTec9, .fiveBtn,.sellFive").hide();
     $(".famasBtn,.sellFamas, .galilBtn,.sellGalil, .m4Btn,.sellM4, .akBtn,.sellAk, .scoutBtn,.sellScout, .awpBtn,.sellAwp").hide();
-    $(".bash").hide();
+    $(".bash, .bish, .bosh").hide();
     //$(".damageBtn, .recoilBtn, .accuracyBtn, .statstrakBtn").hide();
 
     function update () {
         $(".caseNumber").val(euroCount);
         document.title = euroCount +" € - CS:GO Farm";
-        $(".euroTotal").val(achievementExp);
+        $(".euroTotal").val(totalEuro);
         $(".glockBtn .clickerUpgInpt1").val(glockClicker);
         $(".uspBtn .clickerUpgInpt1").val(uspClicker);
         $(".p250Btn .clickerUpgInpt1").val(p250Clicker);
@@ -32,8 +32,8 @@ GAME
 
     var euroCount = 0;
     var euroCountAdd = 1;
+    var totalEuro = 0;
     var achievementExp = 0;
-    var achievementCount = 0;
     var glockClicker = 0;
     var clickerMultiplier = 0;
     var uspClicker = 0;
@@ -52,8 +52,8 @@ GAME
     function timer() {
         euroCount = euroCount + glockClicker;
         euroCount = euroCount + clickerMultiplier;
-        achievementExp = achievementExp + glockClicker;
-        achievementExp = achievementExp + clickerMultiplier;
+        totalEuro = totalEuro + glockClicker;
+        totalEuro = totalEuro + clickerMultiplier;
         achievements();
         prestige();
         update();
@@ -63,7 +63,7 @@ GAME
 
     $(".caseCsgoImg").click(function() {
         euroCount = euroCount + euroCountAdd;
-        achievementExp = achievementExp + euroCountAdd;
+        totalEuro = totalEuro + euroCountAdd;
         $(".caseNumber").val(euroCount);
         euroCount = parseInt(euroCount);
         document.title = euroCount +" € - CS:GO Farm";
@@ -844,7 +844,7 @@ ACHIEVEMENTS
 */
 
             function achievements() {
-                if (achievementExp >= 1000 && achievementCount == 0) {
+                if (totalEuro >= 1000 && achievementExp == 0) {
                     $(".noBash").fadeOut(1500);
                     setInterval(function () {
                         $(".bash").fadeIn(3000);
@@ -852,13 +852,34 @@ ACHIEVEMENTS
                     $("#progress-bar").css("width", "5%");
                     $("#progress-bar").attr("aria-valuenow", "5%");
                     $("#progress-bar .progressBarText").text("25/500 Exp");
-                    achievementCount += 1;
+                    achievementExp += 25;
+                }
+                else if (totalEuro >= 10000 && achievementExp == 25) {
+                    $(".noBish").fadeOut(1500);
+                    setInterval(function () {
+                        $(".bish").fadeIn(3000);
+                    },1500);
+                    $("#progress-bar").css("width", "10%");
+                    $("#progress-bar").attr("aria-valuenow", "10%");
+                    $("#progress-bar .progressBarText").text("50/500 Exp");
+                    achievementExp += 25;
+                }
+                else if (totalEuro >= 100000 && achievementExp == 50) {
+                    $(".noBosh").fadeOut(1500);
+                    setInterval(function () {
+                        $(".bosh").fadeIn(3000);
+                    },1500);
+                    $("#progress-bar").css("width", "15%");
+                    $("#progress-bar").attr("aria-valuenow", "15%");
+                    $("#progress-bar .progressBarText").text("75/500 Exp");
+                    achievementExp += 25;
                 }
         }
 
         function prestige() {
-            if(achievementExp >= 1000000) {
-
+            if(achievementExp == 500) {
+                $("#progress-bar .progressBarText").text("0/750 Exp");
+                $(".yourLevel").text("Level 2");
             }
         }
 
