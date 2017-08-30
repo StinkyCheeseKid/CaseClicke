@@ -1,7 +1,7 @@
 /* GENERAL */
 body
 {
-    background: url("IMGS/blackBackground.jpg");
+    background: url("IMGS/progressBarImg3.jpg");
     /*font-style:*/
     font-size: 20px;
     color: white;
@@ -14,7 +14,8 @@ div .row
 {
     margin-top: 14px;
 }
-.noSelect {
+.noSelect
+{
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -webkit-user-drag: none;
@@ -22,6 +23,14 @@ div .row
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }
 .floatRight
 {
@@ -78,6 +87,9 @@ button
 #myModalAchivementsPop1 .modal-content
 {
     background: url("IMGS/achievementBackground.jpg")
+}
+::-webkit-scrollbar {
+    width: 0px;
 }
 /* FOOTER */
 
@@ -142,14 +154,32 @@ footer h5
 
 #caseSpot
 {
+    height: 821px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-3dlight-color:gold;
+    scrollbar-arrow-color:blue;
+    scrollbar-base-color:;
+    scrollbar-darkshadow-color:blue;
+    scrollbar-face-color:;
+    scrollbar-highlight-color:;
+    scrollbar-shadow-color:
 }
 #caseSpot .caseCsgoImg
 {
     margin: 14px 0px;
     border: 0px solid black;
     border-radius: 25%;
-    margin-left: 55px;
+    margin-left: 50px;
 }
+/*.glowingCircle
+{
+    z-index: 1;
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+}*/
 #caseSpot h1
 {
     border: 1px solid rgba(0, 0, 0, 0.4);
@@ -160,46 +190,65 @@ footer h5
     padding: 2px 0px 2px 0px;
     background-color: rgba(0, 0, 0, 0.5);
 }
-#caseSpot .caseNumberSpot
+#caseSpot .caseNumberSpot, .casePerSecSpot, .casePerClickSpot
 {
     background-color: rgba(0, 0, 0, 0.0);
     border: 1px solid rgba(0, 0, 0, 0.0);
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+#caseSpot .yourBalance, .yourBalanceSec, .yourBalanceClick
+{
+    background: url("IMGS/achievementBackground.jpg");
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 4px 0px 4px 0px;
+    text-align: center;
+    width: 100%;
 }
 #caseSpot .caseNumber
 {
     background-color: rgba(0, 0, 0, 0.0);
     border: 1px solid rgba(0, 0, 0, 0.0);
-    width: 180px;
-    text-align: right;
+    width: 350px;
+    text-align: center;
+    font-weight: bold;
+    color: black;
 }
-#caseSpot .casePerSecSpot
+/*#caseSpot .casePerSecSpot
 {
     background-color: rgba(0, 0, 0, 0.0);
     border: 1px solid rgba(0, 0, 0, 0.0);
-}
+}*/
 #caseSpot .casePerSec
 {
     background-color: rgba(0, 0, 0, 0.0);
     border: 1px solid rgba(0, 0, 0, 0.0);
     width: 180px;
-    text-align: right;
+    text-align: center;
+    color: black;
 }
-#caseSpot .casePerClickSpot
+/*#caseSpot .casePerClickSpot
 {
     background-color: rgba(0, 0, 0, 0.0);
     border: 1px solid rgba(0, 0, 0, 0.0);
-}
+}*/
 #caseSpot .casePerClick
 {
     background-color: rgba(0, 0, 0, 0.0);
     border: 1px solid rgba(0, 0, 0, 0.0);
     width: 180px;
-    text-align: right;
+    text-align: center;
+    color: black;
 }
 /* achievement SPOT */
 
 #achievementSpot
 {
+    height: 821px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 #achievementSpot h1
 {
@@ -213,8 +262,8 @@ footer h5
 }
 .iconAchiev {
   float: left;
-  width: 40px;
-  height: 40px;
+  width: 62px;
+  height: 62px;
   margin: 5px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
@@ -223,13 +272,13 @@ footer h5
 }
 .iconAchievNo {
   float: left;
-  width: 40px;
-  height: 40px;
+  width: 62px;
+  height: 62px;
   margin: 5px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
   background: url("IMGS/achievementBackground.jpg");
-  filter: grayscale(75%);
+  filter: grayscale(100%);
   border-radius: 5px;
 }
 .iconAchiev:hover, .iconAchievNo:hover
@@ -238,8 +287,8 @@ footer h5
 }
 #achievementSpot .achievIcon
 {
-    height: 40px !important;
-    width: 40px !important;
+    height: 62px !important;
+    width: 62px !important;
 }
 #achievementSpot .progressBar
 {
@@ -265,17 +314,17 @@ footer h5
 {
     border-bottom-color:#f00;
 }
-.euroTotal
+.euroTotal, .clickTotal
 {
     display: block;
     width: 100%;
     border: 0px solid black;
     text-align: center;
-    color: #1E90FF;
+    color: black;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.0);
 }
-.yourLevel, .yourTotal, .yourAchievements
+.yourLevel, .yourTotal, .yourAchievements, .yourClicks
 {
     padding: 3px 0px 3px 0px;
     text-align: center;
@@ -294,6 +343,9 @@ footer h5
 #upgradeSpot
 {
     text-align: center;
+    height: 821px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 #upgradeSpot h1
 {
