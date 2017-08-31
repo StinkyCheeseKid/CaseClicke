@@ -10,6 +10,7 @@ body
 {
     height: auto;
     z-index: 1;
+    text-align: center;
 }
 .iCenter
 {
@@ -162,7 +163,7 @@ footer h5
 .randomPopBoost
 {
     position: absolute;
-    height: 40px !important;
+    height: 20px !important;
     width: 40px !important;
 }
 /* COOKIE SPOT */
@@ -185,7 +186,6 @@ footer h5
     margin: 14px 0px;
     border: 0px solid black;
     border-radius: 25%;
-    margin-left: 50px;
     cursor: pointer;
     transition: all .2s ease-in-out;
 }
@@ -201,7 +201,7 @@ footer h5
 {
     color: white;
     position: absolute;
-    margin-left: 160px;
+    margin-left: 290px;
     top: 340px;
     z-index: 1;
     cursor: pointer;
@@ -210,7 +210,7 @@ footer h5
 {
     color: white;
     position: absolute;
-    margin-left: 160px;
+    margin-left: 290px;
     top: 340px;
     z-index: 1;
     cursor: pointer;
@@ -228,7 +228,7 @@ footer h5
     border: 1px solid rgba(0, 0, 0, 0.4);
     box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.6);
     text-align: center;
-    width: 390px;
+    width: 100%;
     height: 42px;
     padding: 2px 0px 2px 0px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -254,10 +254,10 @@ footer h5
 {
     background-color: rgba(0, 0, 0, 0.0);
     border: 1px solid rgba(0, 0, 0, 0.0);
-    width: 350px;
+    width: 100%;
     text-align: center;
     font-weight: bold;
-    color: black;
+    color: white;
 }
 /*#caseSpot .casePerSecSpot
 {
@@ -268,9 +268,9 @@ footer h5
 {
     background-color: rgba(0, 0, 0, 0.0);
     border: 1px solid rgba(0, 0, 0, 0.0);
-    width: 180px;
+    width: 100%;
     text-align: center;
-    color: black;
+    color: white;
 }
 /*#caseSpot .casePerClickSpot
 {
@@ -288,7 +288,7 @@ footer h5
 #caseSpot .adSpot
 {
     border: 1px solid rgba(0, 0, 0, 0.3);
-    height: 900px;
+    height: 250px;
 }
 
 /* achievement SPOT */
@@ -304,7 +304,7 @@ footer h5
     border: 1px solid rgba(0, 0, 0, 0.4);
     box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.6);
     text-align: center;
-    width: 390px;
+    width: 100%;
     height: 42px;
     padding: 2px 0px 2px 0px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -369,7 +369,7 @@ footer h5
     width: 100%;
     border: 0px solid black;
     text-align: center;
-    color: black;
+    color: white;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.0);
 }
@@ -401,7 +401,7 @@ footer h5
     border: 1px solid rgba(0, 0, 0, 0.4);
     box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.6);
     text-align: center;
-    width: 390px;
+    width: 100%;
     height: 42px;
     padding: 2px 0px 2px 0px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -409,12 +409,10 @@ footer h5
 #upgradeSpot .btnUpgs
 {
     width: 100%;
-    padding-left: 40px;
-    float: left;
 }
 #upgradeSpot .btnGroup
 {
-    width: 390px;
+    width: 355px;
 }
 #upgradeSpot .sell
 {
@@ -428,7 +426,7 @@ footer h5
 #upgradeSpot .btnUpg
 {
     /*margin-right: 350px;*/
-    width: 250px;
+    width: 305px;
     text-align: left;
     height: 40px;
     margin-top: 5px;
@@ -449,7 +447,7 @@ footer h5
 }
 #upgradeSpot .clickerUpgInpt2
 {
-    width: 100px;
+    width: 120px;
     text-align: right;
     background-color: rgba(0, 0, 0, 0.0);
     border: 1px solid rgba(0, 0, 0, 0.0);
