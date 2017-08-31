@@ -6,6 +6,11 @@ body
     font-size: 20px;
     color: white;
 }
+#org_div1
+{
+    height: auto;
+    z-index: 1;
+}
 .iCenter
 {
     margin: auto;
@@ -23,6 +28,10 @@ div .row
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+.noCursor
+{
+    cursor: default;
 }
 @-webkit-keyframes rotate {
   from {
@@ -157,13 +166,13 @@ footer h5
     height: 821px;
     overflow-y: auto;
     overflow-x: hidden;
-    scrollbar-3dlight-color:gold;
+    /*scrollbar-3dlight-color:gold;
     scrollbar-arrow-color:blue;
     scrollbar-base-color:;
     scrollbar-darkshadow-color:blue;
     scrollbar-face-color:;
     scrollbar-highlight-color:;
-    scrollbar-shadow-color:
+    scrollbar-shadow-color:*/
 }
 #caseSpot .caseCsgoImg
 {
@@ -171,6 +180,34 @@ footer h5
     border: 0px solid black;
     border-radius: 25%;
     margin-left: 50px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+#caseSpot .caseCsgoImg:hover
+{
+    transform: scale(1.05);
+}
+#caseSpot .caseCsgoImg:active
+{
+    transform: scale(0.95);
+}
+#caseSpot .fadingEuroOne, .fadingEuroTwo, .fadingEuroThree, .fadingEuroFour, .fadingEuroFive, .fadingEuroSix, .fadingEuroSeven
+{
+    color: white;
+    position: absolute;
+    margin-left: 160px;
+    top: 340px;
+    z-index: 1;
+    cursor: pointer;
+}
+#caseSpot .fadingEuroEight, .fadingEuroNine, .fadingEuroTen, .fadingEuroOneOne, .fadingEuroOneTwo, .fadingEuroOneThree, .fadingEuroOneFour
+{
+    color: white;
+    position: absolute;
+    margin-left: 160px;
+    top: 340px;
+    z-index: 1;
+    cursor: pointer;
 }
 /*.glowingCircle
 {
@@ -242,6 +279,12 @@ footer h5
     text-align: center;
     color: black;
 }
+#caseSpot .adSpot
+{
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    height: 900px;
+}
+
 /* achievement SPOT */
 
 #achievementSpot
@@ -357,6 +400,11 @@ footer h5
     padding: 2px 0px 2px 0px;
     background-color: rgba(0, 0, 0, 0.5);
 }
+#upgradeSpot .btnUpgs
+{
+    width: 100%;
+    padding-left: 40px;
+}
 #upgradeSpot .btnGroup
 {
     width: 390px;
@@ -368,7 +416,7 @@ footer h5
 }
 #upgradeSpot .groupBtn
 {
-    margin-left: 40px;
+    margin-left: 0px;
 }
 #upgradeSpot .btnUpg
 {

@@ -1,16 +1,29 @@
 $(document).ready(function() {
 
-    $(".caseCsgoImg").mouseenter(function() {
-        $(this).css("transform", "scale(1.05, 1.05)");
+    $(".fadingEuro").hide();
+
+    $(".caseCsgoImg, .fadingEuro").click(function() {
+        if ($(this).css("transform") == "scale(0.95)") {
+            $(this).css("transform", "scale(1.0)");
+        }
     });
 
-    $(".caseCsgoImg").mouseleave(function() {
-        $(this).css("transform", "none");
-    });
+  (function($) {
+  $.fn.nodoubletapzoom = function() {
+      $(this).bind('touchstart', function preventZoom(e) {
+        var t2 = e.timeStamp
+          , t1 = $(this).data('lastTouch') || t2
+          , dt = t2 - t1
+          , fingers = e.originalEvent.touches.length;
+        $(this).data('lastTouch', t2);
+        if (!dt || dt > 500 || fingers > 1) return; // not double-tap
 
-    $(".caseCsgoImg").hover(function() {
-        $(this).css("cursor", "pointer");
-    });
+        e.preventDefault(); // double tap - prevent the zoom
+        // also synthesize click events we just swallowed up
+        $(this).trigger('click').trigger('click');
+      });
+  };
+})
 
     $("[data-toggle='tooltip']").tooltip();
 });

@@ -54,6 +54,7 @@ GAME
     var akClicker = 0;
     var awpClicker = 0;
     var casePerSecJs = 0;
+    var point = 1;
 
     function timer() {
         euroCount = euroCount + glockClicker;
@@ -66,17 +67,243 @@ GAME
 
     setInterval(timer, 1000);
 
-    $(".caseCsgoImg").click(function() {
+    $(".caseCsgoImg, .fadingEuro").click(function() {
         euroCount = euroCount + euroCountAdd;
         $(".caseNumber").val(euroCount);
         euroCount = parseInt(euroCount);
         totalEuro = totalEuro + euroCountAdd;
         clickCount += 1;
         document.title = euroCount +" € - CS:GO Farm";
-        $(this).css("transform", "scale(0.95, 0.95)");
-        setTimeout(function() {
-            $(this).css("transform", "scale(1.5, 1.5)");
-        },1000);
+        fadingAnim();
+        function fadingAnim() {
+            switch (point) {
+                case 1:
+                    point += 1;
+                    $(".fadingEuroOne").show();
+                    $(".fadingEuroOne").html("+"+ euroCountAdd);
+                    $(".fadingEuroOne").css("opacity", 1).animate({
+                        top: "230px",
+                        opacity:0,
+                        }, {
+                            duration: 1000,
+                            complete: function () {
+                                $(".fadingEuroOne").hide();
+                                $(this).css("top", "340px");
+                            }
+                    });
+                    console.log(point);
+                    break;
+
+                    case 2:
+                        point += 1;
+                        $(".fadingEuroTwo").show();
+                        $(".fadingEuroTwo").html("+"+ euroCountAdd);
+                        $(".fadingEuroTwo").css("opacity", 1).animate({
+                            top: "230px",
+                            opacity:0,
+                            }, {
+                                duration: 1000,
+                                complete: function () {
+                                    $(".fadingEuroTwo").hide();
+                                    $(this).css("top", "340px");
+                                }
+                        });
+                        console.log(point);
+                        break;
+
+                        case 3:
+                        point += 1;
+                        $(".fadingEuroThree").show();
+                        $(".fadingEuroThree").html("+"+ euroCountAdd);
+                        $(".fadingEuroThree").css("opacity", 1).animate({
+                            top: "230px",
+                            opacity:0,
+                            }, {
+                                duration: 1000,
+                                complete: function () {
+                                    $(".fadingEuroThree").hide();
+                                    $(this).css("top", "340px");
+                                }
+                        });
+                        break;
+
+                        case 4:
+                        point += 1;
+                        $(".fadingEuroFour").show();
+                        $(".fadingEuroFour").html("+"+ euroCountAdd);
+                        $(".fadingEuroFour").css("opacity", 1).animate({
+                            top: "230px",
+                            opacity:0,
+                            }, {
+                                duration: 1000,
+                                complete: function () {
+                                    $(".fadingEuroFour").hide();
+                                    $(this).css("top", "340px");
+                                }
+                        });
+                        break;
+
+                        case 5:
+                            point += 1;
+                            $(".fadingEuroFive").show();
+                            $(".fadingEuroFive").html("+"+ euroCountAdd);
+                            $(".fadingEuroFive").css("opacity", 1).animate({
+                                top: "230px",
+                                opacity:0,
+                                }, {
+                                    duration: 1000,
+                                    complete: function () {
+                                        $(".fadingEuroFive").hide();
+                                        $(this).css("top", "340px");
+                                    }
+                            });
+                            break;
+
+                            case 6:
+                                point += 1;
+                                $(".fadingEuroSix").show();
+                                $(".fadingEuroSix").html("+"+ euroCountAdd);
+                                $(".fadingEuroSix").css("opacity", 1).animate({
+                                    top: "230px",
+                                    opacity:0,
+                                    }, {
+                                        duration: 1000,
+                                        complete: function () {
+                                            $(".fadingEuroSix").hide();
+                                            $(this).css("top", "340px");
+                                        }
+                                });
+                                break;
+
+                                case 7:
+                                    point += 1;
+                                    $(".fadingEuroSeven").show();
+                                    $(".fadingEuroSeven").html("+"+ euroCountAdd);
+                                    $(".fadingEuroSeven").css("opacity", 1).animate({
+                                        top: "230px",
+                                        opacity:0,
+                                        }, {
+                                            duration: 1000,
+                                            complete: function () {
+                                                $(".fadingEuroSeven").hide();
+                                                $(this).css("top", "340px");
+                                            }
+                                    });
+                                    break;
+
+                                    case 8:
+                                        point += 1;
+                                        $(".fadingEuroEight").show();
+                                        $(".fadingEuroEight").html("+"+ euroCountAdd);
+                                        $(".fadingEuroEight").css("opacity", 1).animate({
+                                            top: "230px",
+                                            opacity:0,
+                                            }, {
+                                                duration: 1000,
+                                                complete: function () {
+                                                    $(".fadingEuroEight").hide();
+                                                    $(this).css("top", "340px");
+                                                }
+                                        });
+                                        break;
+
+                                        case 9:
+                                            point += 1;
+                                            $(".fadingEuroNine").show();
+                                            $(".fadingEuroNine").html("+"+ euroCountAdd);
+                                            $(".fadingEuroNine").css("opacity", 1).animate({
+                                                top: "230px",
+                                                opacity:0,
+                                                }, {
+                                                    duration: 1000,
+                                                    complete: function () {
+                                                        $(".fadingEuroNine").hide();
+                                                        $(this).css("top", "340px");
+                                                    }
+                                            });
+                                            break;
+
+                                            case 10:
+                                                point += 1;
+                                                $(".fadingEuroTen").show();
+                                                $(".fadingEuroTen").html("+"+ euroCountAdd);
+                                                $(".fadingEuroTen").css("opacity", 1).animate({
+                                                    top: "230px",
+                                                    opacity:0,
+                                                    }, {
+                                                        duration: 1000,
+                                                        complete: function () {
+                                                            $(".fadingEuroTen").hide();
+                                                            $(this).css("top", "340px");
+                                                        }
+                                                });
+                                                break;
+
+                                                case 11:
+                                                    point += 1;
+                                                    $(".fadingEuroOneOne").show();
+                                                    $(".fadingEuroOneOne").html("+"+ euroCountAdd);
+                                                    $(".fadingEuroOneOne").css("opacity", 1).animate({
+                                                        top: "230px",
+                                                        opacity:0,
+                                                        }, {
+                                                            duration: 1000,
+                                                            complete: function () {
+                                                                $(".fadingEuroOneOne").hide();
+                                                                $(this).css("top", "340px");
+                                                            }
+                                                    });
+                                                    break;
+
+                                                    case 12:
+                                                        point += 1;
+                                                        $(".fadingEuroOneTwo").show();
+                                                        $(".fadingEuroOneTwo").html("+"+ euroCountAdd);
+                                                        $(".fadingEuroOneTwo").css("opacity", 1).animate({
+                                                            top: "230px",
+                                                            opacity:0,
+                                                            }, {
+                                                                duration: 1000,
+                                                                complete: function () {
+                                                                    $(".fadingEuroOneTwo").hide();
+                                                                    $(this).css("top", "340px");
+                                                                }
+                                                        });
+                                                        break;
+
+                                                        case 13:
+                                                            point += 1;
+                                                            $(".fadingEuroOneThree").show();
+                                                            $(".fadingEuroOneThree").html("+"+ euroCountAdd);
+                                                            $(".fadingEuroOneThree").css("opacity", 1).animate({
+                                                                top: "230px",
+                                                                opacity:0,
+                                                                }, {
+                                                                    duration: 1000,
+                                                                    complete: function () {
+                                                                        $(".fadingEuroOneThree").hide();
+                                                                        $(this).css("top", "340px");
+                                                                    }
+                                                            });
+                                                            break;
+
+                                                            case 14:
+                                                                point = 1;
+                                                                $(".fadingEuroOneFour").show();
+                                                                $(".fadingEuroOneFour").html("+"+ euroCountAdd);
+                                                                $(".fadingEuroOneFour").css("opacity", 1).animate({
+                                                                    top: "230px",
+                                                                    opacity:0,
+                                                                    }, {
+                                                                        duration: 1000,
+                                                                        complete: function () {
+                                                                            $(".fadingEuroOneFour").hide();
+                                                                            $(this).css("top", "340px");
+                                                                        }
+                                                                });
+                                                                break;
+            }
+            }
     });
 
     /* Pour plus tard !
