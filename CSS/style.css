@@ -159,6 +159,12 @@ footer h5
     color: #fff;
     font-weight: normal;
 }*/
+.randomPopBoost
+{
+    position: absolute;
+    height: 40px !important;
+    width: 40px !important;
+}
 /* COOKIE SPOT */
 
 #caseSpot
@@ -404,6 +410,7 @@ footer h5
 {
     width: 100%;
     padding-left: 40px;
+    float: left;
 }
 #upgradeSpot .btnGroup
 {

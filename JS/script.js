@@ -10,6 +10,7 @@ GAME
     $(".famasBtn,.sellFamas, .galilBtn,.sellGalil, .m4Btn,.sellM4, .akBtn,.sellAk, .scoutBtn,.sellScout, .awpBtn,.sellAwp").hide();
     $(".bash, .bish, .bosh, .drug, .rekt, .skull").hide();
     $(".csgo, .csgoBlue, .csgoGreen, .csgoRed, .flick").hide();
+    $(".randomPopBoost").hide();
     //$(".damageBtn, .recoilBtn, .accuracyBtn, .statstrakBtn").hide();
 
     function update () {
@@ -41,6 +42,7 @@ GAME
     var clickCount= 0;
     var clickCountJs = 1;
     var glockClicker = 0;
+    var glockClickerAdd = 0;
     var clickerMultiplier = 0;
     var uspClicker = 0;
     var p250Clicker = 0;
@@ -57,7 +59,7 @@ GAME
     var point = 1;
 
     function timer() {
-        euroCount = euroCount + glockClicker;
+        euroCount = euroCount + glockClickerAdd;
         euroCount = euroCount + clickerMultiplier;
         totalEuro = totalEuro + glockClicker;
         totalEuro = totalEuro + clickerMultiplier;
@@ -390,6 +392,7 @@ $(".deleteBtn").click(function() {
         if (euroCount >= glockClickerPrice) {
             euroCount = euroCount - glockClickerPrice;
             glockClicker += 1;
+            glockClickerAdd += 1;
             glockClickerPrice *= 1.50;
             glockClickerPrice = parseInt(glockClickerPrice);
             euroCountAdd += 1;
@@ -422,6 +425,7 @@ $(".deleteBtn").click(function() {
     $(".sellGlock").click(function() {
         if (glockClicker > 0) {
             glockClicker -= 1;
+            glockClickerAdd -= 1;
             glockClickerPrice /= 1.50;
             glockClickerPrice = parseInt(glockClickerPrice);
             euroCountAdd -= 1;
@@ -1251,5 +1255,42 @@ ACHIEVEMENTS
                 levelCount += 1
             }
         }
+/*
+=================================================================================================================================
+RANDOMS
+=================================================================================================================================
+*/
 
+    function placeImage(){
+            $(".randomPopBoost").show();
+            var popImgBoost = $(".randomPopBoost");
+            $("body").append(popImgBoost);
+            popImgBoost.css('left', Math.floor(Math.random()*(1080 - popImgBoost.width())));
+            popImgBoost.css('top', Math.floor(Math.random()*(720 - popImgBoost.height())));
+            $(".randomPopBoost").fadeOut(20000)
+    }
+
+        $(".randomPopBoost").click(function () {
+            $(this).hide();
+            euroCountAdd *= 2;
+            glockClickerAdd *= 2;
+            clickerMultiplier *= 2;
+            $(".casePerClick").val(euroCountAdd);
+            euroCountAdd = parseInt(euroCountAdd);
+            $(".casePerSec").val(casePerSecJs);
+            setTimeout(function () {
+                euroCountAdd /= 2;
+                glockClickerAdd /= 2;
+                clickerMultiplier /= 2;
+                $(".casePerClick").val(euroCountAdd);
+                euroCountAdd = parseInt(euroCountAdd);
+                $(".casePerSec").val(casePerSecJs);
+            },40000);
+        })
+        setInterval(placeImage, Math.floor(Math.random()*(1800000 - 600000) + 600000));
+
+        function antiAfk() {
+            $("#myModalAntiAfk").modal({show: true});
+        }
+        setInterval(antiAfk, 28800000);
 });
