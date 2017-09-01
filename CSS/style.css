@@ -299,7 +299,7 @@ footer h5
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media screen and (min-width: 736px) {
+@media screen and (min-width: 1281px) {
     .achievement-banner {
       opacity: 0;
       font-size: 350%;
@@ -316,7 +316,39 @@ footer h5
       bottom: 6%;
     }
 }
-.achievement-banner {
+@media screen and (min-width: 736px) and (max-width: 1280px) {
+    .achievement-banner {
+      opacity: 0;
+      font-size: 350%;
+      width: 10em;
+    	color: #efefef;
+    	background: url("IMGS/achievementBackground.jpg");
+    	border-radius: 10em;
+    	position: absolute;
+      padding: .125em;
+      min-height: 1.5em;
+      overflow: hidden;
+      z-index: 1;
+      margin-left: 22%;
+      bottom: 9.5%;
+    }
+}
+@media screen and (min-width: 402px) and (max-width: 735px) {
+    .achievement-banner {
+      opacity: 0;
+      font-size: 200%;
+      width: auto;
+    	color: #efefef;
+    	background: url("IMGS/achievementBackground.jpg");
+    	border-radius: 10em;
+    	position: absolute;
+      padding: .125em;
+      min-height: 1.5em;
+      overflow: hidden;
+      z-index: 1;
+    }
+}
+/*.achievement-banner {
   opacity: 0;
   font-size: 350%;
   width: 10em;
@@ -329,7 +361,7 @@ footer h5
   overflow: hidden;
   z-index: 1;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7);
-}
+}*/
 .achievement-banner .achievement-icon {
 	border-radius: 10em;
 	position: relative;
@@ -479,19 +511,19 @@ footer h5
 /* border-top-pulse */
 @-webkit-keyframes border-top-pulse {
   0% {border-top-color: #9668f4;}
-  40% {border-top-color: #6270ef;}
+  40% {border-top-color: #ffffff;}
   80% {border-top-color: #9668f4;}
   100% {border-top-color: #9668f4;}
 }
 @-moz-keyframes border-top-pulse {
   0% {border-top-color: #9668f4;}
-  40% {border-top-color: #6270ef;}
+  40% {border-top-color: #ffffff;}
   80% {border-top-color: #9668f4;}
   100% {border-top-color: #9668f4;}
 }
 @keyframes border-top-pulse {
   0% {border-top-color: #9668f4;}
-  40% {border-top-color: #6270ef;}
+  40% {border-top-color: #ffffff;}
   80% {border-top-color: #9668f4;}
   100% {border-top-color: #9668f4;}
 }
