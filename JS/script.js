@@ -39,8 +39,8 @@ GAME
     var totalJs = 1;
     var achievementExp = 0;
     var expBarWidth = 0;
-    var levelCount = 1;
-    var clickCount= 0;
+    var levelCount = 0;
+    var clickCount = 0;
     var clickCountJs = 0;
     var glockClicker = 0;
     var glockClickerAdd = 0;
@@ -1456,8 +1456,33 @@ ACHIEVEMENTS
         }
 
         function prestige() {
-            if(achievementExp == 600 && levelCount == 1) {
-                $(".yourLevel").text("Level 2");
+            if (achievementExp == 1100 && levelCount == 0) {
+                $(".yourLevel").text("Level 1");
+                levelCount += 1
+                achievementExp = 0;
+                expBarWidth = 0;
+                $("#progress-bar").css("width", expBarWidth);
+                $("#progress-bar").attr("aria-valuenow", expBarWidth);
+                $("#progress-bar .progressBarText").text(achievementExp +" Exp");
+                setTimeout(function () {
+                    $( ".achievBanner" ).addClass( "achievement-banner" );
+                    $( ".achievIconBanner" ).addClass( "achievement-icon" );
+                    $( ".achievTextBanner" ).addClass( "achievement-text" );
+                    $( ".achievement-notification" ).html("Your reached level 1");
+                    $( ".achievement-notification" ).show();
+                    $( ".achievement-name" ).html('"You gained enough exp to levelup"');
+                    $( ".achievement-name" ).show();
+                    setTimeout(function () {
+                        $( ".achievBanner" ).removeClass( "achievement-banner" );
+                        $( ".achievIconBanner" ).removeClass( "achievement-icon" );
+                        $( ".achievTextBanner" ).removeClass( "achievement-text" );
+                        $( ".achievement-notification" ).hide();
+                        $( ".achievement-name" ).hide();
+                    }, 5000);
+                }, 5000);
+            }
+            else if (achievementExp == 1200 && levelCount == 1) {
+                $(".yourLevel").text("Level 1");
                 levelCount += 1
                 achievementExp = 0;
                 expBarWidth = 0;
@@ -1481,6 +1506,457 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
+            else if (achievementExp == 1300 && levelCount == 2) {
+                $(".yourLevel").text("Level 1");
+                levelCount += 1
+                achievementExp = 0;
+                expBarWidth = 0;
+                $("#progress-bar").css("width", expBarWidth);
+                $("#progress-bar").attr("aria-valuenow", expBarWidth);
+                $("#progress-bar .progressBarText").text(achievementExp +" Exp");
+                setTimeout(function () {
+                    $( ".achievBanner" ).addClass( "achievement-banner" );
+                    $( ".achievIconBanner" ).addClass( "achievement-icon" );
+                    $( ".achievTextBanner" ).addClass( "achievement-text" );
+                    $( ".achievement-notification" ).html("Your reached level 3");
+                    $( ".achievement-notification" ).show();
+                    $( ".achievement-name" ).html('"You gained enough exp to levelup"');
+                    $( ".achievement-name" ).show();
+                    setTimeout(function () {
+                        $( ".achievBanner" ).removeClass( "achievement-banner" );
+                        $( ".achievIconBanner" ).removeClass( "achievement-icon" );
+                        $( ".achievTextBanner" ).removeClass( "achievement-text" );
+                        $( ".achievement-notification" ).hide();
+                        $( ".achievement-name" ).hide();
+                    }, 5000);
+                }, 5000);
+            }
+            else if (achievementExp == 1400 && levelCount == 3) {
+                $(".yourLevel").text("Level 1");
+                levelCount += 1
+                achievementExp = 0;
+                expBarWidth = 0;
+                $("#progress-bar").css("width", expBarWidth);
+                $("#progress-bar").attr("aria-valuenow", expBarWidth);
+                $("#progress-bar .progressBarText").text(achievementExp +" Exp");
+                setTimeout(function () {
+                    $( ".achievBanner" ).addClass( "achievement-banner" );
+                    $( ".achievIconBanner" ).addClass( "achievement-icon" );
+                    $( ".achievTextBanner" ).addClass( "achievement-text" );
+                    $( ".achievement-notification" ).html("Your reached level 4");
+                    $( ".achievement-notification" ).show();
+                    $( ".achievement-name" ).html('"You gained enough exp to levelup"');
+                    $( ".achievement-name" ).show();
+                    setTimeout(function () {
+                        $( ".achievBanner" ).removeClass( "achievement-banner" );
+                        $( ".achievIconBanner" ).removeClass( "achievement-icon" );
+                        $( ".achievTextBanner" ).removeClass( "achievement-text" );
+                        $( ".achievement-notification" ).hide();
+                        $( ".achievement-name" ).hide();
+                    }, 5000);
+                }, 5000);
+            }
+            else if (achievementExp == 1500 && levelCount == 4) {
+                $(".yourLevel").text("Level 1");
+                levelCount += 1
+                achievementExp = 0;
+                expBarWidth = 0;
+                $("#progress-bar").css("width", expBarWidth);
+                $("#progress-bar").attr("aria-valuenow", expBarWidth);
+                $("#progress-bar .progressBarText").text(achievementExp +" Exp");
+                setTimeout(function () {
+                    $( ".achievBanner" ).addClass( "achievement-banner" );
+                    $( ".achievIconBanner" ).addClass( "achievement-icon" );
+                    $( ".achievTextBanner" ).addClass( "achievement-text" );
+                    $( ".achievement-notification" ).html("Your reached level 5");
+                    $( ".achievement-notification" ).show();
+                    $( ".achievement-name" ).html('"You gained enough exp to levelup"');
+                    $( ".achievement-name" ).show();
+                    setTimeout(function () {
+                        $( ".achievBanner" ).removeClass( "achievement-banner" );
+                        $( ".achievIconBanner" ).removeClass( "achievement-icon" );
+                        $( ".achievTextBanner" ).removeClass( "achievement-text" );
+                        $( ".achievement-notification" ).hide();
+                        $( ".achievement-name" ).hide();
+                    }, 5000);
+                }, 5000);
+            }
+            else if (achievementExp == 1600 && levelCount == 5) {
+                $(".yourLevel").text("Level 1");
+                levelCount += 1
+                achievementExp = 0;
+                expBarWidth = 0;
+                $("#progress-bar").css("width", expBarWidth);
+                $("#progress-bar").attr("aria-valuenow", expBarWidth);
+                $("#progress-bar .progressBarText").text(achievementExp +" Exp");
+                setTimeout(function () {
+                    $( ".achievBanner" ).addClass( "achievement-banner" );
+                    $( ".achievIconBanner" ).addClass( "achievement-icon" );
+                    $( ".achievTextBanner" ).addClass( "achievement-text" );
+                    $( ".achievement-notification" ).html("Your reached level 6");
+                    $( ".achievement-notification" ).show();
+                    $( ".achievement-name" ).html('"You gained enough exp to levelup"');
+                    $( ".achievement-name" ).show();
+                    setTimeout(function () {
+                        $( ".achievBanner" ).removeClass( "achievement-banner" );
+                        $( ".achievIconBanner" ).removeClass( "achievement-icon" );
+                        $( ".achievTextBanner" ).removeClass( "achievement-text" );
+                        $( ".achievement-notification" ).hide();
+                        $( ".achievement-name" ).hide();
+                    }, 5000);
+                }, 5000);
+            }
+            else if (achievementExp == 1700 && levelCount == 6) {
+                $(".yourLevel").text("Level 1");
+                levelCount += 1
+                achievementExp = 0;
+                expBarWidth = 0;
+                $("#progress-bar").css("width", expBarWidth);
+                $("#progress-bar").attr("aria-valuenow", expBarWidth);
+                $("#progress-bar .progressBarText").text(achievementExp +" Exp");
+                setTimeout(function () {
+                    $( ".achievBanner" ).addClass( "achievement-banner" );
+                    $( ".achievIconBanner" ).addClass( "achievement-icon" );
+                    $( ".achievTextBanner" ).addClass( "achievement-text" );
+                    $( ".achievement-notification" ).html("Your reached level 7");
+                    $( ".achievement-notification" ).show();
+                    $( ".achievement-name" ).html('"You gained enough exp to levelup"');
+                    $( ".achievement-name" ).show();
+                    setTimeout(function () {
+                        $( ".achievBanner" ).removeClass( "achievement-banner" );
+                        $( ".achievIconBanner" ).removeClass( "achievement-icon" );
+                        $( ".achievTextBanner" ).removeClass( "achievement-text" );
+                        $( ".achievement-notification" ).hide();
+                        $( ".achievement-name" ).hide();
+                    }, 5000);
+                }, 5000);
+            }
+            else if (achievementExp == 1800 && levelCount == 7) {
+                $(".yourLevel").text("Level 1");
+                levelCount += 1
+                achievementExp = 0;
+                expBarWidth = 0;
+                $("#progress-bar").css("width", expBarWidth);
+                $("#progress-bar").attr("aria-valuenow", expBarWidth);
+                $("#progress-bar .progressBarText").text(achievementExp +" Exp");
+                setTimeout(function () {
+                    $( ".achievBanner" ).addClass( "achievement-banner" );
+                    $( ".achievIconBanner" ).addClass( "achievement-icon" );
+                    $( ".achievTextBanner" ).addClass( "achievement-text" );
+                    $( ".achievement-notification" ).html("Your reached level 8");
+                    $( ".achievement-notification" ).show();
+                    $( ".achievement-name" ).html('"You gained enough exp to levelup"');
+                    $( ".achievement-name" ).show();
+                    setTimeout(function () {
+                        $( ".achievBanner" ).removeClass( "achievement-banner" );
+                        $( ".achievIconBanner" ).removeClass( "achievement-icon" );
+                        $( ".achievTextBanner" ).removeClass( "achievement-text" );
+                        $( ".achievement-notification" ).hide();
+                        $( ".achievement-name" ).hide();
+                    }, 5000);
+                }, 5000);
+            }
+            else if (achievementExp == 1900 && levelCount == 8) {
+                $(".yourLevel").text("Level 1");
+                levelCount += 1
+                achievementExp = 0;
+                expBarWidth = 0;
+                $("#progress-bar").css("width", expBarWidth);
+                $("#progress-bar").attr("aria-valuenow", expBarWidth);
+                $("#progress-bar .progressBarText").text(achievementExp +" Exp");
+                setTimeout(function () {
+                    $( ".achievBanner" ).addClass( "achievement-banner" );
+                    $( ".achievIconBanner" ).addClass( "achievement-icon" );
+                    $( ".achievTextBanner" ).addClass( "achievement-text" );
+                    $( ".achievement-notification" ).html("Your reached level 9");
+                    $( ".achievement-notification" ).show();
+                    $( ".achievement-name" ).html('"You gained enough exp to levelup"');
+                    $( ".achievement-name" ).show();
+                    setTimeout(function () {
+                        $( ".achievBanner" ).removeClass( "achievement-banner" );
+                        $( ".achievIconBanner" ).removeClass( "achievement-icon" );
+                        $( ".achievTextBanner" ).removeClass( "achievement-text" );
+                        $( ".achievement-notification" ).hide();
+                        $( ".achievement-name" ).hide();
+                    }, 5000);
+                }, 5000);
+            }
+            else if (achievementExp == 2000 && levelCount == 9) {
+                $(".yourLevel").text("Level 1");
+                levelCount += 1
+                achievementExp = 0;
+                expBarWidth = 0;
+                $("#progress-bar").css("width", expBarWidth);
+                $("#progress-bar").attr("aria-valuenow", expBarWidth);
+                $("#progress-bar .progressBarText").text(achievementExp +" Exp");
+                setTimeout(function () {
+                    $( ".achievBanner" ).addClass( "achievement-banner" );
+                    $( ".achievIconBanner" ).addClass( "achievement-icon" );
+                    $( ".achievTextBanner" ).addClass( "achievement-text" );
+                    $( ".achievement-notification" ).html("Your reached level 10");
+                    $( ".achievement-notification" ).show();
+                    $( ".achievement-name" ).html('"You gained enough exp to levelup"');
+                    $( ".achievement-name" ).show();
+                    setTimeout(function () {
+                        $( ".achievBanner" ).removeClass( "achievement-banner" );
+                        $( ".achievIconBanner" ).removeClass( "achievement-icon" );
+                        $( ".achievTextBanner" ).removeClass( "achievement-text" );
+                        $( ".achievement-notification" ).hide();
+                        $( ".achievement-name" ).hide();
+                    }, 5000);
+                }, 5000);
+            }
+            else if (achievementExp == 3000 && levelCount == 10) {
+                $(".yourLevel").text("Level 1");
+                levelCount += 1
+                achievementExp = 0;
+                expBarWidth = 0;
+                $("#progress-bar").css("width", expBarWidth);
+                $("#progress-bar").attr("aria-valuenow", expBarWidth);
+                $("#progress-bar .progressBarText").text(achievementExp +" Exp");
+                setTimeout(function () {
+                    $( ".achievBanner" ).addClass( "achievement-banner" );
+                    $( ".achievIconBanner" ).addClass( "achievement-icon" );
+                    $( ".achievTextBanner" ).addClass( "achievement-text" );
+                    $( ".achievement-notification" ).html("Your reached level 11");
+                    $( ".achievement-notification" ).show();
+                    $( ".achievement-name" ).html('"You gained enough exp to levelup"');
+                    $( ".achievement-name" ).show();
+                    setTimeout(function () {
+                        $( ".achievBanner" ).removeClass( "achievement-banner" );
+                        $( ".achievIconBanner" ).removeClass( "achievement-icon" );
+                        $( ".achievTextBanner" ).removeClass( "achievement-text" );
+                        $( ".achievement-notification" ).hide();
+                        $( ".achievement-name" ).hide();
+                    }, 5000);
+                }, 5000);
+            }
+            else if (achievementExp == 4000 && levelCount == 11) {
+                $(".yourLevel").text("Level 1");
+                levelCount += 1
+                achievementExp = 0;
+                expBarWidth = 0;
+                $("#progress-bar").css("width", expBarWidth);
+                $("#progress-bar").attr("aria-valuenow", expBarWidth);
+                $("#progress-bar .progressBarText").text(achievementExp +" Exp");
+                setTimeout(function () {
+                    $( ".achievBanner" ).addClass( "achievement-banner" );
+                    $( ".achievIconBanner" ).addClass( "achievement-icon" );
+                    $( ".achievTextBanner" ).addClass( "achievement-text" );
+                    $( ".achievement-notification" ).html("Your reached level 12");
+                    $( ".achievement-notification" ).show();
+                    $( ".achievement-name" ).html('"You gained enough exp to levelup"');
+                    $( ".achievement-name" ).show();
+                    setTimeout(function () {
+                        $( ".achievBanner" ).removeClass( "achievement-banner" );
+                        $( ".achievIconBanner" ).removeClass( "achievement-icon" );
+                        $( ".achievTextBanner" ).removeClass( "achievement-text" );
+                        $( ".achievement-notification" ).hide();
+                        $( ".achievement-name" ).hide();
+                    }, 5000);
+                }, 5000);
+            }
+            else if (achievementExp == 5500 && levelCount == 12) {
+                $(".yourLevel").text("Level 1");
+                levelCount += 1
+                achievementExp = 0;
+                expBarWidth = 0;
+                $("#progress-bar").css("width", expBarWidth);
+                $("#progress-bar").attr("aria-valuenow", expBarWidth);
+                $("#progress-bar .progressBarText").text(achievementExp +" Exp");
+                setTimeout(function () {
+                    $( ".achievBanner" ).addClass( "achievement-banner" );
+                    $( ".achievIconBanner" ).addClass( "achievement-icon" );
+                    $( ".achievTextBanner" ).addClass( "achievement-text" );
+                    $( ".achievement-notification" ).html("Your reached level 13");
+                    $( ".achievement-notification" ).show();
+                    $( ".achievement-name" ).html('"You gained enough exp to levelup"');
+                    $( ".achievement-name" ).show();
+                    setTimeout(function () {
+                        $( ".achievBanner" ).removeClass( "achievement-banner" );
+                        $( ".achievIconBanner" ).removeClass( "achievement-icon" );
+                        $( ".achievTextBanner" ).removeClass( "achievement-text" );
+                        $( ".achievement-notification" ).hide();
+                        $( ".achievement-name" ).hide();
+                    }, 5000);
+                }, 5000);
+            }
+            else if (achievementExp == 1200 && levelCount == 13) {
+                $(".yourLevel").text("Level 1");
+                levelCount += 1
+                achievementExp = 0;
+                expBarWidth = 0;
+                $("#progress-bar").css("width", expBarWidth);
+                $("#progress-bar").attr("aria-valuenow", expBarWidth);
+                $("#progress-bar .progressBarText").text(achievementExp +" Exp");
+                setTimeout(function () {
+                    $( ".achievBanner" ).addClass( "achievement-banner" );
+                    $( ".achievIconBanner" ).addClass( "achievement-icon" );
+                    $( ".achievTextBanner" ).addClass( "achievement-text" );
+                    $( ".achievement-notification" ).html("Your reached level 14");
+                    $( ".achievement-notification" ).show();
+                    $( ".achievement-name" ).html('"You gained enough exp to levelup"');
+                    $( ".achievement-name" ).show();
+                    setTimeout(function () {
+                        $( ".achievBanner" ).removeClass( "achievement-banner" );
+                        $( ".achievIconBanner" ).removeClass( "achievement-icon" );
+                        $( ".achievTextBanner" ).removeClass( "achievement-text" );
+                        $( ".achievement-notification" ).hide();
+                        $( ".achievement-name" ).hide();
+                    }, 5000);
+                }, 5000);
+            }
+            else if (achievementExp == 1200 && levelCount == 14) {
+                $(".yourLevel").text("Level 1");
+                levelCount += 1
+                achievementExp = 0;
+                expBarWidth = 0;
+                $("#progress-bar").css("width", expBarWidth);
+                $("#progress-bar").attr("aria-valuenow", expBarWidth);
+                $("#progress-bar .progressBarText").text(achievementExp +" Exp");
+                setTimeout(function () {
+                    $( ".achievBanner" ).addClass( "achievement-banner" );
+                    $( ".achievIconBanner" ).addClass( "achievement-icon" );
+                    $( ".achievTextBanner" ).addClass( "achievement-text" );
+                    $( ".achievement-notification" ).html("Your reached level 15");
+                    $( ".achievement-notification" ).show();
+                    $( ".achievement-name" ).html('"You gained enough exp to levelup"');
+                    $( ".achievement-name" ).show();
+                    setTimeout(function () {
+                        $( ".achievBanner" ).removeClass( "achievement-banner" );
+                        $( ".achievIconBanner" ).removeClass( "achievement-icon" );
+                        $( ".achievTextBanner" ).removeClass( "achievement-text" );
+                        $( ".achievement-notification" ).hide();
+                        $( ".achievement-name" ).hide();
+                    }, 5000);
+                }, 5000);
+            }
+            else if (achievementExp == 1200 && levelCount == 15) {
+                $(".yourLevel").text("Level 1");
+                levelCount += 1
+                achievementExp = 0;
+                expBarWidth = 0;
+                $("#progress-bar").css("width", expBarWidth);
+                $("#progress-bar").attr("aria-valuenow", expBarWidth);
+                $("#progress-bar .progressBarText").text(achievementExp +" Exp");
+                setTimeout(function () {
+                    $( ".achievBanner" ).addClass( "achievement-banner" );
+                    $( ".achievIconBanner" ).addClass( "achievement-icon" );
+                    $( ".achievTextBanner" ).addClass( "achievement-text" );
+                    $( ".achievement-notification" ).html("Your reached level 16");
+                    $( ".achievement-notification" ).show();
+                    $( ".achievement-name" ).html('"You gained enough exp to levelup"');
+                    $( ".achievement-name" ).show();
+                    setTimeout(function () {
+                        $( ".achievBanner" ).removeClass( "achievement-banner" );
+                        $( ".achievIconBanner" ).removeClass( "achievement-icon" );
+                        $( ".achievTextBanner" ).removeClass( "achievement-text" );
+                        $( ".achievement-notification" ).hide();
+                        $( ".achievement-name" ).hide();
+                    }, 5000);
+                }, 5000);
+            }
+            else if (achievementExp == 1200 && levelCount == 16) {
+                $(".yourLevel").text("Level 1");
+                levelCount += 1
+                achievementExp = 0;
+                expBarWidth = 0;
+                $("#progress-bar").css("width", expBarWidth);
+                $("#progress-bar").attr("aria-valuenow", expBarWidth);
+                $("#progress-bar .progressBarText").text(achievementExp +" Exp");
+                setTimeout(function () {
+                    $( ".achievBanner" ).addClass( "achievement-banner" );
+                    $( ".achievIconBanner" ).addClass( "achievement-icon" );
+                    $( ".achievTextBanner" ).addClass( "achievement-text" );
+                    $( ".achievement-notification" ).html("Your reached level 17");
+                    $( ".achievement-notification" ).show();
+                    $( ".achievement-name" ).html('"You gained enough exp to levelup"');
+                    $( ".achievement-name" ).show();
+                    setTimeout(function () {
+                        $( ".achievBanner" ).removeClass( "achievement-banner" );
+                        $( ".achievIconBanner" ).removeClass( "achievement-icon" );
+                        $( ".achievTextBanner" ).removeClass( "achievement-text" );
+                        $( ".achievement-notification" ).hide();
+                        $( ".achievement-name" ).hide();
+                    }, 5000);
+                }, 5000);
+            }
+            else if (achievementExp == 1200 && levelCount == 17) {
+                $(".yourLevel").text("Level 1");
+                levelCount += 1
+                achievementExp = 0;
+                expBarWidth = 0;
+                $("#progress-bar").css("width", expBarWidth);
+                $("#progress-bar").attr("aria-valuenow", expBarWidth);
+                $("#progress-bar .progressBarText").text(achievementExp +" Exp");
+                setTimeout(function () {
+                    $( ".achievBanner" ).addClass( "achievement-banner" );
+                    $( ".achievIconBanner" ).addClass( "achievement-icon" );
+                    $( ".achievTextBanner" ).addClass( "achievement-text" );
+                    $( ".achievement-notification" ).html("Your reached level 18");
+                    $( ".achievement-notification" ).show();
+                    $( ".achievement-name" ).html('"You gained enough exp to levelup"');
+                    $( ".achievement-name" ).show();
+                    setTimeout(function () {
+                        $( ".achievBanner" ).removeClass( "achievement-banner" );
+                        $( ".achievIconBanner" ).removeClass( "achievement-icon" );
+                        $( ".achievTextBanner" ).removeClass( "achievement-text" );
+                        $( ".achievement-notification" ).hide();
+                        $( ".achievement-name" ).hide();
+                    }, 5000);
+                }, 5000);
+            }
+            else if (achievementExp == 1200 && levelCount == 18) {
+                $(".yourLevel").text("Level 1");
+                levelCount += 1
+                achievementExp = 0;
+                expBarWidth = 0;
+                $("#progress-bar").css("width", expBarWidth);
+                $("#progress-bar").attr("aria-valuenow", expBarWidth);
+                $("#progress-bar .progressBarText").text(achievementExp +" Exp");
+                setTimeout(function () {
+                    $( ".achievBanner" ).addClass( "achievement-banner" );
+                    $( ".achievIconBanner" ).addClass( "achievement-icon" );
+                    $( ".achievTextBanner" ).addClass( "achievement-text" );
+                    $( ".achievement-notification" ).html("Your reached level 19");
+                    $( ".achievement-notification" ).show();
+                    $( ".achievement-name" ).html('"You gained enough exp to levelup"');
+                    $( ".achievement-name" ).show();
+                    setTimeout(function () {
+                        $( ".achievBanner" ).removeClass( "achievement-banner" );
+                        $( ".achievIconBanner" ).removeClass( "achievement-icon" );
+                        $( ".achievTextBanner" ).removeClass( "achievement-text" );
+                        $( ".achievement-notification" ).hide();
+                        $( ".achievement-name" ).hide();
+                    }, 5000);
+                }, 5000);
+            }
+            else if (achievementExp == 1200 && levelCount == 19) {
+                $(".yourLevel").text("Level 1");
+                levelCount += 1
+                achievementExp = 0;
+                expBarWidth = 0;
+                $("#progress-bar").css("width", expBarWidth);
+                $("#progress-bar").attr("aria-valuenow", expBarWidth);
+                $("#progress-bar .progressBarText").text(achievementExp +" Exp");
+                setTimeout(function () {
+                    $( ".achievBanner" ).addClass( "achievement-banner" );
+                    $( ".achievIconBanner" ).addClass( "achievement-icon" );
+                    $( ".achievTextBanner" ).addClass( "achievement-text" );
+                    $( ".achievement-notification" ).html("Your reached level 20");
+                    $( ".achievement-notification" ).show();
+                    $( ".achievement-name" ).html('"You gained enough exp to levelup"');
+                    $( ".achievement-name" ).show();
+                    setTimeout(function () {
+                        $( ".achievBanner" ).removeClass( "achievement-banner" );
+                        $( ".achievIconBanner" ).removeClass( "achievement-icon" );
+                        $( ".achievTextBanner" ).removeClass( "achievement-text" );
+                        $( ".achievement-notification" ).hide();
+                        $( ".achievement-name" ).hide();
+                    }, 5000);
+                }, 5000);
+            }
+
         }
 /*
 =================================================================================================================================
