@@ -1075,6 +1075,21 @@ $(".deleteBtn").click(function() {
             $(".damageBtn").remove();
         }
     });*/
+
+    function clickColor() {
+        if (euroCountAdd >= 2 && euroCountAdd <= 999) {
+            $(".fadingEuro").css("color", "yellow");
+        }
+        else if (euroCountAdd >= 1000 && euroCountAdd <= 9999) {
+            $(".fadingEuro").css("color", "orange");
+        }
+        else if (euroCountAdd >= 10000 && euroCountAdd <= 99999) {
+            $(".fadingEuro").css("color", "red");
+        }
+        else if (euroCountAdd >= 100000) {
+            $(".fadingEuro").css("color", "blue");
+        }
+    }
 /*
 =================================================================================================================================
 ACHIEVEMENTS
@@ -1084,6 +1099,7 @@ ACHIEVEMENTS
                 achievementsTotal();
                 achievementsClicks();
                 achievementExpBarOne();
+                clickColor();
             }
             setInterval(timerAchiev, 1);
 

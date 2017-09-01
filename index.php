@@ -61,13 +61,13 @@
                 <div id="userSpot" class="col-md-6 col-lg-3">
 
                     <div class="userSpotContent col-md-12 col-lg-12">
-                        <!--<h1 style="font-size: 54px;">CS:GO Farm</h1>
+                        <h1>CS:GO Farm</h1>
                         <img class="logoImg" src="#" alt="logoCsgoFarm"/>
                         <a href="login.html"><button class="loginBtn" type="button">Login</button></a>
-                        <a href="register.html"><button class="registerBtn" type="button">Register</button></a>-->
+                        <a href="register.html"><button class="registerBtn" type="button">Register</button></a>
                     <div class="iCenter">
-                        <div class="valueBox">
-                            <h1 style="padding: 0 0 7px 0">Pseudo du joueur</h1>
+                        <!--<div class="valueBox">
+                            <h1>Pseudo du joueur</h1>
                         </div>
                             <h5>(si connecté, sinon "Login et Logout")</h5>
                             <h2>Avatar du joueur</h2>
@@ -83,7 +83,7 @@
                                 <p>...</p>
                                 <p>...</p>
                                 <p>...</p>
-                                <p>...</p>
+                                <p>...</p>-->
                 <div class="adSpotContainer">
                     <div class="adBox">
                         <p style="margin-top: 10px; color: #ccc; font-size: 14px">Sponsored links<p>
@@ -110,8 +110,8 @@
                     </div>
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="clicker.html">Clicker</a></li>
+                            <li><a href="index.php">Home</a></li>
+                            <li><a href="clicker.php">Clicker</a></li>
                             <li><a href="#">...</a></li>
                             <li><a href="#">...</a></li>
                             <li><a href="#">...</a></li>
