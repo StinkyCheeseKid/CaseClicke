@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+    $( ".achievBanner" ).removeClass( "achievement-banner" );
+    $( ".achievIconBanner" ).removeClass( "achievement-icon" );
+    $( ".achievTextBanner" ).removeClass( "achievement-text" );
+    $( ".achievement-notification" ).hide();
+    $( ".achievement-name" ).hide();
+
     $(".fadingEuro").hide();
 
     $(".caseCsgoImg, .fadingEuro").click(function() {
