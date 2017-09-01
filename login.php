@@ -30,8 +30,8 @@
                     </div>
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="clicker.html">Clicker</a></li>
+                            <li><a href="index.php">Home</a></li>
+                            <li><a href="clicker.php">Clicker</a></li>
                             <li><a href="#">...</a></li>
                             <li><a href="#">...</a></li>
                             <li><a href="#">...</a></li>

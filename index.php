@@ -19,7 +19,7 @@
 
                     <h1>Clicker</h1>
                     <div class="clickerSpotContent col-md-12 col-lg-12">
-                        <img class="clickerImg" src="CSS/IMGS/clickerImg.jpg" alt="Screenshot of the clicker game"/>
+                        <img class="clickerImg" src="CSS/IMGS/caseClickerMiniature.png" alt="Screenshot of the clicker game"/>
                         <div class="clickerSpotText">
                             <h3><strong>Win skins just by clicking</strong></h3>
                             <p style="color: #aaa;"><strong><em>How does this work ?</em></strong></p>
@@ -63,8 +63,8 @@
                     <div class="userSpotContent col-md-12 col-lg-12">
                         <h1>CS:GO Farm</h1>
                         <img class="logoImg" src="#" alt="logoCsgoFarm"/>
-                        <a href="login.html"><button class="loginBtn" type="button">Login</button></a>
-                        <a href="register.html"><button class="registerBtn" type="button">Register</button></a>
+                        <a href="login.php"><button class="loginBtn" type="button">Login</button></a>
+                        <a href="register.php"><button class="registerBtn" type="button">Register</button></a>
                     <div class="iCenter">
                         <!--<div class="valueBox">
                             <h1>Pseudo du joueur</h1>
