@@ -18,9 +18,9 @@
                 <input type="text" maxlength="50" placeholder="Email"><br>
             <p style="color:#fff"><br/><strong><em>Are you over 18 years old ?</em></strong></p>
                 <p style="color: white;">Yes</p>
-                <input class="checkEighteenYes" type="checkbox" maxlength="50">
+                <input class="checkEighteenYes" type="radio" maxlength="50">
                 <p style="color: white;">No</p>
-                <input class="checkEighteenNo" type="checkbox" maxlength="50"><br>
+                <input class="checkEighteenNo" type="radio" maxlength="50"><br>
             <button class="submitBtn btn btn-info" type="submit">Register</button>
         </div>
     </div>

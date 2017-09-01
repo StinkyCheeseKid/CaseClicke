@@ -19,7 +19,7 @@
 
                     <h1>Clicker</h1>
                     <div class="clickerSpotContent col-md-12 col-lg-12">
-                        <img class="clickerImg" src="CSS/IMGS/caseClickerMiniature.png" alt="Screenshot of the clicker game"/>
+                        <img class="clickerImg" src="CSS/IMGS/csgoClickerMiniature.png" alt="Screenshot of the clicker game"/>
                         <div class="clickerSpotText">
                             <h3><strong>Win skins just by clicking</strong></h3>
                             <p style="color: #aaa;"><strong><em>How does this work ?</em></strong></p>
@@ -61,13 +61,13 @@
                 <div id="userSpot" class="col-md-6 col-lg-3">
 
                     <div class="userSpotContent col-md-12 col-lg-12">
-                        <h1>CS:GO Farm</h1>
-                        <img class="logoImg" src="#" alt="logoCsgoFarm"/>
+                        <img class="logoImg" src="CSS/IMGS/logo3.png" alt="logoCsgoFarm"/>
+                        <h1 class="titleSite" style="font-size: 54px;">CS:GO Farm</h1>
                         <a href="login.php"><button class="loginBtn" type="button">Login</button></a>
                         <a href="register.php"><button class="registerBtn" type="button">Register</button></a>
-                    <div class="iCenter">
-                        <!--<div class="valueBox">
-                            <h1>Pseudo du joueur</h1>
+                    <!--<div class="iCenter">
+                        <div class="valueBox">
+                            <h1 style="padding: 0 0 7px 0;">Pseudo du joueur</h1>
                         </div>
                             <h5>(si connecté, sinon "Login et Logout")</h5>
                             <h2>Avatar du joueur</h2>
@@ -78,6 +78,7 @@
                                 <div class="valueBox">
                                     <p><strong>Trade link</strong></p>
                                     <input class="tradeLinkBox" type="text" value="" maxlength="100">
+                                    <button class="saveTradeLinkBtn btn btn-success">Save</button>
                                 </div>
                     </div>
                                 <p>...</p>
@@ -91,10 +92,6 @@
                             <div class="adSpot">
                                 <p>Ads Box<p>
                             </div>
-                </div>
-                    </div>
-                </div>
-                    </div>
                 </div>
 
 
