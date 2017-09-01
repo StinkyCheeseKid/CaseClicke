@@ -158,21 +158,23 @@ button
     padding: 2px 0px 2px 0px;
     background-color: rgba(0, 0, 0, 0.50);
     border-radius: 20px;
+    height: 44em;
 }
 #userSpot .adSpot
 {
     border: 1px solid rgba(0, 0, 0, 0.4);
     height: 250px;
-    width: 92%;
+    width: 100%;
 }
 #userSpot .adBox
 {
-    width: 92%;
+    width: 100%;
     text-align: center;
 }
 #userSpot .adSpotContainer
 {
-    margin-top: 80%;
+    /*margin-top: 0%; If connected*/
+    margin-top: 75%; /*If not connected*/
 }
 #userSpot
 {
@@ -180,11 +182,13 @@ button
 }
 .logoImg
 {
-    border: 2px solid rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
+    /*border: 2px solid rgba(0, 0, 0, 0.5);*/
     margin-top: 5px;
-    width: 90% !important;
-    height: 90% !important;
+    width: 15% !important;
+    height: 12% !important;
+    float: left;
+    margin-left: 15%;
+    margin-top: 7%;
 }
 .loginBtn, .registerBtn
 {
@@ -214,7 +218,7 @@ button
     border-radius: 5px;
     background: rgba(0,0,0,0.0);
     margin-bottom: 2px;
-    width: 300px;
+    width: 50%;
 }
 .balanceBox
 {
@@ -232,7 +236,7 @@ button
     border-radius: 5px;
     background: rgba(0, 0, 0, 0.50);
     margin: 5px 5px;
-    width: 350px;
+    width: 90%;
 }
 #clickerSpotInfo .clickerSpotText
 {
