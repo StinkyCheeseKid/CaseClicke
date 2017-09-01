@@ -335,7 +335,7 @@ footer h5
 	position: relative;
   background: #000;
   border: .125em solid #F5C4C3;
-	border-top-color: #45ca3d;
+	border-top-color: #9668f4;
   height: 1.25em;
   width: 1.25em;
   -webkit-transform: rotate(-45deg);
@@ -478,23 +478,24 @@ footer h5
 
 /* border-top-pulse */
 @-webkit-keyframes border-top-pulse {
-  0% {border-top-color: #F5C4C3;}
-  40% {border-top-color: #ffffff;}
-  80% {border-top-color: #00ff00;}
-  100% {border-top-color: #45ca3d;}
+  0% {border-top-color: #9668f4;}
+  40% {border-top-color: #6270ef;}
+  80% {border-top-color: #9668f4;}
+  100% {border-top-color: #9668f4;}
 }
 @-moz-keyframes border-top-pulse {
-  0% {border-top-color: #F5C4C3;}
-  40% {border-top-color: #ffffff;}
-  80% {border-top-color: #00ff00;}
-  100% {border-top-color: #45ca3d;}
+  0% {border-top-color: #9668f4;}
+  40% {border-top-color: #6270ef;}
+  80% {border-top-color: #9668f4;}
+  100% {border-top-color: #9668f4;}
 }
 @keyframes border-top-pulse {
-  0% {border-top-color: #F5C4C3;}
-  40% {border-top-color: #ffffff;}
-  80% {border-top-color: #00ff00;}
-  100% {border-top-color: #45ca3d;}
+  0% {border-top-color: #9668f4;}
+  40% {border-top-color: #6270ef;}
+  80% {border-top-color: #9668f4;}
+  100% {border-top-color: #9668f4;}
 }
+/*#9668f4, #6270ef*//*#F5C4C3*/
 @-webkit-keyframes fade-in-text {
   0% {opacity: 0;}
   80% {opacity: 0;}
