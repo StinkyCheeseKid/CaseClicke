@@ -1456,7 +1456,7 @@ ACHIEVEMENTS
         }
 
         function prestige() {
-            if (achievementExp == 1100 && levelCount == 0) {
+            if (achievementExp == 600 && levelCount == 0) {
                 $(".yourLevel").text("Level 1");
                 levelCount += 1
                 achievementExp = 0;
@@ -1506,7 +1506,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 1300 && levelCount == 2) {
+            else if (achievementExp == 1800 && levelCount == 2) {
                 $(".yourLevel").text("Level 1");
                 levelCount += 1
                 achievementExp = 0;
@@ -1531,7 +1531,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 1400 && levelCount == 3) {
+            else if (achievementExp == 2400 && levelCount == 3) {
                 $(".yourLevel").text("Level 1");
                 levelCount += 1
                 achievementExp = 0;
@@ -1556,7 +1556,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 1500 && levelCount == 4) {
+            else if (achievementExp == 3000 && levelCount == 4) {
                 $(".yourLevel").text("Level 1");
                 levelCount += 1
                 achievementExp = 0;
@@ -1581,7 +1581,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 1600 && levelCount == 5) {
+            else if (achievementExp == 3600 && levelCount == 5) {
                 $(".yourLevel").text("Level 1");
                 levelCount += 1
                 achievementExp = 0;
@@ -1606,7 +1606,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 1700 && levelCount == 6) {
+            else if (achievementExp == 4200 && levelCount == 6) {
                 $(".yourLevel").text("Level 1");
                 levelCount += 1
                 achievementExp = 0;
@@ -1631,7 +1631,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 1800 && levelCount == 7) {
+            else if (achievementExp == 4800 && levelCount == 7) {
                 $(".yourLevel").text("Level 1");
                 levelCount += 1
                 achievementExp = 0;
@@ -1656,7 +1656,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 1900 && levelCount == 8) {
+            else if (achievementExp == 5400 && levelCount == 8) {
                 $(".yourLevel").text("Level 1");
                 levelCount += 1
                 achievementExp = 0;
@@ -1681,7 +1681,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 2000 && levelCount == 9) {
+            else if (achievementExp == 6000 && levelCount == 9) {
                 $(".yourLevel").text("Level 1");
                 levelCount += 1
                 achievementExp = 0;
@@ -1706,7 +1706,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 3000 && levelCount == 10) {
+            else if (achievementExp == 6600 && levelCount == 10) {
                 $(".yourLevel").text("Level 1");
                 levelCount += 1
                 achievementExp = 0;
@@ -1731,7 +1731,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 4000 && levelCount == 11) {
+            else if (achievementExp == 7200 && levelCount == 11) {
                 $(".yourLevel").text("Level 1");
                 levelCount += 1
                 achievementExp = 0;
@@ -1756,7 +1756,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 5500 && levelCount == 12) {
+            else if (achievementExp == 7800 && levelCount == 12) {
                 $(".yourLevel").text("Level 1");
                 levelCount += 1
                 achievementExp = 0;
@@ -1781,7 +1781,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 1200 && levelCount == 13) {
+            else if (achievementExp == 8400 && levelCount == 13) {
                 $(".yourLevel").text("Level 1");
                 levelCount += 1
                 achievementExp = 0;
@@ -1806,7 +1806,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 1200 && levelCount == 14) {
+            else if (achievementExp == 9000 && levelCount == 14) {
                 $(".yourLevel").text("Level 1");
                 levelCount += 1
                 achievementExp = 0;
@@ -1831,7 +1831,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 1200 && levelCount == 15) {
+            else if (achievementExp == 9600 && levelCount == 15) {
                 $(".yourLevel").text("Level 1");
                 levelCount += 1
                 achievementExp = 0;
@@ -1856,7 +1856,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 1200 && levelCount == 16) {
+            else if (achievementExp == 10200 && levelCount == 16) {
                 $(".yourLevel").text("Level 1");
                 levelCount += 1
                 achievementExp = 0;
@@ -1881,7 +1881,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 1200 && levelCount == 17) {
+            else if (achievementExp == 10800 && levelCount == 17) {
                 $(".yourLevel").text("Level 1");
                 levelCount += 1
                 achievementExp = 0;
@@ -1906,7 +1906,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 1200 && levelCount == 18) {
+            else if (achievementExp == 11400 && levelCount == 18) {
                 $(".yourLevel").text("Level 1");
                 levelCount += 1
                 achievementExp = 0;
@@ -1931,7 +1931,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 1200 && levelCount == 19) {
+            else if (achievementExp == 12000 && levelCount == 19) {
                 $(".yourLevel").text("Level 1");
                 levelCount += 1
                 achievementExp = 0;

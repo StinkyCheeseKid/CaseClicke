@@ -13,9 +13,11 @@
 <body>
     <div id="loginBox">
         <div class="iCenter">
-                <input class="username" type="text" maxlength="50" placeholder="Username">
-                <input class="password" type="text" maxlength="50" placeholder="Password"><br>
-            <button class="submitBtn btn btn-info" type="submit">Login</button>
+            <form action="INCLUDES/login-inc.php" method="POST">
+            <input class="username" type="text" name="uid" placeholder="Username">
+            <input class="password" type="password" name="pass"  placeholder="Password"><br>
+                <button class="submitBtn btn btn-info" type="submit" name="submit">Login</button>
+            </form>
         </div>
     </div>
     <footer class="text-center">

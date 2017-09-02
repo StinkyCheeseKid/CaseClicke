@@ -13,15 +13,12 @@
 <body>
     <div id="loginBox">
         <div class="iCenter">
-                <input class="username" type="text" maxlength="50" placeholder="Username">
-                <input type="text" maxlength="50" placeholder="Password"><br>
-                <input type="text" maxlength="50" placeholder="Email"><br>
-            <p style="color:#fff"><br/><strong><em>Are you over 18 years old ?</em></strong></p>
-                <p style="color: white;">Yes</p>
-                <input class="checkEighteenYes" type="radio" maxlength="50">
-                <p style="color: white;">No</p>
-                <input class="checkEighteenNo" type="radio" maxlength="50"><br>
-            <button class="submitBtn btn btn-info" type="submit">Register</button>
+            <form action="INCLUDES/register-inc.php" method="POST">
+                <input class="username" type="text" name="uid" placeholder="Username">
+                <input type="password" name="pass" placeholder="Password"><br>
+                <input type="text" name="email" placeholder="Email"><br>
+                    <button class="submitBtn btn btn-info" type="submit" name="submit">Register</button>
+            </form>
         </div>
     </div>
     <footer class="text-center">

@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -280,10 +284,10 @@
                             <h4 class="yourClicks">Total of clicks</h4>
                                 <input class="clickTotal" type="text" disabled value="0">
                         <div class="divider"></div>
-                            <h4 class="yourLevel">Level 1 (level 2 = 600xp)</h4>
+                            <h4 class="yourLevel">Level 0 (level 1 = 600xp)</h4>
                         <div class="progress">
                             <div class="progress-bar progressBar" id="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
-                                <span class="progressBarText" style="color: #1E90FF;">0/600 Exp</span>
+                                <span class="progressBarText" style="color: #1E90FF;">0 Exp</span>
                             </div>
                         </div>
                         <div class="divider"></div>
@@ -328,7 +332,7 @@
                     </div>
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav">
-                            <li><a href="index.php">Home</a></li>
+                            <li><a href="member.php">Home</a></li>
                             <li><a href="clicker.php">Clicker</a></li>
                             <li><a href="#">...</a></li>
                             <li><a href="#">...</a></li>
