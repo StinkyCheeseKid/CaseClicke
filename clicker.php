@@ -99,7 +99,13 @@
                         <h2 class="modal-title">About Achievements</h2>
                       </div>
                       <div class="modal-body">
-                        <p>Some text in the modal.</p>
+                        <p><strong><em>How does the exp system work ?</em></strong></p>
+                        <p>- When you unlock an achievement you gain some exp.</p>
+                        <p>- Each time you get an achievement the next one will be harder to get.</p>
+                        <p>- Once you pass a level your exp is reset to 0xp.</p>
+                        <p>- For each level you need 600xp it doesn't change since achiements are harder to get.</p>
+                        <p>- When you reach level 20 you gain points on CS:GO Farm where you can go withdraw skins.</p>
+                        <p>- Reaching level 20 will make you pass a rank on CS:GO Farm</p>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -290,7 +296,7 @@
                             <h4 class="yourClicks">Total of clicks</h4>
                                 <input class="clickTotal" type="text" disabled value="0">
                         <div class="divider"></div>
-                            <h4 class="yourLevel">Level 0 (level 1 = 600xp)</h4>
+                            <h4 class="yourLevel">Level 0</h4>
                         <div class="progress">
                             <div class="progress-bar progressBar" id="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
                                 <span class="progressBarText" style="color: #1E90FF;">0 Exp</span>
@@ -310,6 +316,25 @@
                             <div class="iconAchiev rekt mod-tooltip"><a data-toggle="tooltip" title="Gained 500 000€"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Rekt.ico" draggable="false"></a></div>
                             <div class="iconAchievNo noSkull mod-tooltip"><a data-toggle="tooltip" title="Locked"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Skull.ico" draggable="false"></a></div>
                             <div class="iconAchiev skull mod-tooltip"><a data-toggle="tooltip" title="Gained 1 000 000€"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Skull.ico" draggable="false"></a></div>
+                            <div class="iconAchievNo noHeadshot mod-tooltip"><a data-toggle="tooltip" title="Locked"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Headshot.ico" draggable="false"></a></div>
+                            <div class="iconAchiev headshot mod-tooltip"><a data-toggle="tooltip" title="10 000 clicks"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Headshot.ico" draggable="false"></a></div>
+                            <div class="iconAchievNo noHowl mod-tooltip"><a data-toggle="tooltip" title="Locked"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Howl.ico" draggable="false"></a></div>
+                            <div class="iconAchiev howl mod-tooltip"><a data-toggle="tooltip" title="10 000 clicks"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Howl.ico" draggable="false"></a></div>
+                            <div class="iconAchievNo noTreize mod-tooltip"><a data-toggle="tooltip" title="Locked"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/13.ico" draggable="false"></a></div>
+                            <div class="iconAchiev treize mod-tooltip"><a data-toggle="tooltip" title="10 000 clicks"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/13.ico" draggable="false"></a></div>
+                            <div class="iconAchievNo noStealth mod-tooltip"><a data-toggle="tooltip" title="Locked"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Stealth.ico" draggable="false"></a></div>
+                            <div class="iconAchiev stealth mod-tooltip"><a data-toggle="tooltip" title="10 000 clicks"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Stealth.ico" draggable="false"></a></div>
+                            <div class="iconAchievNo noChi mod-tooltip"><a data-toggle="tooltip" title="Locked"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Chi.ico" draggable="false"></a></div>
+                            <div class="iconAchiev chi mod-tooltip"><a data-toggle="tooltip" title="10 000 clicks"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Chi.ico" draggable="false"></a></div>
+                            <div class="iconAchievNo noItsafox mod-tooltip"><a data-toggle="tooltip" title="Locked"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/ItsaFox.ico" draggable="false"></a></div>
+                            <div class="iconAchiev itsafox mod-tooltip"><a data-toggle="tooltip" title="10 000 clicks"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/ItsaFox.ico" draggable="false"></a></div>
+                            <div class="iconAchievNo noPear mod-tooltip"><a data-toggle="tooltip" title="Locked"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Pear.ico" draggable="false"></a></div>
+                            <div class="iconAchiev pear mod-tooltip"><a data-toggle="tooltip" title="10 000 clicks"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Pear.ico" draggable="false"></a></div>
+                            <div class="iconAchievNo noWarowl mod-tooltip"><a data-toggle="tooltip" title="Locked"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/WarOwl.ico" draggable="false"></a></div>
+                            <div class="iconAchiev warowl mod-tooltip"><a data-toggle="tooltip" title="10 000 clicks"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/WarOwl.ico" draggable="false"></a></div>
+                            <div class="iconAchievNo noSwag mod-tooltip"><a data-toggle="tooltip" title="Locked"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Swag.ico" draggable="false"></a></div>
+                            <div class="iconAchiev sawg mod-tooltip"><a data-toggle="tooltip" title="10 000 clicks"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Swag.ico" draggable="false"></a></div>
+
                             <div class="iconAchievNo noNulu mod-tooltip"><a data-toggle="tooltip" title="Locked"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Nulu.ico" draggable="false"></a></div>
                             <div class="iconAchiev nulu mod-tooltip"><a data-toggle="tooltip" title="10 clicks"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Nulu.ico" draggable="false"></a></div>
                             <div class="iconAchievNo noCsgo mod-tooltip"><a data-toggle="tooltip" title="Locked"><img class="achievIcon" src="CSS/IMGS/csgo/Other/CSGO_.ico" draggable="false"></a></div>
@@ -322,6 +347,7 @@
                             <div class="iconAchiev csgoRed mod-tooltip"><a data-toggle="tooltip" title="5000 clicks"><img class="achievIcon" src="CSS/IMGS/csgo/Other/CSGO_RED.ico" draggable="false"></a></div>
                             <div class="iconAchievNo noFlick mod-tooltip"><a data-toggle="tooltip" title="Locked"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Flick.ico" draggable="false"></a></div>
                             <div class="iconAchiev flick mod-tooltip"><a data-toggle="tooltip" title="10 000 clicks"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Flick.ico" draggable="false"></a></div>
+
                         </div>
                     </div>
                 </div>
