@@ -92,3 +92,14 @@ h2
 {
     background-color: #fff !important;
 }
+.noAccount
+{
+	color: white;
+	text-decoration: none !important;
+	margin-top: 10% !important;
+}
+.noAccount:hover
+{
+	text-decoration: none !important;
+	color: white;
+}

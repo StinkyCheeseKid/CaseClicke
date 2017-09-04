@@ -13,11 +13,13 @@
 <body>
     <div id="loginBox">
         <div class="iCenter">
+            <h1 style="color: white; position: absolute; margin-left: 7%; margin-top: 7%; font-size: 400%;">CS:GO Farm</h1>
             <form action="INCLUDES/login-inc.php" method="POST">
             <input class="username" type="text" name="uid" placeholder="Username">
             <input class="password" type="password" name="pass"  placeholder="Password"><br>
                 <button class="submitBtn btn btn-info" type="submit" name="submit">Login</button>
             </form>
+            <a class="noAccount" href="register.php"><p>Don't have an account ?</p></a>
         </div>
     </div>
     <footer class="text-center">

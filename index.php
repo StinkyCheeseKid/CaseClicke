@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    include_once 'INCLUDES/dbh-inc.php';
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -17,9 +21,9 @@
 
                 <div id="clickerSpotInfo" class="col-md-6 col-lg-3">
 
-                    <h1>Clicker</h1>
+                    <h1><a href="clicker.php" style="text-decoration: none; color: white;">Clicker</a></h1>
                     <div class="clickerSpotContent col-md-12 col-lg-12">
-                        <img class="clickerImg" src="CSS/IMGS/csgoClickerMiniature.png" alt="Screenshot of the clicker game"/>
+                        <a href="clicker.php"><img class="clickerImg" src="CSS/IMGS/csgoClickerMiniature.png" alt="Screenshot of the clicker game"/></a>
                         <div class="clickerSpotText">
                             <h3><strong>Win skins just by clicking</strong></h3>
                             <p style="color: #aaa;"><strong><em>How does this work ?</em></strong></p>
@@ -61,38 +65,91 @@
                 <div id="userSpot" class="col-md-6 col-lg-3">
 
                     <div class="userSpotContent col-md-12 col-lg-12">
-                        <img class="logoImg" src="CSS/IMGS/logo3.png" alt="logoCsgoFarm"/>
-                        <h1 class="titleSite" style="font-size: 54px;">CS:GO Farm</h1>
-                        <a href="login.php"><button class="loginBtn" type="button">Login</button></a>
-                        <a href="register.php"><button class="registerBtn" type="button">Register</button></a>
-                    <!--<div class="iCenter">
-                        <div class="valueBox">
-                            <h1 style="padding: 0 0 7px 0;">Pseudo du joueur</h1>
-                        </div>
-                            <h5>(si connecté, sinon "Login et Logout")</h5>
-                            <h2>Avatar du joueur</h2>
-                                <div class="valueBox">
-                                    <p><strong>Balance</strong></p>
-                                    <input class="balanceBox" type="text" value="0" disabled>
+                    <div class="iCenter">
+                            <?php
+                                if (isset($_SESSION['u_id'])) {
+                                    $sql = "SELECT * FROM users";
+                                    $result = mysqli_query($conn, $sql);
+                                    if (mysqli_num_rows($result) > 0) {
+                                        if ($row = mysqli_fetch_assoc($result)) {
+                                            $id = $_SESSION['u_id'];
+                                            $sqlImg = "SELECT * FROM profileimg WHERE userid='$id'";
+                                            $resultImg = mysqli_query($conn, $sqlImg);
+                                            if ($rowImg = mysqli_fetch_assoc($resultImg)) {
+                                                    if ($rowImg['status'] == 0) {
+                                                        echo '<h1 style="padding: 0 20px 7px 0;">' .$_SESSION["u_uid"]. '</h1>
+                                                            <div class="valueBox">
+                                                            <h2>Profile image</h2>
+                                                            <img class="avatarOfUser" src="../uploads/profile' .$id. '.jpg">
+                                                            <form action="INCLUDES/upload-inc.php" method="POST" enctype="multipart/form-data">
+                                                                <input class="fileSelector btn btn-basic" type="file" name="avatar">
+                                                                <button class="fileSubmit btn btn-success" type="submit" name="submit" value="Upload">Save</button>
+                                                            </form>
+                                                            </div>
+                                                            <div class="valueBox">
+                                                                <p><strong>Points</strong></p>
+                                                                <input class="balanceBox" type="text" value="0" disabled>
+                                                            </div>
+                                                            <div class="valueBox">
+                                                                <p><strong>Trade link</strong></p>
+                                                                <form action="INCLUDES/link-inc.php" method="POST">
+                                                                <input class="tradeLinkBox" type="text" name="tradelink" maxlength="100">
+                                                                <button type="submit" name="submit" class="saveTradeLinkBtn btn btn-success">Save</button>
+                                                                </form>
+                                                            </div>
+                                                            <form action="INCLUDES/logout-inc.php" method="POST">
+                                                                    <button class="logoutBtn" type="submit" name="submit">Logout</button>
+                                                            </form>';
+                                                    }
+                                                    else {
+                                                        echo '<h1 style="padding: 0 20px 7px 0;">' .$_SESSION["u_uid"]. '</h1>
+                                                            <div class="valueBox">
+                                                            <h2>Profile image</h2>
+                                                            <img class="avatarOfUser" src="../uploads/profileDefault2-resized.jpg">
+                                                            <form action="INCLUDES/upload-inc.php" method="POST" enctype="multipart/form-data">
+                                                                <input class="fileSelector btn btn-basic" type="file" name="avatar">
+                                                                <button class="fileSubmit btn btn-success" type="submit" name="submit" value="Upload">Save</button>
+                                                            </form>
+                                                            </div>
+                                                            <div class="valueBox">
+                                                                <p><strong>Points</strong></p>
+                                                                <input class="balanceBox" type="text" value="0" disabled>
+                                                            </div>
+                                                            <div class="valueBox">
+                                                                <p><strong>Trade link</strong></p>
+                                                                <form action="INCLUDES/link-inc.php" method="POST">
+                                                                <input class="tradeLinkBox" type="text" name="tradelink" maxlength="100">
+                                                                <button type="submit" name="submit" class="saveTradeLinkBtn btn btn-success">Save</button>
+                                                                </form>
+                                                            </div>
+                                                            <form action="INCLUDES/logout-inc.php" method="POST">
+                                                                    <button class="logoutBtn" type="submit" name="submit">Logout</button>
+                                                            </form>';
+                                                    }
+                                            }
+                                        }
+                                        else {
+                                            header("Location: ../index.php?user=null");
+                                        }
+                                    }
+                                }
+                                else {
+                                        echo '<img class="logoImg" src="CSS/IMGS/logo3.png" alt="logoCsgoFarm"/>
+                                        <h1 class="titleSite" style="font-size: 54px;">CS:GO Farm</h1>
+                                        <a href="login.php"><button class="loginBtn" type="button">Login</button></a>
+                                        <a href="register.php"><button class="registerBtn" type="button">Register</button></a>';
+                                }
+                            ?>
+                            <div class="adSpotContainer">
+                                <div class="adBox">
+                                    <p style="margin-top: 10px; color: #ccc; font-size: 14px">Sponsored links<p>
                                 </div>
-                                <div class="valueBox">
-                                    <p><strong>Trade link</strong></p>
-                                    <input class="tradeLinkBox" type="text" value="" maxlength="100">
-                                    <button class="saveTradeLinkBtn btn btn-success">Save</button>
-                                </div>
-                    </div>
-                                <p>...</p>
-                                <p>...</p>
-                                <p>...</p>
-                                <p>...</p>-->
-                <div class="adSpotContainer">
-                    <div class="adBox">
-                        <p style="margin-top: 10px; color: #ccc; font-size: 14px">Sponsored links<p>
-                    </div>
-                            <div class="adSpot">
-                                <p>Ads Box<p>
+                                        <div class="adSpot">
+                                            <p>Ads Box<p>
+                                        </div>
                             </div>
-                </div>
+                        </div>
+                    </div>
 
 
         <footer class="text-center">

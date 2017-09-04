@@ -63,8 +63,8 @@
                     <div class="userSpotContent col-md-12 col-lg-12">
                         <img class="logoImg" src="CSS/IMGS/logo3.png" alt="logoCsgoFarm"/>
                         <h1 class="titleSite" style="font-size: 54px;">CS:GO Farm</h1>
-                        <a href="login.html"><button class="loginBtn" type="button">Login</button></a>
-                        <a href="register.html"><button class="registerBtn" type="button">Register</button></a>
+                        <a href="login.php"><button class="loginBtn" type="button">Login</button></a>
+                        <a href="register.php"><button class="registerBtn" type="button">Register</button></a>
                     <!--<div class="iCenter">
                         <div class="valueBox">
                             <h1 style="padding: 0 0 7px 0;">Pseudo du joueur</h1>
@@ -107,8 +107,8 @@
                     </div>
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="clicker.html">Clicker</a></li>
+                            <li><a href="index.php">Home</a></li>
+                            <li><a href="clicker.php">Clicker</a></li>
                             <li><a href="#">...</a></li>
                             <li><a href="#">...</a></li>
                             <li><a href="#">...</a></li>

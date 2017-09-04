@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
     else {
         //Check if email is valid
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            header("Location: ../register.php?register=email");
+            header("Location: ../register.php?register=emailinvalid");
             exit();
         }
         else {
@@ -28,13 +28,34 @@ if (isset($_POST['submit'])) {
                 header("Location: ../register.php?register=usernametaken");
                 exit();
             }
-            else {
-                $hashedPass = password_hash($pass, PASSWORD_DEFAULT);
-                //Insert the user into the database
-                $sql = "INSERT INTO users (user_uid, user_email, user_pass) VALUES ('$uid', '$email', '$hashedPass');";
+            elseif ($resultCheck == 0) {
+                $sql = "SELECT * FROM users WHERE user_email = '$email'";
                 $result = mysqli_query($conn, $sql);
-                header("Location: ../login.php?register=succes");
-                exit();
+                $resultCheck = mysqli_num_rows($result);
+
+                if ($resultCheck > 0) {
+                    header("Location: ../register.php?register=emailtaken");
+                    exit();
+                }
+                else {
+                    $hashedPass = password_hash($pass, PASSWORD_DEFAULT);
+                    //Insert the user into the database
+                    $sql = "INSERT INTO users (user_uid, user_email, user_pass) VALUES ('$uid', '$email', '$hashedPass');";
+                    $result = mysqli_query($conn, $sql);
+
+                    $sql = "SELECT * FROM users WHERE user_uid = '$uid'";
+                    $result = mysqli_query($conn, $sql);
+
+                    if (mysqli_num_rows($result) > 0) {
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            $userid = $row['user_id'];
+                            $sql = "INSERT INTO profileimg (userid, status) VALUES ('$userid', 1)";
+                            mysqli_query($conn, $sql);
+                        }
+                    }
+                    header("Location: ../login.php?register=success");
+                    exit();
+                }
             }
         }
     }

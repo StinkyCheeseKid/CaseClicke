@@ -1,6 +1,6 @@
 <?php
 
-if (isset($_POST['save'])) {
+if (isset($_POST['submit'])) {
 
     include 'dbh-inc.php';
 

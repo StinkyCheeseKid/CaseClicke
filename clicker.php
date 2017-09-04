@@ -1,5 +1,11 @@
 <?php
     session_start();
+
+    if (!isset($_SESSION['u_id'])) {
+    echo '<script>
+            window.location.href="login.php";
+        </script>';
+    }
 ?>
 
 <!DOCTYPE html>
@@ -123,7 +129,7 @@
                   </div>
                 </div>
             </div>
-            <div id="myModalAchivementsPop1" class="modal fade" role="dialog">
+            <div id="myModalLoginIfNotLogged" class="modal fade" role="dialog">
               <div class="modal-dialog modal-sm">
 
                 <!-- Modal content-->
@@ -332,7 +338,7 @@
                     </div>
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav">
-                            <li><a href="member.php">Home</a></li>
+                            <li><a href="index.php">Home</a></li>
                             <li><a href="clicker.php">Clicker</a></li>
                             <li><a href="#">...</a></li>
                             <li><a href="#">...</a></li>

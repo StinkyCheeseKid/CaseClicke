@@ -13,6 +13,7 @@
 <body>
     <div id="loginBox">
         <div class="iCenter">
+            <h1 style="color: white; position: absolute; margin-left: 7%; margin-top: 6%; font-size: 400%;">CS:GO Farm</h1>
             <form action="INCLUDES/register-inc.php" method="POST">
                 <input class="username" type="text" name="uid" placeholder="Username">
                 <input type="password" name="pass" placeholder="Password"><br>

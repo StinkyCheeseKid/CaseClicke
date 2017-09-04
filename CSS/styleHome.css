@@ -163,18 +163,18 @@ button
 #userSpot .adSpot
 {
     border: 1px solid rgba(0, 0, 0, 0.4);
-    height: 250px;
-    width: 100%;
+    height: auto;
+    width: 90%;
 }
 #userSpot .adBox
 {
-    width: 100%;
+    width: 90%;
     text-align: center;
+    margin-right: 5%;
 }
 #userSpot .adSpotContainer
 {
-    /*margin-top: 0%; If connected*/
-    margin-top: 75%; /*If not connected*/
+    /*margin-top: 75%; If not connected*/
 }
 #userSpot
 {
@@ -187,7 +187,7 @@ button
     width: 15% !important;
     height: 12% !important;
     float: left;
-    margin-left: 15%;
+    margin-left: 9%;
     margin-top: 7%;
 }
 .loginBtn, .registerBtn
@@ -195,6 +195,7 @@ button
     width: 75%;
     height: 40px;
     margin-top: 18px;
+    margin-right: 5%;
     color: white;
     background: rgba(35, 38, 38, 0.85);
     border: 1px solid rgba(0, 0, 0, 0.3);
@@ -213,13 +214,12 @@ button
 }
 .tradeLinkBox
 {
-    margin-left: 18%;
     border: 1px solid rgba(0,0,0,0.2);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.0);
     border-radius: 5px;
     background: white;
     margin-bottom: 2px;
-    width: 50%;
+    width: 66%;
 }
 .balanceBox
 {
@@ -260,9 +260,38 @@ button
     width: 75%;
     height: 40px;
     margin-top: 18px;
+    margin-right: 7%;
     color: white;
     background: rgba(35, 38, 38, 0.85);
     border: 1px solid rgba(0, 0, 0, 0.3);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+}
+.saveTradeLinkBtn
+{
+    margin: 2% 2%;
+}
+.fileSelector
+{
+    margin-left: 7.5%;
+    background: rgba(35, 38, 38, 0.85);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    width: 86%;
+}
+.fileSelector:hover
+{
+    text-decoration: none;
+    color: white;
+}
+.fileSubmit
+{
+    margin-top: 3%;
+}
+.avatarOfUser
+{
+    height: 150px;
+    width: 150px;
+    border-radius: 30px;
 }
