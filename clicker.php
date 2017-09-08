@@ -99,12 +99,12 @@
                         <h2 class="modal-title">About Achievements</h2>
                       </div>
                       <div class="modal-body">
-                        <p><strong><em>How does the exp system work ?</em></strong></p>
+                        <p style="color: #ccc;"><strong><em>How does the exp system works ?</em></strong></p>
                         <p>- When you unlock an achievement you gain some exp.</p>
                         <p>- Each time you get an achievement the next one will be harder to get.</p>
                         <p>- Once you pass a level your exp is reset to 0xp.</p>
                         <p>- For each level you need 600xp it doesn't change since achiements are harder to get.</p>
-                        <p>- When you reach level 20 you gain points on CS:GO Farm where you can go withdraw skins.</p>
+                        <p>- When you levelup you gain points on CS:GO Farm where you can go withdraw skins.</p>
                         <p>- Reaching level 20 will make you pass a rank on CS:GO Farm</p>
                       </div>
                       <div class="modal-footer">
@@ -123,7 +123,7 @@
                         <h2 class="modal-title">Are you still here ?</h2>
                       </div>
                       <div class="modal-body">
-                        <p><strong>Why is this here ?</strong></p>
+                        <p style="color: #ccc"><strong><em>Why is this here ?</em></strong></p>
                         <p>This is for avoiding scripts more commonly named as cheats.</p>
                         <p>Not 100% efficient but still is quite efficient.</p>
                       </div>
@@ -317,23 +317,23 @@
                             <div class="iconAchievNo noSkull mod-tooltip"><a data-toggle="tooltip" title="Locked"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Skull.ico" draggable="false"></a></div>
                             <div class="iconAchiev skull mod-tooltip"><a data-toggle="tooltip" title="Gained 1 000 000€"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Skull.ico" draggable="false"></a></div>
                             <div class="iconAchievNo noHeadshot mod-tooltip"><a data-toggle="tooltip" title="Locked"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Headshot.ico" draggable="false"></a></div>
-                            <div class="iconAchiev headshot mod-tooltip"><a data-toggle="tooltip" title="10 000 clicks"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Headshot.ico" draggable="false"></a></div>
+                            <div class="iconAchiev headshot mod-tooltip"><a data-toggle="tooltip" title="2 500 000€"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Headshot.ico" draggable="false"></a></div>
                             <div class="iconAchievNo noHowl mod-tooltip"><a data-toggle="tooltip" title="Locked"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Howl.ico" draggable="false"></a></div>
-                            <div class="iconAchiev howl mod-tooltip"><a data-toggle="tooltip" title="10 000 clicks"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Howl.ico" draggable="false"></a></div>
+                            <div class="iconAchiev howl mod-tooltip"><a data-toggle="tooltip" title="5 000 000€"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Howl.ico" draggable="false"></a></div>
                             <div class="iconAchievNo noTreize mod-tooltip"><a data-toggle="tooltip" title="Locked"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/13.ico" draggable="false"></a></div>
-                            <div class="iconAchiev treize mod-tooltip"><a data-toggle="tooltip" title="10 000 clicks"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/13.ico" draggable="false"></a></div>
+                            <div class="iconAchiev treize mod-tooltip"><a data-toggle="tooltip" title="10 000 000€"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/13.ico" draggable="false"></a></div>
                             <div class="iconAchievNo noStealth mod-tooltip"><a data-toggle="tooltip" title="Locked"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Stealth.ico" draggable="false"></a></div>
-                            <div class="iconAchiev stealth mod-tooltip"><a data-toggle="tooltip" title="10 000 clicks"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Stealth.ico" draggable="false"></a></div>
+                            <div class="iconAchiev stealth mod-tooltip"><a data-toggle="tooltip" title="25 000 000€"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Stealth.ico" draggable="false"></a></div>
                             <div class="iconAchievNo noChi mod-tooltip"><a data-toggle="tooltip" title="Locked"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Chi.ico" draggable="false"></a></div>
-                            <div class="iconAchiev chi mod-tooltip"><a data-toggle="tooltip" title="10 000 clicks"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Chi.ico" draggable="false"></a></div>
+                            <div class="iconAchiev chi mod-tooltip"><a data-toggle="tooltip" title="50 000 000€"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Chi.ico" draggable="false"></a></div>
                             <div class="iconAchievNo noItsafox mod-tooltip"><a data-toggle="tooltip" title="Locked"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/ItsaFox.ico" draggable="false"></a></div>
-                            <div class="iconAchiev itsafox mod-tooltip"><a data-toggle="tooltip" title="10 000 clicks"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/ItsaFox.ico" draggable="false"></a></div>
+                            <div class="iconAchiev itsafox mod-tooltip"><a data-toggle="tooltip" title="100 000 000€"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/ItsaFox.ico" draggable="false"></a></div>
                             <div class="iconAchievNo noPear mod-tooltip"><a data-toggle="tooltip" title="Locked"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Pear.ico" draggable="false"></a></div>
-                            <div class="iconAchiev pear mod-tooltip"><a data-toggle="tooltip" title="10 000 clicks"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Pear.ico" draggable="false"></a></div>
+                            <div class="iconAchiev pear mod-tooltip"><a data-toggle="tooltip" title="250 000 000€"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Pear.ico" draggable="false"></a></div>
                             <div class="iconAchievNo noWarowl mod-tooltip"><a data-toggle="tooltip" title="Locked"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/WarOwl.ico" draggable="false"></a></div>
-                            <div class="iconAchiev warowl mod-tooltip"><a data-toggle="tooltip" title="10 000 clicks"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/WarOwl.ico" draggable="false"></a></div>
+                            <div class="iconAchiev warowl mod-tooltip"><a data-toggle="tooltip" title="500 000 000€"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/WarOwl.ico" draggable="false"></a></div>
                             <div class="iconAchievNo noSwag mod-tooltip"><a data-toggle="tooltip" title="Locked"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Swag.ico" draggable="false"></a></div>
-                            <div class="iconAchiev sawg mod-tooltip"><a data-toggle="tooltip" title="10 000 clicks"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Swag.ico" draggable="false"></a></div>
+                            <div class="iconAchiev swag mod-tooltip"><a data-toggle="tooltip" title="1 000 000 000€"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Swag.ico" draggable="false"></a></div>
 
                             <div class="iconAchievNo noNulu mod-tooltip"><a data-toggle="tooltip" title="Locked"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Nulu.ico" draggable="false"></a></div>
                             <div class="iconAchiev nulu mod-tooltip"><a data-toggle="tooltip" title="10 clicks"><img class="achievIcon" src="CSS/IMGS/csgo/Stickers/Nulu.ico" draggable="false"></a></div>

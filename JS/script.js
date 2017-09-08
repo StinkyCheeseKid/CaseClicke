@@ -5,7 +5,7 @@ $(document).ready(function() {
 GAME
 =================================================================================================================================
 */
-
+    load();
     $(".uspBtn,.sellUsp, .p250Btn,.sellP250, .deagBtn,.sellDeag, .tec9Btn,.sellTec9, .fiveBtn,.sellFive").hide();
     $(".famasBtn,.sellFamas, .galilBtn,.sellGalil, .m4Btn,.sellM4, .akBtn,.sellAk, .scoutBtn,.sellScout, .awpBtn,.sellAwp").hide();
     $(".bash, .bish, .bosh, .drug, .rekt, .skull, .headshot, .howl").hide();
@@ -310,26 +310,103 @@ GAME
             }
     });
 
-    /* Pour plus tard !
-
-    $(".saveBtn").click(function() {
+    function save() {
     localStorage.setItem("euroCount", euroCount);
+
+    /*localStorage.setItem("euroCountAdd", euroCountAdd);
+    localStorage.setItem("totalEuro", totalEuro);
+    localStorage.setItem("totalJs", totalJs);
+    localStorage.setItem("achievementExp", achievementExp);
+    localStorage.setItem("expBarWidth", expBarWidth);
+    localStorage.setItem("levelCount", levelCount);
+    localStorage.setItem("clickCount", clickCount);
+    localStorage.setItem("clickCountJs", clickCountJs);
     localStorage.setItem("glockClicker", glockClicker);
-    localStorage.setItem("glockClickerPrice", glockClickerPrice);
     localStorage.setItem("uspClicker", uspClicker);
-    localStorage.setItem("uspClickerPrice", uspClickerPrice);
+    localStorage.setItem("p250Clicker", p250Clicker);
+    localStorage.setItem("deagClicker", deagClicker);
+    localStorage.setItem("tec9Clicker", tec9Clicker);
+    localStorage.setItem("fiveClicker", fiveClicker);
+    localStorage.setItem("famasClicker", famasClicker);
+    localStorage.setItem("galilClicker", galilClicker);
+    localStorage.setItem("m4Clicker", m4Clicker);
+    localStorage.setItem("scoutClicker", scoutClicker);
+    localStorage.setItem("akClicker", akClicker);
+    localStorage.setItem("awpClicker", awpClicker);
     localStorage.setItem("casePerSecJs", casePerSecJs);
-    localStorage.setItem("uspClickerMultiplier", uspClickerMultiplier);
-    localStorage.setItem("euroCountAdd", euroCountAdd);
+    localStorage.setItem("point", point);
+    localStorage.setItem("glockClickerPrice", glockClickerPrice);
+    localStorage.setItem("uspClickerPrice", uspClickerPrice);
+    localStorage.setItem("p250ClickerPrice", p250ClickerPrice);
+    localStorage.setItem("deagClickerPrice", deagClickerPrice);
+    localStorage.setItem("tec9ClickerPrice", tec9ClickerPrice);
+    localStorage.setItem("fiveClickerPrice", fiveClickerPrice);
+    localStorage.setItem("famasClickerPrice", famasClickerPrice);
+    localStorage.setItem("galilClickerPrice", galilClickerPrice);
+    localStorage.setItem("m4ClickerPrice", m4ClickerPrice);
+    localStorage.setItem("scoutClickerPrice", scoutClickerPrice);
+    localStorage.setItem("akClickerPrice", akClickerPrice);
+    localStorage.setItem("awpClickerPrice", awpClickerPrice);
+    localStorage.setItem("clickerMultiplier", clickerMultiplier);*/
 });
 
-    $(".loadBtn").click(function() {
+    function load() {
     euroCount = localStorage.getItem("euroCount");
     euroCount = parseInt(euroCount);
     $(".caseNumber").val(euroCount);
+
+    /*totalEuro = localStorage.getItem("totalEuro");
+    totalEuro = parseInt(totalEuro);
+    $(".euroTotal").val(totalEuro);
+    clickCount = localStorage.getItem("clickCount");
+    clickCount = parseInt(clickCount);
+    $(".clickTotal").val(clickCount);
+    totalJs = localStorage.getItem("totalJs");
+    totalJs = parseInt(totalJs);
+    point = localStorage.getItem("point");
+    point = parseInt(point);
+    levelCount = localStorage.getItem("levelCount");
+    levelCount = parseInt(levelCount);
+    $(".yourLevel").text("Level "+levelCount);
+    achievementExp = localStorage.getItem("achievementExp");
+    achievementExp = parseInt(achievementExp);
+    expBarWidth = localStorage.getItem("expBarWidth");
+    expBarWidth = parseInt(expBarWidth);
+    clickCountJs = localStorage.getItem("clickCountJs");
+    clickCountJs = parseInt(clickCountJs);
     glockClicker = localStorage.getItem("glockClicker");
     glockClicker = parseInt(glockClicker);
     $(".glockBtn .clickerUpgInpt1").val(glockClicker);
+    p250Clicker = localStorage.getItem("p250Clicker");
+    p250Clicker = parseInt(p250Clicker);
+    $(".p250Btn .clickerUpgInpt1").val(p250Clicker);
+    deagClicker = localStorage.getItem("deagClicker");
+    deagClicker = parseInt(deagClicker);
+    $(".deagBtn .clickerUpgInpt1").val(deagClicker);
+    tec9Clicker = localStorage.getItem("tec9Clicker");
+    tec9Clicker = parseInt(tec9Clicker);
+    $(".tec9Btn .clickerUpgInpt1").val(tec9Clicker);
+    fiveClicker = localStorage.getItem("fiveClicker");
+    fiveClicker = parseInt(fiveClicker);
+    $(".fiveBtn .clickerUpgInpt1").val(fiveClicker);
+    famasClicker = localStorage.getItem("famasClicker");
+    famasClicker = parseInt(famasClicker);
+    $(".famasBtn .clickerUpgInpt1").val(famasClicker);
+    galilClicker = localStorage.getItem("galilClicker");
+    galilClicker = parseInt(galilClicker);
+    $(".galilBtn .clickerUpgInpt1").val(galilClicker);
+    m4Clicker = localStorage.getItem("m4Clicker");
+    m4Clicker = parseInt(m4Clicker);
+    $(".m4Btn .clickerUpgInpt1").val(m4Clicker);
+    scoutClicker = localStorage.getItem("scoutClicker");
+    scoutClicker = parseInt(scoutClicker);
+    $(".scoutBtn .clickerUpgInpt1").val(scoutClicker);
+    akClicker = localStorage.getItem("akClicker");
+    akClicker = parseInt(akClicker);
+    $(".akBtn .clickerUpgInpt1").val(akClicker);
+    awpClicker = localStorage.getItem("awpClicker");
+    awpClicker = parseInt(awpClicker);
+    $(".awpBtn .clickerUpgInpt1").val(awpClicker);
     glockClickerPrice = localStorage.getItem("glockClickerPrice");
     glockClickerPrice = parseInt(glockClickerPrice);
     $(".glockBtn .clickerUpgInpt2").val(glockClickerPrice);
@@ -339,8 +416,38 @@ GAME
     uspClickerPrice = localStorage.getItem("uspClickerPrice");
     uspClickerPrice = parseInt(uspClickerPrice);
     $(".uspBtn .clickerUpgInpt2").val(uspClickerPrice);
-    uspClickerMultiplier = localStorage.getItem("uspClickerMultiplier");
-    uspClickerMultiplier = parseInt(uspClickerMultiplier);
+    clickerMultiplier = localStorage.getItem("clickerMultiplier");
+    clickerMultiplier = parseInt(clickerMultiplier);
+    p250ClickerPrice = localStorage.getItem("p250ClickerPrice");
+    p250ClickerPrice = parseInt(p250ClickerPrice);
+    $(".p250Btn .clickerUpgInpt1").val(p250Clicker);
+    deagClickerPrice = localStorage.getItem("deagClickerPrice");
+    deagClickerPrice = parseInt(deagClickerPrice);
+    $(".deagBtn .clickerUpgInpt1").val(deagClicker);
+    tec9ClickerPrice = localStorage.getItem("tec9ClickerPrice");
+    tec9ClickerPrice = parseInt(tec9ClickerPrice);
+    $(".tec9Btn .clickerUpgInpt1").val(tec9Clicker);
+    fiveClickerPrice = localStorage.getItem("fiveClickerPrice");
+    fiveClickerPrice = parseInt(fiveClickerPrice);
+    $(".fiveBtn .clickerUpgInpt1").val(fiveClicker);
+    famasClickerPrice = localStorage.getItem("famasClickerPrice");
+    famasClickerPrice = parseInt(famasClickerPrice);
+    $(".famasBtn .clickerUpgInpt1").val(famasClicker);
+    galilClickerPrice = localStorage.getItem("galilClickerPrice");
+    galilClickerPrice = parseInt(galilClickerPrice);
+    $(".galilBtn .clickerUpgInpt1").val(galilClicker);
+    m4ClickerPrice = localStorage.getItem("m4ClickerPrice");
+    m4ClickerPrice = parseInt(m4ClickerPrice);
+    $(".m4Btn .clickerUpgInpt1").val(m4Clicker);
+    scoutClickerPrice = localStorage.getItem("scoutClickerPrice");
+    scoutClickerPrice = parseInt(scoutClickerPrice);
+    $(".scoutBtn .clickerUpgInpt1").val(scoutClicker);
+    akClickerPrice = localStorage.getItem("akClickerPrice");
+    akClickerPrice = parseInt(akClickerPrice);
+    $(".akBtn .clickerUpgInpt1").val(akClicker);
+    awpClickerPrice = localStorage.getItem("awpClickerPrice");
+    awpClickerPrice = parseInt(awpClickerPrice);
+    $(".awpBtn .clickerUpgInpt1").val(awpClicker);
     casePerSecJs = localStorage.getItem("casePerSecJs");
     casePerSecJs = parseInt(casePerSecJs);
     $(".casePerSec").val(casePerSecJs);
@@ -348,10 +455,10 @@ GAME
     euroCountAdd = parseInt(euroCountAdd);
     $("#cookieSpot .casePerClickSpot .casePerClick").val(euroCountAdd);
     document.title = euroCount +" € - CS:GO Farm";
-    update();
+    update();*/
 });
 
-$(".resetBtn").click(function() {
+/*$(".resetBtn").click(function() {
     euroCount = 0;
     clickerMultiplier
     glockClicker = 0;
@@ -1101,6 +1208,7 @@ ACHIEVEMENTS
                 achievementsClicks();
                 achievementExpBarOne();
                 clickColor();
+                save();
             }
             setInterval(timerAchiev, 1);
 
@@ -1323,7 +1431,7 @@ ACHIEVEMENTS
                     $( ".achievement-notification" ).html("Achievement unlocked");
                     $( ".achievement-notification" ).html("Achievement unlocked");
                     $( ".achievement-notification" ).show();
-                    $( ".achievement-name" ).html('"You gained 1 000 000 € in total !"');
+                    $( ".achievement-name" ).html('"You gained 2 500 000 € in total !"');
                     $( ".achievement-name" ).show();
                     setTimeout(function () {
                         $( ".achievBanner" ).removeClass( "achievement-banner" );
@@ -1347,7 +1455,7 @@ ACHIEVEMENTS
                     $( ".achievement-notification" ).html("Achievement unlocked");
                     $( ".achievement-notification" ).html("Achievement unlocked");
                     $( ".achievement-notification" ).show();
-                    $( ".achievement-name" ).html('"You gained 1 000 000 € in total !"');
+                    $( ".achievement-name" ).html('"You gained 5 000 000 € in total !"');
                     $( ".achievement-name" ).show();
                     setTimeout(function () {
                         $( ".achievBanner" ).removeClass( "achievement-banner" );
@@ -1362,8 +1470,8 @@ ACHIEVEMENTS
                     setInterval(function () {
                         $(".skull").fadeIn(3000);
                     },1500);
-                    achievementExp += 60;
-                    expBarWidth += 60;
+                    achievementExp += 30;
+                    expBarWidth += 30;
                     totalJs += 1;
                     $( ".achievBanner" ).addClass( "achievement-banner" );
                     $( ".achievIconBanner" ).addClass( "achievement-icon" );
@@ -1371,7 +1479,7 @@ ACHIEVEMENTS
                     $( ".achievement-notification" ).html("Achievement unlocked");
                     $( ".achievement-notification" ).html("Achievement unlocked");
                     $( ".achievement-notification" ).show();
-                    $( ".achievement-name" ).html('"You gained 1 000 000 € in total !"');
+                    $( ".achievement-name" ).html('"You gained 10 000 000 € in total !"');
                     $( ".achievement-name" ).show();
                     setTimeout(function () {
                         $( ".achievBanner" ).removeClass( "achievement-banner" );
@@ -1386,8 +1494,8 @@ ACHIEVEMENTS
                     setInterval(function () {
                         $(".skull").fadeIn(3000);
                     },1500);
-                    achievementExp += 60;
-                    expBarWidth += 60;
+                    achievementExp += 30;
+                    expBarWidth += 30;
                     totalJs += 1;
                     $( ".achievBanner" ).addClass( "achievement-banner" );
                     $( ".achievIconBanner" ).addClass( "achievement-icon" );
@@ -1395,7 +1503,7 @@ ACHIEVEMENTS
                     $( ".achievement-notification" ).html("Achievement unlocked");
                     $( ".achievement-notification" ).html("Achievement unlocked");
                     $( ".achievement-notification" ).show();
-                    $( ".achievement-name" ).html('"You gained 1 000 000 € in total !"');
+                    $( ".achievement-name" ).html('"You gained 25 000 000 € in total !"');
                     $( ".achievement-name" ).show();
                     setTimeout(function () {
                         $( ".achievBanner" ).removeClass( "achievement-banner" );
@@ -1410,8 +1518,8 @@ ACHIEVEMENTS
                     setInterval(function () {
                         $(".skull").fadeIn(3000);
                     },1500);
-                    achievementExp += 60;
-                    expBarWidth += 60;
+                    achievementExp += 30;
+                    expBarWidth += 30;
                     totalJs += 1;
                     $( ".achievBanner" ).addClass( "achievement-banner" );
                     $( ".achievIconBanner" ).addClass( "achievement-icon" );
@@ -1419,7 +1527,7 @@ ACHIEVEMENTS
                     $( ".achievement-notification" ).html("Achievement unlocked");
                     $( ".achievement-notification" ).html("Achievement unlocked");
                     $( ".achievement-notification" ).show();
-                    $( ".achievement-name" ).html('"You gained 1 000 000 € in total !"');
+                    $( ".achievement-name" ).html('"You gained 50 000 000 € in total !"');
                     $( ".achievement-name" ).show();
                     setTimeout(function () {
                         $( ".achievBanner" ).removeClass( "achievement-banner" );
@@ -1434,8 +1542,8 @@ ACHIEVEMENTS
                     setInterval(function () {
                         $(".skull").fadeIn(3000);
                     },1500);
-                    achievementExp += 90;
-                    expBarWidth += 90;
+                    achievementExp += 30;
+                    expBarWidth += 30;
                     totalJs += 1;
                     $( ".achievBanner" ).addClass( "achievement-banner" );
                     $( ".achievIconBanner" ).addClass( "achievement-icon" );
@@ -1443,7 +1551,7 @@ ACHIEVEMENTS
                     $( ".achievement-notification" ).html("Achievement unlocked");
                     $( ".achievement-notification" ).html("Achievement unlocked");
                     $( ".achievement-notification" ).show();
-                    $( ".achievement-name" ).html('"You gained 1 000 000 € in total !"');
+                    $( ".achievement-name" ).html('"You gained 100 000 000 € in total !"');
                     $( ".achievement-name" ).show();
                     setTimeout(function () {
                         $( ".achievBanner" ).removeClass( "achievement-banner" );
@@ -1458,8 +1566,8 @@ ACHIEVEMENTS
                     setInterval(function () {
                         $(".skull").fadeIn(3000);
                     },1500);
-                    achievementExp += 90;
-                    expBarWidth += 90;
+                    achievementExp += 30;
+                    expBarWidth += 30;
                     totalJs += 1;
                     $( ".achievBanner" ).addClass( "achievement-banner" );
                     $( ".achievIconBanner" ).addClass( "achievement-icon" );
@@ -1467,7 +1575,7 @@ ACHIEVEMENTS
                     $( ".achievement-notification" ).html("Achievement unlocked");
                     $( ".achievement-notification" ).html("Achievement unlocked");
                     $( ".achievement-notification" ).show();
-                    $( ".achievement-name" ).html('"You gained 1 000 000 € in total !"');
+                    $( ".achievement-name" ).html('"You gained 250 000 000 € in total !"');
                     $( ".achievement-name" ).show();
                     setTimeout(function () {
                         $( ".achievBanner" ).removeClass( "achievement-banner" );
@@ -1482,8 +1590,8 @@ ACHIEVEMENTS
                     setInterval(function () {
                         $(".skull").fadeIn(3000);
                     },1500);
-                    achievementExp += 90;
-                    expBarWidth += 90;
+                    achievementExp += 30;
+                    expBarWidth += 30;
                     totalJs += 1;
                     $( ".achievBanner" ).addClass( "achievement-banner" );
                     $( ".achievIconBanner" ).addClass( "achievement-icon" );
@@ -1491,7 +1599,7 @@ ACHIEVEMENTS
                     $( ".achievement-notification" ).html("Achievement unlocked");
                     $( ".achievement-notification" ).html("Achievement unlocked");
                     $( ".achievement-notification" ).show();
-                    $( ".achievement-name" ).html('"You gained 1 000 000 € in total !"');
+                    $( ".achievement-name" ).html('"You gained 500 000 000 € in total !"');
                     $( ".achievement-name" ).show();
                     setTimeout(function () {
                         $( ".achievBanner" ).removeClass( "achievement-banner" );
@@ -1506,8 +1614,8 @@ ACHIEVEMENTS
                     setInterval(function () {
                         $(".skull").fadeIn(3000);
                     },1500);
-                    achievementExp += 120;
-                    expBarWidth += 120;
+                    achievementExp += 30;
+                    expBarWidth += 30;
                     totalJs += 1;
                     $( ".achievBanner" ).addClass( "achievement-banner" );
                     $( ".achievIconBanner" ).addClass( "achievement-icon" );
@@ -1515,7 +1623,7 @@ ACHIEVEMENTS
                     $( ".achievement-notification" ).html("Achievement unlocked");
                     $( ".achievement-notification" ).html("Achievement unlocked");
                     $( ".achievement-notification" ).show();
-                    $( ".achievement-name" ).html('"You gained 1 000 000 € in total !"');
+                    $( ".achievement-name" ).html('"You gained 1 000 000 000 € in total !"');
                     $( ".achievement-name" ).show();
                     setTimeout(function () {
                         $( ".achievBanner" ).removeClass( "achievement-banner" );
@@ -1583,8 +1691,8 @@ ACHIEVEMENTS
                 setInterval(function () {
                     $(".csgoBlue").fadeIn(3000);
                 },1500);
-                achievementExp += 60;
-                expBarWidth += 60;
+                achievementExp += 30;
+                expBarWidth += 30;
                 clickCountJs += 1
                 $( ".achievBanner" ).addClass( "achievement-banner" );
                 $( ".achievIconBanner" ).addClass( "achievement-icon" );
@@ -1606,8 +1714,8 @@ ACHIEVEMENTS
                 setInterval(function () {
                     $(".csgoGreen").fadeIn(3000);
                 },1500);
-                achievementExp += 60;
-                expBarWidth += 60;
+                achievementExp += 30;
+                expBarWidth += 30;
                 clickCountJs += 1
                 $( ".achievBanner" ).addClass( "achievement-banner" );
                 $( ".achievIconBanner" ).addClass( "achievement-icon" );
@@ -1629,8 +1737,8 @@ ACHIEVEMENTS
                 setInterval(function () {
                     $(".csgoRed").fadeIn(3000);
                 },1500);
-                achievementExp += 60;
-                expBarWidth += 60;
+                achievementExp += 30;
+                expBarWidth += 30;
                 clickCountJs += 1
                 $( ".achievBanner" ).addClass( "achievement-banner" );
                 $( ".achievIconBanner" ).addClass( "achievement-icon" );
@@ -1652,8 +1760,8 @@ ACHIEVEMENTS
                 setInterval(function () {
                     $(".flick").fadeIn(3000);
                 },1500);
-                achievementExp += 90;
-                expBarWidth += 90;
+                achievementExp += 30;
+                expBarWidth += 30;
                 clickCountJs += 1;
                 $( ".achievBanner" ).addClass( "achievement-banner" );
                 $( ".achievIconBanner" ).addClass( "achievement-icon" );
@@ -1698,7 +1806,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 1200 && levelCount == 1) {
+            else if (achievementExp == 600 && levelCount == 1) {
                 $(".yourLevel").text("Level 2");
                 levelCount += 1
                 achievementExp = 0;
@@ -1723,7 +1831,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 1800 && levelCount == 2) {
+            else if (achievementExp == 600 && levelCount == 2) {
                 $(".yourLevel").text("Level 3");
                 levelCount += 1
                 achievementExp = 0;
@@ -1748,7 +1856,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 2400 && levelCount == 3) {
+            else if (achievementExp == 600 && levelCount == 3) {
                 $(".yourLevel").text("Level 4");
                 levelCount += 1
                 achievementExp = 0;
@@ -1773,7 +1881,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 3000 && levelCount == 4) {
+            else if (achievementExp == 600 && levelCount == 4) {
                 $(".yourLevel").text("Level 5");
                 levelCount += 1
                 achievementExp = 0;
@@ -1798,7 +1906,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 3600 && levelCount == 5) {
+            else if (achievementExp == 600 && levelCount == 5) {
                 $(".yourLevel").text("Level 6");
                 levelCount += 1
                 achievementExp = 0;
@@ -1823,7 +1931,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 4200 && levelCount == 6) {
+            else if (achievementExp == 600 && levelCount == 6) {
                 $(".yourLevel").text("Level 7");
                 levelCount += 1
                 achievementExp = 0;
@@ -1848,7 +1956,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 4800 && levelCount == 7) {
+            else if (achievementExp == 600 && levelCount == 7) {
                 $(".yourLevel").text("Level 8");
                 levelCount += 1
                 achievementExp = 0;
@@ -1873,7 +1981,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 5400 && levelCount == 8) {
+            else if (achievementExp == 600 && levelCount == 8) {
                 $(".yourLevel").text("Level 9");
                 levelCount += 1
                 achievementExp = 0;
@@ -1898,7 +2006,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 6000 && levelCount == 9) {
+            else if (achievementExp == 600 && levelCount == 9) {
                 $(".yourLevel").text("Level 10");
                 levelCount += 1
                 achievementExp = 0;
@@ -1923,7 +2031,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 6600 && levelCount == 10) {
+            else if (achievementExp == 600 && levelCount == 10) {
                 $(".yourLevel").text("Level 11");
                 levelCount += 1
                 achievementExp = 0;
@@ -1948,7 +2056,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 7200 && levelCount == 11) {
+            else if (achievementExp == 600 && levelCount == 11) {
                 $(".yourLevel").text("Level 12");
                 levelCount += 1
                 achievementExp = 0;
@@ -1973,7 +2081,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 7800 && levelCount == 12) {
+            else if (achievementExp == 600 && levelCount == 12) {
                 $(".yourLevel").text("Level 13");
                 levelCount += 1
                 achievementExp = 0;
@@ -1998,7 +2106,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 8400 && levelCount == 13) {
+            else if (achievementExp == 600 && levelCount == 13) {
                 $(".yourLevel").text("Level 14");
                 levelCount += 1
                 achievementExp = 0;
@@ -2023,7 +2131,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 9000 && levelCount == 14) {
+            else if (achievementExp == 600 && levelCount == 14) {
                 $(".yourLevel").text("Level 15");
                 levelCount += 1
                 achievementExp = 0;
@@ -2048,7 +2156,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 9600 && levelCount == 15) {
+            else if (achievementExp == 600 && levelCount == 15) {
                 $(".yourLevel").text("Level 16");
                 levelCount += 1
                 achievementExp = 0;
@@ -2073,7 +2181,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 10200 && levelCount == 16) {
+            else if (achievementExp == 600 && levelCount == 16) {
                 $(".yourLevel").text("Level 17");
                 levelCount += 1
                 achievementExp = 0;
@@ -2098,7 +2206,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 10800 && levelCount == 17) {
+            else if (achievementExp == 600 && levelCount == 17) {
                 $(".yourLevel").text("Level 18");
                 levelCount += 1
                 achievementExp = 0;
@@ -2123,7 +2231,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 11400 && levelCount == 18) {
+            else if (achievementExp == 600 && levelCount == 18) {
                 $(".yourLevel").text("Level 19");
                 levelCount += 1
                 achievementExp = 0;
@@ -2148,7 +2256,7 @@ ACHIEVEMENTS
                     }, 5000);
                 }, 5000);
             }
-            else if (achievementExp == 12000 && levelCount == 19) {
+            else if (achievementExp == 600 && levelCount == 19) {
                 $(".yourLevel").text("Level 20");
                 levelCount += 1
                 achievementExp = 0;

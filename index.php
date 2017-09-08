@@ -68,6 +68,7 @@
                     <div class="iCenter">
                             <?php
                                 if (isset($_SESSION['u_id'])) {
+                                    $id = $_SESSION['u_id'];
                                     $sql = "SELECT * FROM users";
                                     $result = mysqli_query($conn, $sql);
                                     if (mysqli_num_rows($result) > 0) {
@@ -81,9 +82,13 @@
                                                             <div class="valueBox">
                                                             <h2>Profile image</h2>
                                                             <img class="avatarOfUser" src="../uploads/profile' .$id. '.jpg">
+                                                            <p style="font-size:10px;">Only jpg is supported</p>
                                                             <form action="INCLUDES/upload-inc.php" method="POST" enctype="multipart/form-data">
                                                                 <input class="fileSelector btn btn-basic" type="file" name="avatar">
                                                                 <button class="fileSubmit btn btn-success" type="submit" name="submit" value="Upload">Save</button>
+                                                            </form>
+                                                            <form action="INCLUDES/delete-inc.php" method="POST">
+                                                                <button class="fileDelete btn btn-danger" type="submit" name="submit">Delete</button>
                                                             </form>
                                                             </div>
                                                             <div class="valueBox">
@@ -93,7 +98,7 @@
                                                             <div class="valueBox">
                                                                 <p><strong>Trade link</strong></p>
                                                                 <form action="INCLUDES/link-inc.php" method="POST">
-                                                                <input class="tradeLinkBox" type="text" name="tradelink" maxlength="100">
+                                                                <input class="tradeLinkBox" type="text" name="tradelink" maxlength="100" placeholder="Your tradelink...">
                                                                 <button type="submit" name="submit" class="saveTradeLinkBtn btn btn-success">Save</button>
                                                                 </form>
                                                             </div>
@@ -106,9 +111,10 @@
                                                             <div class="valueBox">
                                                             <h2>Profile image</h2>
                                                             <img class="avatarOfUser" src="../uploads/profileDefault2-resized.jpg">
+                                                            <p style="font-size:10px;">Only jpg is supported</p>
                                                             <form action="INCLUDES/upload-inc.php" method="POST" enctype="multipart/form-data">
                                                                 <input class="fileSelector btn btn-basic" type="file" name="avatar">
-                                                                <button class="fileSubmit btn btn-success" type="submit" name="submit" value="Upload">Save</button>
+                                                                <button class="fileSubmit btn btn-success" type="submit" name="submit">Save</button>
                                                             </form>
                                                             </div>
                                                             <div class="valueBox">
@@ -118,7 +124,7 @@
                                                             <div class="valueBox">
                                                                 <p><strong>Trade link</strong></p>
                                                                 <form action="INCLUDES/link-inc.php" method="POST">
-                                                                <input class="tradeLinkBox" type="text" name="tradelink" maxlength="100">
+                                                                <input class="tradeLinkBox" type="text" name="tradelink" maxlength="100" placeholder="Your tradelink...">
                                                                 <button type="submit" name="submit" class="saveTradeLinkBtn btn btn-success">Save</button>
                                                                 </form>
                                                             </div>

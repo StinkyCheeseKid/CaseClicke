@@ -16,7 +16,8 @@
             <h1 style="color: white; position: absolute; margin-left: 7%; margin-top: 6%; font-size: 400%;">CS:GO Farm</h1>
             <form action="INCLUDES/register-inc.php" method="POST">
                 <input class="username" type="text" name="uid" placeholder="Username">
-                <input type="password" name="pass" placeholder="Password"><br>
+                <input type="password" name="pass1" placeholder="Password"><br>
+                <input type="password" name="pass2" placeholder="Confirm password"><br>
                 <input type="text" name="email" placeholder="Email"><br>
                     <button class="submitBtn btn btn-info" type="submit" name="submit">Register</button>
             </form>

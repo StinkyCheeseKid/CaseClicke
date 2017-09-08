@@ -285,9 +285,11 @@ button
     text-decoration: none;
     color: white;
 }
-.fileSubmit
+.fileSubmit, .fileDelete
 {
-    margin-top: 3%;
+    margin-top: 3% !important;
+    width: 100px !important;
+    height: 30px !important
 }
 .avatarOfUser
 {
