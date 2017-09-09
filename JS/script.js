@@ -5,7 +5,6 @@ $(document).ready(function() {
 GAME
 =================================================================================================================================
 */
-    load();
     $(".uspBtn,.sellUsp, .p250Btn,.sellP250, .deagBtn,.sellDeag, .tec9Btn,.sellTec9, .fiveBtn,.sellFive").hide();
     $(".famasBtn,.sellFamas, .galilBtn,.sellGalil, .m4Btn,.sellM4, .akBtn,.sellAk, .scoutBtn,.sellScout, .awpBtn,.sellAwp").hide();
     $(".bash, .bish, .bosh, .drug, .rekt, .skull, .headshot, .howl").hide();
@@ -310,10 +309,9 @@ GAME
             }
     });
 
-    function save() {
+    /*function save() {
     localStorage.setItem("euroCount", euroCount);
-
-    /*localStorage.setItem("euroCountAdd", euroCountAdd);
+    localStorage.setItem("euroCountAdd", euroCountAdd);
     localStorage.setItem("totalEuro", totalEuro);
     localStorage.setItem("totalJs", totalJs);
     localStorage.setItem("achievementExp", achievementExp);
@@ -347,15 +345,14 @@ GAME
     localStorage.setItem("scoutClickerPrice", scoutClickerPrice);
     localStorage.setItem("akClickerPrice", akClickerPrice);
     localStorage.setItem("awpClickerPrice", awpClickerPrice);
-    localStorage.setItem("clickerMultiplier", clickerMultiplier);*/
-});
+    localStorage.setItem("clickerMultiplier", clickerMultiplier);
+}
 
     function load() {
     euroCount = localStorage.getItem("euroCount");
     euroCount = parseInt(euroCount);
     $(".caseNumber").val(euroCount);
-
-    /*totalEuro = localStorage.getItem("totalEuro");
+    totalEuro = localStorage.getItem("totalEuro");
     totalEuro = parseInt(totalEuro);
     $(".euroTotal").val(totalEuro);
     clickCount = localStorage.getItem("clickCount");
@@ -412,7 +409,7 @@ GAME
     $(".glockBtn .clickerUpgInpt2").val(glockClickerPrice);
     uspClicker = localStorage.getItem("uspClicker");
     uspClicker = parseInt(uspClicker);
-    $(".uspBtn .clickerUpgInpt1").val(uspClicker);
+    $(".uspBtn .clickerUpgInpt2").val(uspClicker);
     uspClickerPrice = localStorage.getItem("uspClickerPrice");
     uspClickerPrice = parseInt(uspClickerPrice);
     $(".uspBtn .clickerUpgInpt2").val(uspClickerPrice);
@@ -420,34 +417,34 @@ GAME
     clickerMultiplier = parseInt(clickerMultiplier);
     p250ClickerPrice = localStorage.getItem("p250ClickerPrice");
     p250ClickerPrice = parseInt(p250ClickerPrice);
-    $(".p250Btn .clickerUpgInpt1").val(p250Clicker);
+    $(".p250Btn .clickerUpgInpt2").val(p250Clicker);
     deagClickerPrice = localStorage.getItem("deagClickerPrice");
     deagClickerPrice = parseInt(deagClickerPrice);
-    $(".deagBtn .clickerUpgInpt1").val(deagClicker);
+    $(".deagBtn .clickerUpgInpt2").val(deagClicker);
     tec9ClickerPrice = localStorage.getItem("tec9ClickerPrice");
     tec9ClickerPrice = parseInt(tec9ClickerPrice);
-    $(".tec9Btn .clickerUpgInpt1").val(tec9Clicker);
+    $(".tec9Btn .clickerUpgInpt2").val(tec9Clicker);
     fiveClickerPrice = localStorage.getItem("fiveClickerPrice");
     fiveClickerPrice = parseInt(fiveClickerPrice);
-    $(".fiveBtn .clickerUpgInpt1").val(fiveClicker);
+    $(".fiveBtn .clickerUpgInpt2").val(fiveClicker);
     famasClickerPrice = localStorage.getItem("famasClickerPrice");
     famasClickerPrice = parseInt(famasClickerPrice);
-    $(".famasBtn .clickerUpgInpt1").val(famasClicker);
+    $(".famasBtn .clickerUpgInpt2").val(famasClicker);
     galilClickerPrice = localStorage.getItem("galilClickerPrice");
     galilClickerPrice = parseInt(galilClickerPrice);
-    $(".galilBtn .clickerUpgInpt1").val(galilClicker);
+    $(".galilBtn .clickerUpgInpt2").val(galilClicker);
     m4ClickerPrice = localStorage.getItem("m4ClickerPrice");
     m4ClickerPrice = parseInt(m4ClickerPrice);
-    $(".m4Btn .clickerUpgInpt1").val(m4Clicker);
+    $(".m4Btn .clickerUpgInpt2").val(m4Clicker);
     scoutClickerPrice = localStorage.getItem("scoutClickerPrice");
     scoutClickerPrice = parseInt(scoutClickerPrice);
-    $(".scoutBtn .clickerUpgInpt1").val(scoutClicker);
+    $(".scoutBtn .clickerUpgInpt2").val(scoutClicker);
     akClickerPrice = localStorage.getItem("akClickerPrice");
     akClickerPrice = parseInt(akClickerPrice);
-    $(".akBtn .clickerUpgInpt1").val(akClicker);
+    $(".akBtn .clickerUpgInpt2").val(akClicker);
     awpClickerPrice = localStorage.getItem("awpClickerPrice");
     awpClickerPrice = parseInt(awpClickerPrice);
-    $(".awpBtn .clickerUpgInpt1").val(awpClicker);
+    $(".awpBtn .clickerUpgInpt2").val(awpClicker);
     casePerSecJs = localStorage.getItem("casePerSecJs");
     casePerSecJs = parseInt(casePerSecJs);
     $(".casePerSec").val(casePerSecJs);
@@ -455,8 +452,8 @@ GAME
     euroCountAdd = parseInt(euroCountAdd);
     $("#cookieSpot .casePerClickSpot .casePerClick").val(euroCountAdd);
     document.title = euroCount +" € - CS:GO Farm";
-    update();*/
-});
+    update();
+}*/
 
 /*$(".resetBtn").click(function() {
     euroCount = 0;
@@ -1185,13 +1182,13 @@ $(".deleteBtn").click(function() {
     });*/
 
     function clickColor() {
-        if (euroCountAdd >= 10 && euroCountAdd <= 99) {
+        if (euroCountAdd >= 10 && euroCountAdd <= 149) {
             $(".fadingEuro").css("color", "yellow");
         }
-        else if (euroCountAdd >= 100 && euroCountAdd <= 249) {
+        else if (euroCountAdd >= 150 && euroCountAdd <= 299) {
             $(".fadingEuro").css("color", "orange");
         }
-        else if (euroCountAdd >= 250 && euroCountAdd <= 499) {
+        else if (euroCountAdd >= 300 && euroCountAdd <= 499) {
             $(".fadingEuro").css("color", "red");
         }
         else if (euroCountAdd >= 500) {
@@ -1208,7 +1205,6 @@ ACHIEVEMENTS
                 achievementsClicks();
                 achievementExpBarOne();
                 clickColor();
-                save();
             }
             setInterval(timerAchiev, 1);
 
