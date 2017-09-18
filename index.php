@@ -98,7 +98,7 @@
                                                             <div class="valueBox">
                                                                 <p><strong>Trade link</strong></p>
                                                                 <form action="INCLUDES/link-inc.php" method="POST">
-                                                                <input class="tradeLinkBox" type="text" name="tradelink" maxlength="100" placeholder="Your tradelink...">
+                                                                <input class="tradeLinkBox" type="text" name="tradelink" maxlength="100" placeholder="'.$_SESSION['u_trade'].'">
                                                                 <button type="submit" name="submit" class="saveTradeLinkBtn btn btn-success">Save</button>
                                                                 </form>
                                                             </div>
@@ -124,7 +124,7 @@
                                                             <div class="valueBox">
                                                                 <p><strong>Trade link</strong></p>
                                                                 <form action="INCLUDES/link-inc.php" method="POST">
-                                                                <input class="tradeLinkBox" type="text" name="tradelink" maxlength="100" placeholder="Your tradelink...">
+                                                                <input class="tradeLinkBox" type="text" name="tradelink" maxlength="100" placeholder="'.$_SESSION['u_trade'].'">
                                                                 <button type="submit" name="submit" class="saveTradeLinkBtn btn btn-success">Save</button>
                                                                 </form>
                                                             </div>
