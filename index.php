@@ -146,14 +146,14 @@
                                         <a href="register.php"><button class="registerBtn" type="button">Register</button></a>';
                                 }
                             ?>
-                            <div class="adSpotContainer">
+                            <!-- <div class="adSpotContainer">
                                 <div class="adBox">
                                     <p style="margin-top: 10px; color: #ccc; font-size: 14px">Sponsored links<p>
                                 </div>
                                         <div class="adSpot">
                                             <p>Ads Box<p>
                                         </div>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
 

@@ -66,6 +66,8 @@ GAME
         totalEuro = totalEuro + clickerMultiplier;
         prestige();
         update();
+        save();
+        load();
     }
 
     setInterval(timer, 1000);
@@ -309,43 +311,43 @@ GAME
             }
     });
 
-    /*function save() {
-    localStorage.setItem("euroCount", euroCount);
-    localStorage.setItem("euroCountAdd", euroCountAdd);
-    localStorage.setItem("totalEuro", totalEuro);
-    localStorage.setItem("totalJs", totalJs);
-    localStorage.setItem("achievementExp", achievementExp);
-    localStorage.setItem("expBarWidth", expBarWidth);
-    localStorage.setItem("levelCount", levelCount);
-    localStorage.setItem("clickCount", clickCount);
-    localStorage.setItem("clickCountJs", clickCountJs);
-    localStorage.setItem("glockClicker", glockClicker);
-    localStorage.setItem("uspClicker", uspClicker);
-    localStorage.setItem("p250Clicker", p250Clicker);
-    localStorage.setItem("deagClicker", deagClicker);
-    localStorage.setItem("tec9Clicker", tec9Clicker);
-    localStorage.setItem("fiveClicker", fiveClicker);
-    localStorage.setItem("famasClicker", famasClicker);
-    localStorage.setItem("galilClicker", galilClicker);
-    localStorage.setItem("m4Clicker", m4Clicker);
-    localStorage.setItem("scoutClicker", scoutClicker);
-    localStorage.setItem("akClicker", akClicker);
-    localStorage.setItem("awpClicker", awpClicker);
-    localStorage.setItem("casePerSecJs", casePerSecJs);
-    localStorage.setItem("point", point);
-    localStorage.setItem("glockClickerPrice", glockClickerPrice);
-    localStorage.setItem("uspClickerPrice", uspClickerPrice);
-    localStorage.setItem("p250ClickerPrice", p250ClickerPrice);
-    localStorage.setItem("deagClickerPrice", deagClickerPrice);
-    localStorage.setItem("tec9ClickerPrice", tec9ClickerPrice);
-    localStorage.setItem("fiveClickerPrice", fiveClickerPrice);
-    localStorage.setItem("famasClickerPrice", famasClickerPrice);
-    localStorage.setItem("galilClickerPrice", galilClickerPrice);
-    localStorage.setItem("m4ClickerPrice", m4ClickerPrice);
-    localStorage.setItem("scoutClickerPrice", scoutClickerPrice);
-    localStorage.setItem("akClickerPrice", akClickerPrice);
-    localStorage.setItem("awpClickerPrice", awpClickerPrice);
-    localStorage.setItem("clickerMultiplier", clickerMultiplier);
+    function save() {
+    localStorage.setItem("euroCount",JSON.stringify(euroCount));
+    localStorage.setItem("euroCountAdd",JSON.stringify(euroCountAdd));
+    localStorage.setItem("totalEuro",JSON.stringify(totalEuro));
+    localStorage.setItem("totalJs",JSON.stringify(totalJs));
+    localStorage.setItem("achievementExp",JSON.stringify(achievementExp));
+    localStorage.setItem("expBarWidth",JSON.stringify(expBarWidth));
+    localStorage.setItem("levelCount",JSON.stringify(levelCount));
+    localStorage.setItem("clickCount",JSON.stringify(clickCount));
+    localStorage.setItem("clickCountJs",JSON.stringify(clickCountJs));
+    localStorage.setItem("glockClicker",JSON.stringify(glockClicker));
+    localStorage.setItem("uspClicker",JSON.stringify(uspClicker));
+    localStorage.setItem("p250Clicker",JSON.stringify(p250Clicker));
+    localStorage.setItem("deagClicker",JSON.stringify(deagClicker));
+    localStorage.setItem("tec9Clicker",JSON.stringify(tec9Clicker));
+    localStorage.setItem("fiveClicker",JSON.stringify(fiveClicker));
+    localStorage.setItem("famasClicker",JSON.stringify(famasClicker));
+    localStorage.setItem("galilClicker",JSON.stringify(galilClicker));
+    localStorage.setItem("m4Clicker",JSON.stringify(m4Clicker));
+    localStorage.setItem("scoutClicker",JSON.stringify(scoutClicker));
+    localStorage.setItem("akClicker",JSON.stringify(akClicker));
+    localStorage.setItem("awpClicker",JSON.stringify(awpClicker));
+    localStorage.setItem("casePerSecJs",JSON.stringify(casePerSecJs));
+    localStorage.setItem("point",JSON.stringify(point));
+    localStorage.setItem("glockClickerPrice",JSON.stringify(glockClickerPrice));
+    localStorage.setItem("uspClickerPrice",JSON.stringify(uspClickerPrice));
+    localStorage.setItem("p250ClickerPrice",JSON.stringify(p250ClickerPrice));
+    localStorage.setItem("deagClickerPrice",JSON.stringify(deagClickerPrice));
+    localStorage.setItem("tec9ClickerPrice",JSON.stringify(tec9ClickerPrice));
+    localStorage.setItem("fiveClickerPrice",JSON.stringify(fiveClickerPrice));
+    localStorage.setItem("famasClickerPrice",JSON.stringify(famasClickerPrice));
+    localStorage.setItem("galilClickerPrice",JSON.stringify(galilClickerPrice));
+    localStorage.setItem("m4ClickerPrice",JSON.stringify(m4ClickerPrice));
+    localStorage.setItem("scoutClickerPrice",JSON.stringify(scoutClickerPrice));
+    localStorage.setItem("akClickerPrice",JSON.stringify(akClickerPrice));
+    localStorage.setItem("awpClickerPrice",JSON.stringify(awpClickerPrice));
+    localStorage.setItem("clickerMultiplier",JSON.stringify(clickerMultiplier));
 }
 
     function load() {
@@ -453,7 +455,7 @@ GAME
     $("#cookieSpot .casePerClickSpot .casePerClick").val(euroCountAdd);
     document.title = euroCount +" € - CS:GO Farm";
     update();
-}*/
+}
 
 /*$(".resetBtn").click(function() {
     euroCount = 0;
@@ -1414,9 +1416,9 @@ ACHIEVEMENTS
                     }, 5000);
                 }
                 else if (totalEuro >= 2500000 && totalJs == 7) {
-                    $(".noSkull").fadeOut(1500);
+                    $(".noHeadshot").fadeOut(1500);
                     setInterval(function () {
-                        $(".skull").fadeIn(3000);
+                        $(".headshot").fadeIn(3000);
                     },1500);
                     achievementExp += 30;
                     expBarWidth += 30;
@@ -1438,9 +1440,9 @@ ACHIEVEMENTS
                     }, 5000);
                 }
                 else if (totalEuro >= 5000000 && totalJs == 8) {
-                    $(".noSkull").fadeOut(1500);
+                    $(".noHowl").fadeOut(1500);
                     setInterval(function () {
-                        $(".skull").fadeIn(3000);
+                        $(".howl").fadeIn(3000);
                     },1500);
                     achievementExp += 30;
                     expBarWidth += 30;
@@ -1462,9 +1464,9 @@ ACHIEVEMENTS
                     }, 5000);
                 }
                 else if (totalEuro >= 10000000 && totalJs == 9) {
-                    $(".noSkull").fadeOut(1500);
+                    $(".noTreize").fadeOut(1500);
                     setInterval(function () {
-                        $(".skull").fadeIn(3000);
+                        $(".treize").fadeIn(3000);
                     },1500);
                     achievementExp += 30;
                     expBarWidth += 30;
@@ -1486,9 +1488,9 @@ ACHIEVEMENTS
                     }, 5000);
                 }
                 else if (totalEuro >= 25000000 && totalJs == 10) {
-                    $(".noSkull").fadeOut(1500);
+                    $(".noStealth").fadeOut(1500);
                     setInterval(function () {
-                        $(".skull").fadeIn(3000);
+                        $(".stealth").fadeIn(3000);
                     },1500);
                     achievementExp += 30;
                     expBarWidth += 30;
@@ -1510,9 +1512,9 @@ ACHIEVEMENTS
                     }, 5000);
                 }
                 else if (totalEuro >= 50000000 && totalJs == 11) {
-                    $(".noSkull").fadeOut(1500);
+                    $(".noChi").fadeOut(1500);
                     setInterval(function () {
-                        $(".skull").fadeIn(3000);
+                        $(".chi").fadeIn(3000);
                     },1500);
                     achievementExp += 30;
                     expBarWidth += 30;
@@ -1534,9 +1536,9 @@ ACHIEVEMENTS
                     }, 5000);
                 }
                 else if (totalEuro >= 100000000 && totalJs == 12) {
-                    $(".noSkull").fadeOut(1500);
+                    $(".noItsafox").fadeOut(1500);
                     setInterval(function () {
-                        $(".skull").fadeIn(3000);
+                        $(".itsafox").fadeIn(3000);
                     },1500);
                     achievementExp += 30;
                     expBarWidth += 30;
@@ -1558,9 +1560,9 @@ ACHIEVEMENTS
                     }, 5000);
                 }
                 else if (totalEuro >= 250000000 && totalJs == 13) {
-                    $(".noSkull").fadeOut(1500);
+                    $(".noPear").fadeOut(1500);
                     setInterval(function () {
-                        $(".skull").fadeIn(3000);
+                        $(".pear").fadeIn(3000);
                     },1500);
                     achievementExp += 30;
                     expBarWidth += 30;
@@ -1582,9 +1584,9 @@ ACHIEVEMENTS
                     }, 5000);
                 }
                 else if (totalEuro >= 500000000 && totalJs == 14) {
-                    $(".noSkull").fadeOut(1500);
+                    $(".noWarowl").fadeOut(1500);
                     setInterval(function () {
-                        $(".skull").fadeIn(3000);
+                        $(".warowl").fadeIn(3000);
                     },1500);
                     achievementExp += 30;
                     expBarWidth += 30;
@@ -1606,9 +1608,9 @@ ACHIEVEMENTS
                     }, 5000);
                 }
                 else if (totalEuro >= 1000000000 && totalJs == 15) {
-                    $(".noSkull").fadeOut(1500);
+                    $(".noSwag").fadeOut(1500);
                     setInterval(function () {
-                        $(".skull").fadeIn(3000);
+                        $(".swag").fadeIn(3000);
                     },1500);
                     achievementExp += 30;
                     expBarWidth += 30;
@@ -2291,7 +2293,7 @@ RANDOMS
             $("body").append(popImgBoost);
             popImgBoost.css('left', Math.floor(Math.random()*(1080 - popImgBoost.width())));
             popImgBoost.css('top', Math.floor(Math.random()*(720 - popImgBoost.height())));
-            $(".randomPopBoost").fadeOut(20000)
+            $(".randomPopBoost").fadeOut(30000)
     }
 
         $(".randomPopBoost").click(function () {
@@ -2311,7 +2313,7 @@ RANDOMS
                 $(".casePerSec").val(casePerSecJs);
             },40000);
         })
-        setInterval(placeImage, Math.floor(Math.random()*(1800000 - 600000) + 600000));
+        setInterval(placeImage, Math.floor(Math.random()*(600000 - 300000) + 300000));
 
         function antiAfk() {
             $("#myModalAntiAfk").modal({show: true});

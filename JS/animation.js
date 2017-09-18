@@ -32,4 +32,17 @@ $(document).ready(function() {
 })
 
     $("[data-toggle='tooltip']").tooltip();
+
+    $(".chatCloseBtn").click(function() {
+        $("#userSpot").hide(1000);
+    });
+
+    $(".chatOpenBtn").click(function() {
+        $("#userSpot").show(1000);
+    });
+
+    // function refresh() {
+    //     $(".chatBox").load(location.href + " .chatBox");
+    // }
+    // setInterval(refresh, 250);
 });

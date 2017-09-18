@@ -727,3 +727,91 @@ footer h5
     color: #aaa !important;
     margin-left: 10px;
 }
+.chatText
+{
+    border: 1px solid rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.0);
+    border-radius: 5px;
+    background: white;
+    width: 90%;
+    margin-top: 2%;
+}
+#userSpot
+{
+    position: absolute;
+    z-index: 1;
+    margin-top: 0.6%;
+    width: 300px;
+    height: 92%;
+    background: #262326;
+    border: 1px solid rgba(0,0,0, 0.8);
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.7);
+    border-radius: 10px;
+    right: 0.1%;
+    text-align: center;
+}
+.balanceBox
+{
+    border: 1px solid rgba(0,0,0,0.0);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.0);
+    border-radius: 5px;
+    background: rgba(0,0,0,0.0);
+    width: 100%;
+    text-align: center;
+}
+.chatEnter
+{
+    width: 60%;
+    height: 34px;
+    color: white;
+    background: rgba(35, 38, 38, 0.85);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-top: 2%;
+}
+.chatEnter:hover
+{
+    text-decoration: none;
+    color: #ccc;
+}
+.chatBox
+{
+    background: white;
+    border: 2px solid black;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px black;
+    color: black;
+    height: 29.8em !important;
+    overflow-y: auto;
+    text-align: left !important;
+}
+.chatCloseBtn
+{
+    color: black;
+    margin-top: 4% !important;
+}
+.chatOpenBtn
+{
+    position: absolute;
+    right: 1%;
+    bottom: 5.5%;
+    width: 180px;
+    height: 34px;
+    color: white;
+    background: rgba(35, 38, 38, 0.85);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    text-align: center;
+}
+.chatOpenBtn:active, .chatOpenBtn:visited, .chatOpenBtn:focus
+{
+    color: white;
+    text-decoration: none;
+}
+.chatOpenBtn:hover
+{
+    color: #ccc;
+    text-decoration: none;
+}

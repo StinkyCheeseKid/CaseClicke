@@ -1,5 +1,6 @@
 <?php
     session_start();
+    include_once 'INCLUDES/dbh-inc.php';
 
     if (!isset($_SESSION['u_id'])) {
     echo '<script>
@@ -22,7 +23,42 @@
     <script src="JS/animation.js"></script>
     </head>
     <body>
-
+        <a href="#" class="chatOpenBtn">Chat</a>
+        <div id="userSpot">
+            <div class="userContent">
+                <?php
+                    if(isset($_POST['submit'])) {
+                        $pseudo = $_SESSION['u_uid'];
+                        $message = htmlspecialchars($_POST['message']);
+                        $sql = "INSERT INTO chat (chat_uid, chat_text) VALUES ('$pseudo', '$message')";
+                        $result = mysqli_query($conn, $sql);
+                    }
+                ?>
+                <?php
+                echo '<h1>'.$_SESSION["u_uid"].'</h1>';
+                ?>
+                <p><strong>Points</strong></p>
+                <input class="balanceBox" type="text" value="0" disabled>
+                <div class="chatBox">
+                <?php
+                $sql = "SELECT * FROM chat";
+                $result = mysqli_query($conn, $sql);
+                if (isset($_POST['submit'])) {
+                    while($row = mysqli_fetch_assoc($result)) {
+                ?>
+                    <b><?php echo $row['chat_uid'];?>: </b><?php echo $row['chat_text'];?><br/>
+                <?php
+                    }
+                }
+                ?>
+                </div>
+                <form action="" method="POST">
+                    <input class="chatText" type="text" name="message" placeholder="Message..." maxlength="20" style="color: black;">
+                    <button class="chatEnter" type="submit" name="submit">Enter</button>
+                </form>
+                <button class="chatCloseBtn btn btn-basic" type="button">Close</button>
+            </div>
+        </div>
         <img class="randomPopBoost" src="CSS/IMGS/csgo/Other/1.6.ico" alt="c4-1.6" draggable="false">
         <div class="achievBanner achievement-banner">
             <div class="achievIconBanner achievement-icon">
@@ -43,7 +79,7 @@
                     <!-- Modal content-->
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h2 class="modal-title">ABout CS:GO Farm</h2>
+                        <h2 class="modal-title">About CS:GO Farm's Case Clicker</h2>
                       </div>
                       <div class="modal-body">
                         <p>Some text in the modal.</p>
@@ -103,8 +139,8 @@
                         <p>- When you unlock an achievement you gain some exp.</p>
                         <p>- Each time you get an achievement the next one will be harder to get.</p>
                         <p>- Once you pass a level your exp is reset to 0xp.</p>
-                        <p>- For each level you need 600xp it doesn't change since achiements are harder to get.</p>
-                        <p>- When you levelup you gain points on CS:GO Farm where you can go withdraw skins.</p>
+                        <p>- For each level you need 600xp it doesn't change since achievements are harder to get.</p>
+                        <p>- When you levelup you gain points on CS:GO Farm with what you can go withdraw skins.</p>
                         <p>- Reaching level 20 will make you pass a rank on CS:GO Farm</p>
                       </div>
                       <div class="modal-footer">
@@ -159,7 +195,7 @@
 
                 <div id="caseSpot" class="col-sm-12 col-md-6 col-lg-4">
 
-                    <h1>CS:GO Farm <button type="button" class="btn btn-info infoBtnUpg" data-toggle="modal" data-target="#myModalCase"><span class="glyphicon glyphicon-question-sign infoIcon"></span></buttons></h1>
+                    <h1>Case Clicker <button type="button" class="btn btn-info infoBtnUpg" data-toggle="modal" data-target="#myModalCase"><span class="glyphicon glyphicon-question-sign infoIcon"></span></buttons></h1>
                         <div class="caseNumberSpot">
                             <h4 class="yourBalance">Your balance</h4>
                             <input class="caseNumber" type="text" disabled value="0">
@@ -190,10 +226,10 @@
                         <h4 class="fadingEuroOneThree fadingEuro"></h4>
                         <h4 class="fadingEuroOneFour fadingEuro"></h4>
 
-                        <p style="margin-top: 10px; color: #ccc; font-size: 14px">Sponsored links<p>
+                        <!-- <p style="margin-top: 10px; color: #ccc; font-size: 14px">Sponsored links<p>
                         <div class="adSpot">
                             <p>Ads Box<p>
-                        </div>
+                        </div> -->
 
                     <!-- <img class="glowingCircle" src="CSS/IMGS/caseCsgo3.png" draggable="false"> -->
                 </div>
@@ -371,7 +407,6 @@
                             <li><a href="#">...</a></li>
                         </ul>
                     </div>
-
                 </div>
 
             </nav>

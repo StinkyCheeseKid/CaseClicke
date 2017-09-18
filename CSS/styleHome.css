@@ -291,6 +291,10 @@ button
     width: 100px !important;
     height: 30px !important
 }
+.fileDelete
+{
+    margin-bottom: 1% !important;
+}
 .avatarOfUser
 {
     height: 150px;
