@@ -5,22 +5,20 @@
             <title>CS:GO Farm</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-            <link rel="stylesheet" href="CSS/styleLogin.css" />
+            <link rel="stylesheet" href="CSS/styleForget.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="JS/scriptLogin.js"></script>
+    <script src="JS/scriptForget.js"></script>
     </head>
 <body>
-    <div id="loginBox">
+    <div id="forgetBox">
         <div class="iCenter">
-            <h1 style="color: white; position: absolute; margin-left: 7%; margin-top: 7%; font-size: 400%;">CS:GO Farm</h1>
-            <form action="INCLUDES/login-inc.php" method="POST">
+            <h4 style="color: #ccc; position: absolute; margin-left: 3.7%; margin-top: 8%; font-size: 200%;">Forgot your password or username ?</h4>
+            <form action="INCLUDES/forget-inc.php" method="POST">
             <input class="username" type="text" name="uid" placeholder="Username">
-            <input class="password" type="password" name="pass"  placeholder="Password"><br>
-                <button class="submitBtn btn btn-info" type="submit" name="submit">Login</button>
+            <input class="email" type="text" name="email"  placeholder="Email"><br>
+                <button class="submitBtn btn btn-info" type="submit" name="submit">Send</button>
             </form>
-            <a class="noAccount" href="register.php"><p>Don't have an account ?</p></a>
-            <a class="forget" href="forget.php"><p>Forgot your password or username ?</p></a>
         </div>
     </div>
     <footer class="text-center">

@@ -3,7 +3,7 @@ body{
 }
 @media screen and (min-width: 762px)
 {
-	#loginBox
+	#forgetBox
 	{
 		border: 1px solid rgba(0,0,0,0.6);
 		background: rgba(35,38,38,0.4);
@@ -25,7 +25,7 @@ body{
 	}
 }
 
-#loginBox
+#forgetBox
 {
     border: 1px solid rgba(0,0,0,0.6);
     background: rgba(35,38,38,0.4);
@@ -91,26 +91,4 @@ h2
 .icon-bar
 {
     background-color: #fff !important;
-}
-.noAccount
-{
-	color: white;
-	text-decoration: none !important;
-	margin-top: 10% !important;
-}
-.noAccount:hover
-{
-	text-decoration: none !important;
-	color: white;
-}
-.forget
-{
-	color: white;
-	text-decoration: none !important;
-	margin-top: 10% !important;
-}
-.forget:hover
-{
-	text-decoration: none !important;
-	color: white;
 }
