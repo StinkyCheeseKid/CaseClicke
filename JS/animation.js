@@ -44,5 +44,5 @@ $(document).ready(function() {
     // function refresh() {
     //     $(".chatBox").load(location.href + " .chatBox");
     // }
-    // setInterval(refresh, 250);
+    // setInterval(refresh, 250); 
 });

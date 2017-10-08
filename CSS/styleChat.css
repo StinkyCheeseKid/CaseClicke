@@ -1,28 +1,6 @@
-/* GENERAL */ 
 body
 {
-    background: url("IMGS/progressBarImg2.jpg");
-    /*font-style:*/
-    font-size: 20px;
-    color: white;
-}
-#org_div1
-{
-    height: auto;
-    z-index: 1;
-    text-align: center;
-}
-.iCenter
-{
-    width: 100%;
-    padding-left: 7%;
-}
-div .row
-{
-    margin-top: 14px;
-}
-.noSelect
-{
+    background: url("IMGS/background6.jpg");
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -webkit-user-drag: none;
@@ -35,75 +13,9 @@ div .row
 {
     cursor: default;
 }
-@-webkit-keyframes rotate {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-  }
-}
-.floatRight
-{
-    float: right;
-}
-.floatLeft
-{
-    float: left;
-}
-.infoBtnUpg
-{
-    padding: 1px 4px 1px 4px;
-}
-.infoIcon
-{
-    font-size: 10px;
-}
-h1
-{
-    font-size: 30px;
-    font-style: bold;
-}
-button
-{
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-}
-.clickerUpgInpt1:hover, .clickerUpgInpt2:hover
-{
-    cursor: pointer;
-}
-.modalLeft
-{
-    text-align: left;
-}
-.modalRight
-{
-    text-align: right;
-}
-.titleModals .modal-content
-{
-    background: url("IMGS/popUpBackground3.jpg");
-    /*z-index: 1;
-    position:absolute;
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px black;
-    background: url("IMGS/popUpBackgroundResized.jpg");
-    text-align: center;
-    width: 1280px;
-    height: 750px;
-    margin-left: 315px;
-    margin-top: 85px;*/
-}
-#myModalAchivementsPop1 .modal-content
-{
-    background: url("IMGS/achievementBackground.jpg")
-}
 ::-webkit-scrollbar {
     width: 0px;
 }
-/* FOOTER */
-
 .navbar
 {
     background: rgba(0,0,0, 0.7);
@@ -156,7 +68,7 @@ button
     text-align: center;
     width: 100%;
     padding: 2px 0px 2px 0px;
-    background-color: rgba(0, 0, 0, 0.50);
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 20px;
     height: 43em;
 }
@@ -190,28 +102,6 @@ button
     margin-left: 9%;
     margin-top: 7%;
 }
-.loginBtn, .registerBtn
-{
-    width: 75%;
-    height: 40px;
-    margin-top: 18px;
-    margin-right: 5%;
-    color: white;
-    background: rgba(35, 38, 38, 0.85);
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-}
-.clickerSpotContent, .caseSpotContent, .coinflipSpotContent
-{
-    border: 1px solid rgba(0, 0, 0, 0.4);
-    box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.6);
-    text-align: center;
-    width: 100%;
-    margin-top: 5%;
-    padding: 2px 0px 2px 0px;
-    background-color: rgba(0, 0, 0, 0.5);
-}
 .tradeLinkBox
 {
     border: 1px solid rgba(0,0,0,0.2);
@@ -220,6 +110,7 @@ button
     background: white;
     margin-bottom: 2px;
     width: 66%;
+    height: 30px;
     color: black;
 }
 .balanceBox
@@ -236,46 +127,19 @@ button
     border: 1px solid rgba(0,0,0,0.4);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
     border-radius: 5px;
-    background: rgba(0, 0, 0, 0.50);
+    background: rgba(0, 0, 0, 0.4);
     margin: 5px 5px;
     width: 90%;
-}
-#clickerSpotInfo .clickerSpotText
-{
-    margin-top: 10px;
-}
-#clickerSpotInfo .clickerSpotText p
-{
-    font-size: 18px;
-}
-.clickerImg, .caseImg, .coinflipImg
-{
-    border: 3px solid rgba(0, 0, 0, 0.6);
-    border-radius: 15px;
-    margin-top: 5px;
-    width: 90% !important;
-    height: 90% !important;
-}
-.logoutBtn
-{
-    width: 75%;
-    height: 40px;
-    margin-top: 18px;
-    margin-right: 7%;
-    color: white;
-    background: rgba(35, 38, 38, 0.85);
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
 }
 .saveTradeLinkBtn
 {
     margin: 2% 2%;
+    height: 30px;
 }
 .fileSelector
 {
     margin-left: 7.5%;
-    background: rgba(35, 38, 38, 0.85);
+    background: rgba(35, 38, 38, 0.80);
     border: 1px solid rgba(0, 0, 0, 0.3);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
@@ -298,7 +162,73 @@ button
 }
 .avatarOfUser
 {
-    height: 150px;
-    width: 150px;
+    height: 70%;
+    width: 70%;
     border-radius: 30px;
+}
+.chatText
+{
+    border: 1px solid rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    background: white;
+    width: 74.5%;
+    margin-left: 1%;
+    height: 34px;
+    margin-top: 1%;
+    float: left;
+}
+#userSpot
+{
+    position: absolute;
+    z-index: 1;
+    margin-top: 0.14%;
+    width: 14%;
+    height: 92%;
+    background: rgba(0, 0, 0, 0.50);
+    border: 1px solid rgba(0,0,0, 0.6);
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.7);
+    border-radius: 10px;
+    right: 0.1%;
+    text-align: center;
+    color: white;
+}
+.balanceBox
+{
+    border: 1px solid rgba(0,0,0,0.0);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.0);
+    border-radius: 5px;
+    background: rgba(0,0,0,0.0);
+    width: 100%;
+    text-align: center;
+}
+.chatEnter
+{
+    width: 9%;
+    margin-left: 0.5%;
+    height: 34px;
+    color: white;
+    background: rgba(35, 38, 38, 0.85);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-top: 1%;
+}
+.chatEnter:hover
+{
+    text-decoration: none;
+    color: #ccc;
+}
+.chatBox
+{
+    border: 2px solid rgba(0,0,0, 0.30);
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px black;
+    background: rgba(0, 0, 0, 0.50);
+    color: black;
+    width: 84%;
+    margin-left: 1%;
+    margin-top: 0.7%;
+    height: 58.5em !important;
+    text-align: left !important;
 }

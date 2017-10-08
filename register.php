@@ -13,7 +13,7 @@
 <body>
     <div id="loginBox">
         <div class="iCenter">
-            <h1 style="color: white; position: absolute; margin-left: 7%; margin-top: 6%; font-size: 400%;">CS:GO Farm</h1>
+            <h1 class="titre">CS:GO Farm</h1>
             <form action="INCLUDES/register-inc.php" method="POST">
                 <input class="username" type="text" name="uid" placeholder="Username">
                 <input type="password" name="pass1" placeholder="Password"><br>
@@ -37,9 +37,9 @@
                         <ul class="nav navbar-nav">
                             <li><a href="index.php">Home</a></li>
                             <li><a href="clicker.php">Clicker</a></li>
+                            <li><a href="coinflip.php">Coinflip</a></li>
                             <li><a href="#">...</a></li>
-                            <li><a href="#">...</a></li>
-                            <li><a href="#">...</a></li>
+                            <li><a href="#">Shop</a></li>
                         </ul>
                     </div>
 

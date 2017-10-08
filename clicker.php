@@ -19,46 +19,11 @@
             <link rel="stylesheet" href="CSS/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="JS/script.js"></script>
+    <script src="JS/main.js"></script>
     <script src="JS/animation.js"></script>
     </head>
     <body>
-        <a href="#" class="chatOpenBtn">Chat</a>
-        <div id="userSpot">
-            <div class="userContent">
-                <?php
-                    if(isset($_POST['submit'])) {
-                        $pseudo = $_SESSION['u_uid'];
-                        $message = htmlspecialchars($_POST['message']);
-                        $sql = "INSERT INTO chat (chat_uid, chat_text) VALUES ('$pseudo', '$message')";
-                        $result = mysqli_query($conn, $sql);
-                    }
-                ?>
-                <?php
-                echo '<h1>'.$_SESSION["u_uid"].'</h1>';
-                ?>
-                <p><strong>Points</strong></p>
-                <input class="balanceBox" type="text" value="0" disabled>
-                <div class="chatBox">
-                <?php
-                $sql = "SELECT * FROM chat";
-                $result = mysqli_query($conn, $sql);
-                if (isset($_POST['submit'])) {
-                    while($row = mysqli_fetch_assoc($result)) {
-                ?>
-                    <b><?php echo $row['chat_uid'];?>: </b><?php echo $row['chat_text'];?><br/>
-                <?php
-                    }
-                }
-                ?>
-                </div>
-                <form action="" method="POST">
-                    <input class="chatText" type="text" name="message" placeholder="Message..." maxlength="20" style="color: black;">
-                    <button class="chatEnter" type="submit" name="submit">Enter</button>
-                </form>
-                <button class="chatCloseBtn btn btn-basic" type="button">Close</button>
-            </div>
-        </div>
+        <a href="chat.php" class="chatOpenBtn">Chat</a>
         <img class="randomPopBoost" src="CSS/IMGS/csgo/Other/1.6.ico" alt="c4-1.6" draggable="false">
         <div class="achievBanner achievement-banner">
             <div class="achievIconBanner achievement-icon">
@@ -402,9 +367,9 @@
                         <ul class="nav navbar-nav">
                             <li><a href="index.php">Home</a></li>
                             <li><a href="clicker.php">Clicker</a></li>
+                            <li><a href="coinflip.php">Coinflip</a></li>
                             <li><a href="#">...</a></li>
-                            <li><a href="#">...</a></li>
-                            <li><a href="#">...</a></li>
+                            <li><a href="#">Shop</a></li>
                         </ul>
                     </div>
                 </div>

@@ -13,9 +13,8 @@
 <body>
     <div id="forgetBox">
         <div class="iCenter">
-            <h4 style="color: #ccc; position: absolute; margin-left: 3.7%; margin-top: 8%; font-size: 200%;">Forgot your password or username ?</h4>
+            <h4 class="titre">Forgot your password or username ?</h4>
             <form action="INCLUDES/forget-inc.php" method="POST">
-            <input class="username" type="text" name="uid" placeholder="Username">
             <input class="email" type="text" name="email"  placeholder="Email"><br>
                 <button class="submitBtn btn btn-info" type="submit" name="submit">Send</button>
             </form>
@@ -35,9 +34,9 @@
                         <ul class="nav navbar-nav">
                             <li><a href="index.php">Home</a></li>
                             <li><a href="clicker.php">Clicker</a></li>
+                            <li><a href="coinflip.php">Coinflip</a></li>
                             <li><a href="#">...</a></li>
-                            <li><a href="#">...</a></li>
-                            <li><a href="#">...</a></li>
+                            <li><a href="#">Shop</a></li>
                         </ul>
                     </div>
 

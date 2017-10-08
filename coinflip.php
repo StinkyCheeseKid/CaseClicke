@@ -1,6 +1,12 @@
 <?php
     session_start();
     include_once 'INCLUDES/dbh-inc.php';
+
+    if (!isset($_SESSION['u_id'])) {
+    echo '<script>
+            window.location.href="login.php";
+        </script>';
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -9,57 +15,44 @@
             <title>CS:GO Farm</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-            <link rel="stylesheet" href="CSS/styleHome.css" />
+            <link rel="stylesheet" href="CSS/styleCoinflip.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="JS/main.js"></script>
+    <script src="JS/scriptCoinflip.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $(".coinflipGames").load("INCLUDES/coinInsert-inc.php");
+                setInterval(function(){
+                 $('.coinflipGames').load('INCLUDES/coinInsert-inc.php');
+             }, 1000);
+        });
+
+    </script>
     </head>
     <body>
 
         <div class="container-fluid noSelect noCursor iCenter">
             <div class="row">
-
-                <div id="clickerSpotInfo" class="col-md-6 col-lg-3">
-
-                    <h1><a href="clicker.php" style="text-decoration: none; color: white;">Clicker</a></h1>
-                    <div class="clickerSpotContent col-md-12 col-lg-12">
-                        <a href="clicker.php"><img class="clickerImg" src="CSS/IMGS/csgoClickerMiniature.png" alt="Screenshot of the clicker game"/></a>
-                        <div class="clickerSpotText">
-                            <h3><strong>Win skins just by clicking</strong></h3>
-                            <p style="color: #aaa;"><strong><em>How does this work ?</em></strong></p>
-                            <p>Gain Exp by unlocking achievements</p>
-                            <p>Levelup with that Exp gained</p>
-                            <p>Everytime you levelup you get some points,</p>
-                            <p>these points will allow you to buy skins.</p>
-                        </div>
-                    </div>
-
-                </div>
-                <div id="caseSpotInfo" class="col-md-6 col-lg-3">
-
-                    <h1>Case Opening</h1>
-                    <div class="caseSpotContent col-md-12 col-lg-12">
-                        <img class="caseImg" src="CSS/IMGS/comingSoon.jpg" alt="caseImg">
-                            <h3><strong>Coming Soon ...</strong></h3>
-                            <p></p>
-                            <p></p>
-                            <p></p>
-                            <p></p>
-                            <p></p>
-                    </div>
-
-                </div>
-                <div id="coinflipSpotInfo" class="col-md-6 col-lg-3">
+                <div id="coinflipSpotInfo" class="col-md-6 col-lg-9">
 
                     <h1>Coin Flip</h1>
                     <div class="coinflipSpotContent col-md-12 col-lg-12">
-                        <img class="coinflipImg" src="CSS/IMGS/comingSoon.jpg" alt="conflipImg">
-                            <h3><strong>Coming Soon ...</strong></h3>
-                            <p></p>
-                            <p></p>
-                            <p></p>
-                            <p></p>
-                            <p></p>
+                        <div class="coinForm">
+                            <form action="INCLUDES/coinMaker-inc.php" method="POST">
+                                <h2 style="text-decoration: underline;">Create a Game</h2>
+                                <div>
+                                    <input type="radio" value="Counter-Terrorist" name="side" checked="checked">Counter-Terrorist </br>Or</br>
+                                    <input type="radio" value="Terrorist" name="side">Terrorist
+                                </div>
+                                Cost: <input class="inputCost" type="text" name="cost">
+                                <button class="btn btn-primary" type="submit" name="submit">Create</button>
+                            </form>
+                        </div>
+                        <h2 style="text-decoration: underline;">Join a Game</h2>
+                        <div class="coinflipGames">
+                            <?php include 'INCLUDES/coinInsert-inc.php' ?>
+                        </div>
                     </div>
                 </div>
                 <div id="userSpot" class="col-md-6 col-lg-3">
@@ -157,36 +150,30 @@
                         </div>
                     </div>
 
-
         <footer class="text-center">
-            <nav class="navbar navbar-default navbar-fixed-bottom">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                             <span class="icon-bar"></span>
-                             <span class="icon-bar"></span>
-                             <span class="icon-bar"></span>
-                        </button>
+                <nav class="navbar navbar-default navbar-fixed-bottom">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                 <span class="icon-bar"></span>
+                                 <span class="icon-bar"></span>
+                                 <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="myNavbar">
+                            <ul class="nav navbar-nav">
+                                <li><a href="index.php">Home</a></li>
+                                <li><a href="clicker.php">Clicker</a></li>
+                                <li><a href="coinflip.php">Coinflip</a></li>
+                                <li><a href="#">...</a></li>
+                                <li><a href="#">Shop</a></li>
+                            </ul>
+                        </div>
+
                     </div>
-                    <div class="collapse navbar-collapse" id="myNavbar">
-                        <ul class="nav navbar-nav">
-                            <li><a href="index.php">Home</a></li>
-                            <li><a href="clicker.php">Clicker</a></li>
-                            <li><a href="coinflip.php">Coinflip</a></li>
-                            <li><a href="#">...</a></li>
-                            <li><a href="#">Shop</a></li>
-                        </ul>
-                    </div>
 
-                </div>
+                </nav>
 
-            </nav>
-
-            <!-- <a href="#about">
-                <span class="glyphicon glyphicon-chevron-up"></span>
-            </a>
-            <h5>© 2017 Udemy.com</h5> -->
-        </footer>
-
+            </footer>
     </body>
 </html>

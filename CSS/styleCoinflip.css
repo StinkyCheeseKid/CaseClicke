@@ -1,7 +1,7 @@
-/* GENERAL */ 
+/* GENERAL */
 body
 {
-    background: url("IMGS/progressBarImg2.jpg");
+    background: url("IMGS/background4.jpg");
     /*font-style:*/
     font-size: 20px;
     color: white;
@@ -43,62 +43,6 @@ div .row
     -webkit-transform: rotate(360deg);
   }
 }
-.floatRight
-{
-    float: right;
-}
-.floatLeft
-{
-    float: left;
-}
-.infoBtnUpg
-{
-    padding: 1px 4px 1px 4px;
-}
-.infoIcon
-{
-    font-size: 10px;
-}
-h1
-{
-    font-size: 30px;
-    font-style: bold;
-}
-button
-{
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-}
-.clickerUpgInpt1:hover, .clickerUpgInpt2:hover
-{
-    cursor: pointer;
-}
-.modalLeft
-{
-    text-align: left;
-}
-.modalRight
-{
-    text-align: right;
-}
-.titleModals .modal-content
-{
-    background: url("IMGS/popUpBackground3.jpg");
-    /*z-index: 1;
-    position:absolute;
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px black;
-    background: url("IMGS/popUpBackgroundResized.jpg");
-    text-align: center;
-    width: 1280px;
-    height: 750px;
-    margin-left: 315px;
-    margin-top: 85px;*/
-}
-#myModalAchivementsPop1 .modal-content
-{
-    background: url("IMGS/achievementBackground.jpg")
-}
 ::-webkit-scrollbar {
     width: 0px;
 }
@@ -139,7 +83,7 @@ button
 {
     background-color: #fff !important;
 }
-#clickerSpotInfo h1, #coinflipSpotInfo h1, #caseSpotInfo h1
+#coinflipSpotInfo h1
 {
     border: 1px solid rgba(0, 0, 0, 0.4);
     box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.6);
@@ -202,13 +146,13 @@ button
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
 }
-.clickerSpotContent, .caseSpotContent, .coinflipSpotContent
+.coinflipSpotContent
 {
     border: 1px solid rgba(0, 0, 0, 0.4);
     box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.6);
     text-align: center;
     width: 100%;
-    margin-top: 5%;
+    height: 40em;
     padding: 2px 0px 2px 0px;
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -301,4 +245,10 @@ button
     height: 150px;
     width: 150px;
     border-radius: 30px;
+}
+.inputCost
+{
+    border-radius: 15px;
+    color: black;
+    text-align: center;
 }

@@ -45,6 +45,7 @@ if (isset($_POST['submit'])) {
                             $_SESSION['u_id'] = $row['user_id'];
                             $_SESSION['u_uid'] = $row['user_uid'];
                             $_SESSION['u_email'] = $row['user_email'];
+                            $_SESSION['u_balance'] = $row['user_balance'];
                             header("Location: ../index.php?login=success");
                             exit();
                         }

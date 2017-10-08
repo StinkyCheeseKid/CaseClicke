@@ -1,9 +1,10 @@
-body{
+body
+{
 	background: url(IMGS/progressBarImg4.jpg);
 }
 @media screen and (min-width: 762px)
 {
-	#loginBox
+	#recoverBox
 	{
 		border: 1px solid rgba(0,0,0,0.6);
 		background: rgba(35,38,38,0.4);
@@ -26,7 +27,7 @@ body{
 }
 @media screen and (min-width: 762px) and (max-width: 1200px)
 {
-	#loginBox
+	#recoverBox
 	{
 		border: 1px solid rgba(0,0,0,0.6);
 		background: rgba(35,38,38,0.4);
@@ -46,9 +47,10 @@ body{
 		height: 40px;
 		margin-top: 5%;
 	}
+
 }
 
-#loginBox
+#recoverBox
 {
     border: 1px solid rgba(0,0,0,0.6);
     background: rgba(35,38,38,0.4);
@@ -71,7 +73,15 @@ h2
 }
 .username
 {
-	margin-top: 7%;
+	margin-top: 5%;
+}
+.pass
+{
+	margin-top: 3%;
+}
+.passConfirm
+{
+	margin-top: 3%;
 }
 .submitBtn
 {
@@ -83,7 +93,7 @@ h2
 .titre
 	{
 		color: white;
-		font-size: 500%;
+		font-size: 225%;
 		margin-left: 10px !important;
 		margin-top: 140px !important;
 	}
@@ -121,26 +131,4 @@ h2
 .icon-bar
 {
     background-color: #fff !important;
-}
-.noAccount
-{
-	color: white;
-	text-decoration: none !important;
-	margin-top: 10% !important;
-}
-.noAccount:hover
-{
-	text-decoration: none !important;
-	color: white;
-}
-.forget
-{
-	color: white;
-	text-decoration: none !important;
-	margin-top: 10% !important;
-}
-.forget:hover
-{
-	text-decoration: none !important;
-	color: white;
 }
